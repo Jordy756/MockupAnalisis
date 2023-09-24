@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <div class="contenedor-principal">
+        <nav>
+            <i>
+                <img src="./logo.png" alt="" width="80px" height="35px">
+            </i>
+            <i class="bi bi-box-arrow-right bi-xl"></i>
+        </nav>
+
+        <main class="component">
+            <h1>Ingresar suministro</h1>
+
+            <form action="" class="component">
+                <div style="margin-left: 50px;">
+                    <input type="text" placeholder="Codigo del suministro">
+                    <button type="button" class="btn-secundary">
+                        <i class="bi bi-file-text"></i>
+                    </button>
+                </div>
+                <input type="text" placeholder="Cuenta contable" required>
+                <input type="text" placeholder="Grupo" required>
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Unidad de medida" required>
+                <input type="text" placeholder="Sub grupo" required>
+                <input type="text" placeholder="Marca" required>
+                <input type="text" placeholder="Valor por unidad" required>
+                <input type="text" placeholder="Proveedor" required>
+                <input type="number" placeholder="Cantidad" min="0" required>
+                <button class="btn-primary">Registrar ingreso</button>
+            </form>
+
+        </main>
+    </div>
+</body>
+
+</html>

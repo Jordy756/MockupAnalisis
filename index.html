@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+
+    <body>
+        <div class="contenedor-principal">
+            <main class="component-vertical">
+                <img src="./assets/images/logo.png" class="login-image-logo" width="30%" height="30%" />
+                <form action="/login" method="post" class="component">
+                    <div class="input-box">
+                        <input id="email" class="input" type="email" placeholder="Correo electrónico" required />
+                        <span class="span-for-input-error"></span>
+                    </div>
+                    <div class="input-box">
+                        <input id="password" class="input" type="password" placeholder="Contraseña" required maxlength="10" minlength="8" />
+                        <span class="span-for-input-error"></span>
+                    </div>
+                    <button id="btn-log-in" type="submit" class="btn-primary">Iniciar sesión</button>
+                </form>
+            </main>
+        </div>
+        <script type="module" src="./js/validations.js"></script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <div class="contenedor-principal">
+        <nav>
+            <i>
+                <img src="./logo.png" alt="" width="80px" height="35px">
+            </i>
+            <i class="bi bi-box-arrow-right bi-xl"></i>
+        </nav>
+
+        <main class="component">
+            <h1>Suministros de las unidades</h1>
+
+            <select name="" id="">
+                <option value="" selected disabled>Selecciona una unidad</option>
+                <option value="">La Managua</option>
+                <option value="">Los diamantes</option>
+                <option value="">Carlos Duran</option>
+            </select>
+
+
+            <select name="" id="">
+                <option value="" selected disabled>Selecciona el tipo de reporte</option>
+                <option value="">Salidas</option>
+                <option value="">Gastos</option>
+                <option value="">Inventario</option>
+            </select>
+
+            <label for="">Fecha de inicio</label>
+            <input type="date" data-format="dd-mm-yyyy" placeholder="fecha de inicio">
+
+            <label for="">Fecha de final</label>
+            <input type="date" data-format="dd-mm-yyyy" name="" id="">
+
+            <button class="btn-primary">Descargar reporte</button>
+
+        </main>
+    </div>
+</body>
+
+</html>
