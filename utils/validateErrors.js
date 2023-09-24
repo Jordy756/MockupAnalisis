@@ -13,6 +13,4 @@ const showMessage = (input, errorTypes, errorMessages) => {
     let message = "";
     errorTypes.forEach(error => input.validity[error] && (message = errorMessages[input.id][error]));
     return message;
-
-    console.log()
 };
