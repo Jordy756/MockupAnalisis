@@ -29,10 +29,8 @@
 
             <div class="botonesAC">
                 <div class="input-box">
-                    <div class="componente-relativo">
-                        <input type="text" placeholder="¿Qué deseas encontrar?" class="input-busqueda" required>
+                        <input id="busqueda" type="text" class="input input-busqueda" placeholder="Buscar el nombre de usuario" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
                         <button type="submit" class="boton-busqueda"><i class="bi bi-search"></i></button>
-                    </div>
                     <span class="span-for-input-error"></span>
                 </div>
                 <button class="btn-primary" onclick="abrirModalRegistrar('myModal1')">Nueva usuario</button>
