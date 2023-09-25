@@ -39,15 +39,30 @@
             </select>
 
             <label for="">Fecha de inicio</label>
-            <input type="date" data-format="dd-mm-yyyy" placeholder="fecha de inicio">
+            <input type="date" data-format="dd-mm-yyyy" id="fechaInicio">
 
             <label for="">Fecha de final</label>
-            <input type="date" data-format="dd-mm-yyyy" name="" id="">
+            <input type="date" data-format="dd-mm-yyyy" id="fechaFinal">
 
             <button class="btn-primary">Descargar reporte</button>
 
         </main>
     </div>
 </body>
+
+<script>
+    // Se obtiene una referencia a las fechas
+    const fechaInicioInput = document.getElementById("fechaInicio");
+    const fechaFinalInput = document.getElementById("fechaFinal");
+  
+    // Se obtiene la fecha actual en formato (yyyy-mm-dd)
+    const fechaActual = new Date().toISOString().split("T")[0];
+  
+    // Se establece la fecha mínima para ambos campos de fecha
+    fechaInicioInput.setAttribute("max", fechaActual);
+    fechaFinalInput.setAttribute("max", fechaActual);
+
+    // Error: Tira un día de más. Posible solución: Sincronizar con la hora del server.
+  </script>
 
 </html>

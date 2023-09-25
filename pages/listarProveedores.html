@@ -24,7 +24,10 @@
             <h1>Lista de proveedores</h1>
 
             <div class="botonesAC">
-                <input type="text" placeholder="¿Qué deseas encontrar?">
+                <div class="input-box">
+                    <input id="busqueda" type="text" class="input" placeholder="¿Qué deseas encontrar?" required pattern="[a-zA-Z0-9]+">
+                    <span class="span-for-input-error"></span>
+                </div>
                 <button class="btn-primary" onclick="abrirModalRegistrar('myModal1')">Nuevo proveedor</button>
             </div>
 
@@ -36,10 +39,19 @@
                         <span class="close">&times;</span>
                     </div>
                     <form action="" class="component-vertical">
-                        <input type="text" placeholder="Nombre del proveedor" class="" required>
-                        <input type="text" placeholder="Direccion" required>
-                        <input type="tel" placeholder="Numero de telefono"
-                            oninput="formatPhone(this); validatePhone(this);" required maxlength="9">
+                        <div class="input-box">
+                            <input id="nombre" type="text" class="input" placeholder="Nombre del proveedor" required pattern="[a-zA-Z0-9]+">
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <div class="input-box">
+                            <input id="direction" type="text" class="input" placeholder="Dirección" required pattern="[a-zA-Z0-9]+">
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <div class="input-box">
+                            <input id="telefono" type="text" class="input" placeholder="Número de teléfono" required oninput="formatPhone(this); validatePhone(this);" required maxlength="9">
+                            <span class="span-for-input-error"></span>
+                        </div>
+
                         <button class="btn-primary">Agregar proveedor</button>
                     </form>
                 </div>
@@ -52,10 +64,18 @@
                         <span class="close">&times;</span>
                     </div>
                     <form action="" class="component-vertical">
-                        <input type="text" placeholder="Nombre del proveedor" required>
-                        <input type="text" placeholder="Direccion" required>
-                        <input type="tel" placeholder="Numero de telefono"
-                            oninput="formatPhone(this); validatePhone(this);" required maxlength="9">
+                        <div class="input-box">
+                            <input id="nombre" type="text" class="input" placeholder="Nombre del proveedor" required pattern="[a-zA-Z0-9]+">
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <div class="input-box">
+                            <input id="direction" type="text" class="input" placeholder="Dirección" required pattern="[a-zA-Z0-9]+">
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <div class="input-box">
+                            <input id="telefono" type="text" class="input" placeholder="Número de teléfono" required oninput="formatPhone(this); validatePhone(this);" required maxlength="9">
+                            <span class="span-for-input-error"></span>
+                        </div>
                         <button class="btn-primary">Guardar Cambios</button>
                     </form>
                 </div>
@@ -158,6 +178,7 @@
             </div>
         </main>
     </div>
+    <script type="module" src="../js/validationsListarProveedores.js"></script>
 </body>
 
 </html>
