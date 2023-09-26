@@ -1,94 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-</head>
+    <body>
+        <div class="contenedor-principal">
+            <nav>
+                <i>
+                    <img src="../assets/images/logo.png" alt="" width="80px" height="35px" />
+                </i>
+                <i class="bi bi-box-arrow-right bi-xl"></i>
+            </nav>
 
-<body>
+            <main class="component">
+                <h1>Ingresar suministro</h1>
 
-    <div class="contenedor-principal">
-        <nav>
-            <i>
-                <img src="../assets/images/logo.png" alt="" width="80px" height="35px">
-            </i>
-            <i class="bi bi-box-arrow-right bi-xl"></i>
-        </nav>
+                <form action="" class="component">
+                    <div style="margin-left: 50px">
+                        <input id="codigo" type="text" placeholder="Codigo del suministro" required pattern="[a-zA-Z0-9]+" />
+                        <button type="button" class="btn-secundary">
+                            <i class="bi bi-file-text"></i>
+                        </button>
+                    </div>
 
-        <main class="component">
-            <h1>Ingresar suministro</h1>
+                    <div class="input-box">
+                        <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
+                        <span class="span-for-input-error"></span>
+                    </div>
+                    <div class="input-box">
+                        <input id="grupo" type="text" class="input" placeholder="Grupo" required />
+                        <span class="span-for-input-error"></span>
+                    </div>
 
-            <form action="" class="component">
+                    <div class="input-box">
+                        <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+" />
+                        <span class="span-for-input-error"></span>
+                    </div>
 
+                    <div class="input-box">
+                        <input id="unidadDeMedida" type="text" class="input" placeholder="Unidad de medida" required />
+                        <span class="span-for-input-error"></span>
+                    </div>
 
-                <div style="margin-left: 50px;">
+                    <div class="input-box">
+                        <input id="subgrupo" type="text" class="input" placeholder="Sub grupo" required />
+                        <span class="span-for-input-error"></span>
+                    </div>
 
+                    <div class="input-box">
+                        <input id="marca" type="text" class="input" placeholder="Marca" required />
+                        <span class="span-for-input-error"></span>
+                    </div>
 
-                    <input id="codigo" type="text" placeholder="Codigo del suministro" required pattern="[a-zA-Z0-9]+">
-                    <button type="button" class="btn-secundary">
-                        <i class="bi bi-file-text"></i>
-                    </button>
-                </div>
+                    <div class="input-box">
+                        <input id="valorPorUnidad" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
+                        <span class="span-for-input-error"></span>
+                    </div>
 
+                    <div class="input-box">
+                        <input id="proveedor" type="text" class="input" placeholder="Proveedor" required />
+                        <span class="span-for-input-error"></span>
+                    </div>
 
-                <div class="input-box">
-                    <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required
-                        pattern="[0-9.]+">
-                    <span class="span-for-input-error"></span>
-                </div>
-                <div class="input-box">
-                    <input id="grupo" type="text" class="input" placeholder="Grupo" required>
-                    <span class="span-for-input-error"></span>
-                </div>
+                    <div class="input-box">
+                        <input id="cantidad" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$" />
+                        <span class="span-for-input-error"></span>
+                    </div>
 
-                <div class="input-box">
-                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+">
-                    <span class="span-for-input-error"></span>
-                </div>
-
-                <div class="input-box">
-                    <input id="unidadDeMedida" type="text" class="input" placeholder="Unidad de medida" required>
-                    <span class="span-for-input-error"></span>
-                </div>
-
-                <div class="input-box">
-                    <input id="subgrupo" type="text" class="input" placeholder="Sub grupo" required>
-                    <span class="span-for-input-error"></span>
-                </div>
-
-                <div class="input-box">
-                    <input id="marca" type="text" class="input" placeholder="Marca" required>
-                    <span class="span-for-input-error"></span>
-                </div>
-
-                <div class="input-box">
-                    <input id="valorPorUnidad" type="text" class="input" placeholder="Valor por unidad" required
-                        pattern="[0-9,]+">
-                    <span class="span-for-input-error"></span>
-                </div>
-
-                <div class="input-box">
-                    <input id="proveedor" type="text" class="input" placeholder="Proveedor" required>
-                    <span class="span-for-input-error"></span>
-                </div>
-
-                <div class="input-box">
-                    <input id="cantidad" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$">
-                    <span class="span-for-input-error"></span>
-                </div>
-
-                <button class="btn-primary">Registrar ingreso</button>
-                <button class="btn-primary">Cancelar</button>
-            </form>
-
-        </main>
-    </div>
-    <script type="module" src="../js/validationIngresoSuministro.js"></script>
-</body>
-
+                    <button class="btn-primary">Registrar ingreso</button>
+                    <button class="btn-primary">Cancelar</button>
+                </form>
+            </main>
+        </div>
+        <script type="module" src="../js/validationIngresoSuministro.js"></script>
+    </body>
 </html>
