@@ -4,18 +4,19 @@ const errorTypes = ["valueMissing","patternMismatch"];
 const errorMessages = {
     nombre: {
         valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No debe llevar ningún caracter especial",
+        patternMismatch: "No se permiten caracteres especiales",
     },
     direction: {
         valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No debe llevar ningún caracter especial",
+        patternMismatch: "No se permiten caracteres especiales",
     },
     telefono: {
         valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No debe llevar ningún caracter especial",
+        patternMismatch: "No se permiten caracteres especiales",
     },
     busqueda: {
-        patternMismatch: "No debe llevar ningún caracter especial",
+        patternMismatch: "No se permiten caracteres especiales",
+        valueMissing: "Para buscar es necesario ingresar un nombre",
     },
 };
 

@@ -15,7 +15,7 @@
     <div class="contenedor-principal">
         <nav>
             <i>
-                <img src="./logo.png" alt="" width="80px" height="35px">
+                <img src="../assets/images/logo.png" alt="" width="80px" height="35px">
             </i>
             <i class="bi bi-box-arrow-right bi-xl"></i>
         </nav>
@@ -24,14 +24,12 @@
             <h1>Lista de departamentos</h1>
 
             <div class="botonesAC">
-                <div class="input-box">
-                    <div class="componente-relativo">
-                        <input type="text" placeholder="¿Qué deseas encontrar?" class="input-busqueda" required>
+                <div class="input-box componente-relativo">
+                        <input id="busqueda" type="text" class="input input-busqueda" placeholder="Buscar departamento" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
                         <button type="submit" class="boton-busqueda"><i class="bi bi-search"></i></button>
-                    </div>
                     <span class="span-for-input-error"></span>
                 </div>
-                <button class="btn-primary" onclick="abrirModalRegistrar('myModal1')">Nueva departamento</button>
+                <button class="btn-primary" onclick="abrirModalRegistrar('myModal1')">Nuevo departamento</button>
             </div>
 
             <div id="myModal1" class="modal">
@@ -188,7 +186,7 @@
             </div>
         </main>
     </div>
-    <script type="module" src="../js/validationsListarProveedores.js"></script>
+    <script type="module" src="../js/validationsListarDepartamentos.js"></script>
 </body>
 
 </html>

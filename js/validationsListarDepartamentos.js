@@ -1,20 +1,12 @@
 import { validate } from "../utils/validateErrors.js";
 
-const errorTypes = ["valueMissing","typeMismatch","patternMismatch"];
+const errorTypes = ["valueMissing","patternMismatch"];
 const errorMessages = {
-    email: {
-        valueMissing: "Este campo no puede ir vacío",
-        typeMismatch: "Formato no válido",
-    },
     nombre: {
         valueMissing: "Este campo no puede ir vacío",
         patternMismatch: "No se permiten caracteres especiales",
     },
-    apellido: {
-        valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No se permiten caracteres especiales",
-    },
-    rol: {
+    direction: {
         valueMissing: "Este campo no puede ir vacío",
         patternMismatch: "No se permiten caracteres especiales",
     },

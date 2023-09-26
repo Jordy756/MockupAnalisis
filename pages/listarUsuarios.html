@@ -27,12 +27,10 @@
             <h1>Lista de usuarios</h1>
 
             <div class="botonesAC">
-                <div class="input-box">
-                    <div class="componente-relativo"> <!-- F no funciona, se cae la validacion -->
-                        <input id="busqueda" type="text" class="input input-busqueda"
-                            placeholder="Buscar el nombre de usuario" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
-                        <button type="submit" class="boton-busqueda"><i class="bi bi-search"></i></button>
-                    </div>
+                <div class="input-box componente-relativo">
+                    <input id="busqueda" type="text" class="input input-busqueda"
+                        placeholder="Buscar el nombre de usuario" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
+                    <button type="submit" class="boton-busqueda"><i class="bi bi-search"></i></button>
                     <span class="span-for-input-error"></span>
                 </div>
                 <button class="btn-primary" onclick="abrirModalRegistrar('myModal1')">Nueva usuario</button>
@@ -198,7 +196,7 @@
 
             </script>
 
-            <!-- Sin datos <h1><i class="bi bi-exclamation-diamond"></i>No cuenta con solicitudes</h1> -->
+            <!-- Sin datos <h1><i class="bi bi-exclamation-diamond"></i> No se encontraron resultados para "ejemzcswa"</h1> -->
 
             <table>
                 <thead>
@@ -233,6 +231,7 @@
                 </tbody>
             </table>
 
+
             <script>
                 document.getElementById("btn-eliminar").addEventListener("click", function () {
                     Swal.fire({
@@ -257,6 +256,7 @@
                 <button id="myButton" type="submit" class="btn-secundary"><i class="bi bi-arrow-left"></i></button>
                 <button id="myButton" type="submit" class="btn-secundary"><i class="bi bi-arrow-right"></i></button>
             </div>
+
         </main>
     </div>
     <script type="module" src="../js/validationsListarUsuarios.js"></script>
