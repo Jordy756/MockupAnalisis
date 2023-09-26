@@ -124,8 +124,6 @@
                 </div>
             </div>
 
-            <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/google-libphonenumber/7.3.0/libphonenumber.min.js"></script>
             <script>
                 function abrirModalRegistrar(idModal) {
                     const modal = document.getElementById(idModal);
@@ -151,9 +149,12 @@
 
             </script>
 
-            <!-- Sin datos <h1><i class="bi bi-exclamation-diamond"></i>No cuenta con solicitudes</h1> --> 
+            <div class="no-result">
+                <img src="../assets/images/no-results.png" alt="" width="30px" height="30px">
+                <h1>No se encontro ningun resultado</h1>
+            </div>
 
-            <table>
+            <!-- <table>
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -183,7 +184,7 @@
             <div>
                 <button id="myButton" type="submit" class="btn-secundary"><i class="bi bi-arrow-left"></i></button>
                 <button id="myButton" type="submit" class="btn-secundary"><i class="bi bi-arrow-right"></i></button>
-            </div>
+            </div> -->
         </main>
     </div>
     <script type="module" src="../js/validationsListarDepartamentos.js"></script>
