@@ -24,14 +24,12 @@
             <h1>Lista de unidades</h1>
 
             <div class="botonesAC">
-                <div class="input-box">
-                    <div class="componente-relativo">
-                        <input type="text" placeholder="¿Qué deseas encontrar?" class="input-busqueda" required>
+                <div class="input-box componente-relativo">
+                        <input id="busqueda" type="text" class="input input-busqueda" placeholder="Buscar el nombre del proveedor" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
                         <button type="submit" class="boton-busqueda"><i class="bi bi-search"></i></button>
-                    </div>
                     <span class="span-for-input-error"></span>
                 </div>
-                <button class="btn-primary" onclick="abrirModalRegistrar('myModal1')">Nueva unidad</button>
+                <button class="btn-primary" onclick="abrirModalRegistrar('myModal1')">Nuevo unidad</button>
             </div>
 
             <div id="myModal1" class="modal">

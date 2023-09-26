@@ -17,7 +17,7 @@
     <div class="contenedor-principal">
         <nav>
             <i>
-                <img src="./logo.png" alt="" width="80px" height="35px">
+                <img src="../assets/images/logo.png" alt="" width="80px" height="35px">
             </i>
             <i class="bi bi-box-arrow-right bi-xl"></i>
         </nav>
@@ -33,7 +33,7 @@
                     <option value="">Carlos Duran</option>
                 </select>
                 <div class="componente-relativo">
-                    <input type="text" placeholder="¿Qué deseas encontrar?" class="input-busqueda" required>
+                    <input class="input" type="text" placeholder="¿Qué deseas encontrar?" class="input-busqueda" required>
                     <button type="submit" class="boton-busqueda"><i class="bi bi-search"></i></button>
                 </div>
             </form>
@@ -170,7 +170,7 @@
 
                 <form action="" class="component">
                     <div class="input-box">
-                        <input id="Cantidad" type="text" placeholder="Cantidad del suministro" required
+                        <input id="Cantidad" class="input" type="text" placeholder="Cantidad del suministro" required
                             pattern="[0-9]+" >
                         <span class="span-for-input-error"></span>
                     </div>
@@ -192,49 +192,49 @@
                 </div>
                 <form action="">
                     <div class="input-box">
-                        <input id="codigo" type="text" placeholder="Codigo del suministro" required
-                            pattern="[a-zA-Z0-9]+">
+                        <input id="codigo" class="input" type="text" placeholder="Codigo del suministro" required
+                            pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
                         <span class="span-for-input-error"></span>
                     </div>
                     <div class="input-box">
-                        <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required
+                        <input id="cuentaContable" class="input" type="text" class="input" placeholder="Cuenta contable" required
                             pattern="[0-9.]+">
                         <span class="span-for-input-error"></span>
                     </div>
                     <div class="input-box">
-                        <input id="grupo" type="text" class="input" placeholder="Grupo" required>
+                        <input id="grupo" class="input" type="text" class="input" placeholder="Grupo" required>
                         <span class="span-for-input-error"></span>
                     </div>
 
                     <div class="input-box">
-                        <input id="nombre" type="text" class="input" placeholder="Nombre" required
+                        <input id="nombre" class="input" type="text" class="input" placeholder="Nombre" required
                             pattern="[a-zA-Z0-9]+">
                         <span class="span-for-input-error"></span>
                     </div>
 
                     <div class="input-box">
-                        <input id="unidadDeMedida" type="text" class="input" placeholder="Unidad de medida" required>
+                        <input id="unidadDeMedida" class="input" type="text" class="input" placeholder="Unidad de medida" required>
                         <span class="span-for-input-error"></span>
                     </div>
 
                     <div class="input-box">
-                        <input id="subgrupo" type="text" class="input" placeholder="Sub grupo" required>
+                        <input id="subgrupo" class="input" type="text" class="input" placeholder="Sub grupo" required>
                         <span class="span-for-input-error"></span>
                     </div>
 
                     <div class="input-box">
-                        <input id="marca" type="text" class="input" placeholder="Marca" required>
+                        <input id="marca" class="input" type="text" class="input" placeholder="Marca" required>
                         <span class="span-for-input-error"></span>
                     </div>
 
                     <div class="input-box">
-                        <input id="valorPorUnidad" type="text" class="input" placeholder="Valor por unidad" required
+                        <input id="valorPorUnidad" class="input" type="text" class="input" placeholder="Valor por unidad" required
                             pattern="[0-9,]+">
                         <span class="span-for-input-error"></span>
                     </div>
 
                     <div class="input-box">
-                        <input id="proveedor" type="text" class="input" placeholder="Proveedor" required>
+                        <input id="proveedor" class="input" type="text" class="input" placeholder="Proveedor" required>
                         <span class="span-for-input-error"></span>
                     </div>
 
