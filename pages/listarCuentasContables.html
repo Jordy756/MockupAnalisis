@@ -71,7 +71,7 @@
                                 <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ]+" />
                                 <span class="span-for-input-error"></span>
                             </div>
-                            <button class="btn-primary">Actualizar</button>
+                            <button id="btn-prueba" class="btn-primary" onclick="abrirModalRegistrar('myModal4')">Actualizar</button>
                         </form>
                     </div>
                 </div>
@@ -84,6 +84,19 @@
                         </div>
                         <div>
                             <button class="btn-CRUD btn-aceptar" id="btn-eliminar"><i class="bi bi-check2"></i></button>
+                            <button class="btn-CRUD btn-eliminar" onclick="'cancelar'"><i class="bi bi-x-lg"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="myModal4" class="modal">
+                    <div class="modal-content">
+                        <div class="botonesAC">
+                            <h1>¿Desea actualizar esta cuenta contable?</h1>
+                            <span class="close">&times;</span>
+                        </div>
+                        <div>
+                            <button class="btn-CRUD btn-aceptar" id="btn-actualizar"><i class="bi bi-check2"></i></button>
                             <button class="btn-CRUD btn-eliminar" onclick="'cancelar'"><i class="bi bi-x-lg"></i></button>
                         </div>
                     </div>
@@ -112,6 +125,8 @@
                     function formatPhone(input) {
                         input.value = input.value.replace(/\D/g, "").replace(/(\d{4})(\d{4})/, "$1-$2");
                     }
+                    const btnActualizar = document.querySelector("#btn-prueba");
+                    btnActualizar.addEventListener("click", e => e.preventDefault());
                 </script>
                 <table>
                     <thead>

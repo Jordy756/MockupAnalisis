@@ -1,69 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-</head>
+    <body>
+        <div class="contenedor-principal">
+            <main class="component-vertical">
+                <img src="./assets/images/logo.png" class="login-image-logo" width="30%" height="30%" />
+                <form action="/login" method="post" class="component" id="login-form" novalidate>
+                    <div class="input-box">
+                        <input id="email" class="input" type="email" placeholder="Correo electrónico" required />
+                        <span class="span-for-input-error"></span>
+                    </div>
+                    <div class="input-box">
+                        <input id="password" class="input" type="password" placeholder="Contraseña" required maxlength="10" minlength="8" />
+                        <span class="span-for-input-error"></span>
+                    </div>
+                    <button id="btn-log-in" type="submit" class="btn-primary">Iniciar sesión</button>
+                </form>
+            </main>
+        </div>
 
-<body>
+        <script>
+            const errorMessages = {
+                email: {
+                    valueMissing: "Este campo no puede ir vacío",
+                    typeMismatch: "Formato no válido",
+                },
+                password: {
+                    valueMissing: "Este campo no puede ir vacío",
+                    tooShort: "La contraseña debe tener entre 8 y 10 dígitos",
+                },
+            };
 
-    <div class="contenedor-principal">
-        <main class="component-vertical">
-            <img src="./assets/images/logo.png" class="login-image-logo" width="30%" height="30%" />
-            <form action="/login" method="post" class="component" id="login-form" novalidate>
-                <div class="input-box">
-                    <input id="email" class="input" type="email" placeholder="Correo electrónico" required />
-                    <span class="span-for-input-error"></span>
-                </div>
-                <div class="input-box">
-                    <input id="password" class="input" type="password" placeholder="Contraseña" required maxlength="10"
-                        minlength="8" />
-                    <span class="span-for-input-error"></span>
-                </div>
-                <button id="btn-log-in" type="submit" class="btn-primary">Iniciar sesión</button>
-            </form>
-        </main>
-    </div>
+            const validate = input => {
+                const span = input.parentElement.querySelector(".span-for-input-error");
+                span.textContent = Object.keys(errorMessages[input.id])
+                    .filter(error => input.validity[error])
+                    .map(error => errorMessages[input.id][error])
+                    .join(" ");
+                input.style.borderColor = span.textContent ? "#f41d1d" : "#849a30";
+            };
 
-    <script>
-                const errorMessages = {
-            email: {
-                valueMissing: "Este campo no puede ir vacío",
-                typeMismatch: "Formato no válido",
-            },
-            password: {
-                valueMissing: "Este campo no puede ir vacío",
-                tooShort: "La contraseña debe tener entre 8 y 10 dígitos",
-            },
-        };
+            document.querySelectorAll(".input").forEach(input => input.addEventListener("input", () => validate(input)));
 
-        const validate = (input) => {
-            const span = input.parentElement.querySelector(".span-for-input-error");
-            span.textContent = Object.keys(errorMessages[input.id])
-                .filter((error) => input.validity[error])
-                .map((error) => errorMessages[input.id][error])
-                .join(" ");
-            input.style.borderColor = span.textContent ? "#f41d1d" : "#849a30";
-        };
-
-        document.querySelectorAll(".input").forEach((input) =>
-            input.addEventListener("input", () => validate(input))
-        );
-
-        const form = document.getElementById("login-form");
-        form.addEventListener("submit", (e) => {
-            document.querySelectorAll(".input").forEach(validate);
-            const errorSpans = form.querySelectorAll(".span-for-input-error");
-            if (Array.from(errorSpans).some((span) => span.textContent !== "")) {
-                e.preventDefault();
-            }
-        });
-    </script>
-
-</body>
-
+            const form = document.getElementById("login-form");
+            form.addEventListener("submit", e => {
+                document.querySelectorAll(".input").forEach(validate);
+                const errorSpans = form.querySelectorAll(".span-for-input-error");
+                if (Array.from(errorSpans).some(span => span.textContent !== "")) {
+                    e.preventDefault();
+                }
+            });
+        </script>
+    </body>
 </html>
