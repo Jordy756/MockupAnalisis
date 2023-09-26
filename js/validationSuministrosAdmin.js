@@ -35,7 +35,10 @@ const errorMessages = {
     },
     codigo: {
         valueMissing: "Este campo no puede ir vacío",
-       
+    },
+    busqueda: {
+        patternMismatch: "No se permiten caracteres especiales",
+        valueMissing: "Para buscar es necesario ingresar un nombre",
     },
 };
 
