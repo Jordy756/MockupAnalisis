@@ -16,6 +16,7 @@ const errorMessages = {
     },
     busqueda: {
         patternMismatch: "No debe llevar ningún caracter especial",
+        valueMissing: "Para buscar es necesario ingresar un nombre",
     },
 };
 

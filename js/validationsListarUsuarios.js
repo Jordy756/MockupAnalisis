@@ -20,6 +20,7 @@ const errorMessages = {
     },
     busqueda: {
         patternMismatch: "No se permiten caracteres especiales",
+        valueMissing: "Para buscar es necesario ingresar un nombre",
     },
 };
 
