@@ -31,11 +31,18 @@ const errorMessages = {
     },
     cantidad: {
         valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No debe llevar ningún caracter especial",
+        patternMismatch: "Solo se permite ingresar valores numéricos",
+    },
+    valorPorUnidad: {
+        valueMissing: "Este campo no puede ir vacío",
+        patternMismatch: "Solo se permite ingresar valores numéricos",
     },
     codigo: {
         valueMissing: "Este campo no puede ir vacío",
-       
+    },
+    busqueda: {
+        patternMismatch: "No se permiten caracteres especiales",
+        valueMissing: "Para buscar es necesario ingresar un nombre",
     },
 };
 
