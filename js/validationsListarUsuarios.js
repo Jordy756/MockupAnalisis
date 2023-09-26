@@ -18,6 +18,9 @@ const errorMessages = {
         valueMissing: "Este campo no puede ir vacío",
         patternMismatch: "No se permiten caracteres especiales",
     },
+    busqueda: {
+        patternMismatch: "No se permiten caracteres especiales",
+    },
 };
 
 const inputs = document.querySelectorAll(".input");
