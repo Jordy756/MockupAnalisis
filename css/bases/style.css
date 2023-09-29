@@ -27,9 +27,17 @@ body {
     padding: 0rem 1rem;
 }
 
-.title {
-    font-size: 1.7rem;
+.title, .title-modal {
     font-weight: bold;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.title-modal {
+    font-size: 1.5rem;
 }
 
 .form {

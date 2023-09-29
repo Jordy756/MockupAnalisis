@@ -69,7 +69,9 @@
                                 <button class="table-button button-details" onclick="mostrarModal('myModal1')"><i class="bi bi-eye"></i></button>
                             </td>
                             <td class="body-column">
-                                <button class="table-button button-update" onclick="mostrarModal('update-supply')"><i class="bi bi-pencil"></i></button>
+                                <button class="table-button button-update" onclick="mostrarModal('update-supply')">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
                                 <button id="btn-eliminar" class="table-button button-delete"><i class="bi bi-trash"></i></button>
                             </td>
                         </tr>
@@ -82,7 +84,9 @@
                                 <button class="table-button button-details" onclick="mostrarModal('myModal1')"><i class="bi bi-eye"></i></button>
                             </td>
                             <td class="body-column">
-                                <button class="table-button button-update" onclick="mostrarModal('update-supply')"><i class="bi bi-pencil"></i></button>
+                                <button class="table-button button-update" onclick="mostrarModal('update-supply')">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
                                 <button id="btn-eliminar" class="table-button button-delete"><i class="bi bi-trash"></i></button>
                             </td>
                         </tr>
@@ -97,9 +101,9 @@
                 <div id="new-supply" class="modal">
                     <div class="modal-content">
                         <button class="button-close-modal">&times;</button>
-                        <h1 class="title">Agregar nuevo suministro</h1>
+                        <h2 class="title-modal">Agregar nuevo suministro</h2>
                         <form action="" class="form">
-                            <div class="input-box">
+                            <div class="input-box input-box-with-button">
                                 <input id="codigo" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />
                                 <button type="button" class="button button-secondary"><i class="bi bi-file-text"></i></button>
                             </div>
@@ -150,11 +154,10 @@
                 <div id="update-supply" class="modal">
                     <div class="modal-content">
                         <button class="button-close-modal">&times;</button>
-                        <h1 class="title">Actualizar nuevo suministro</h1>
+                        <h2 class="title-modal">Actualizar suministro</h2¬>
                         <form action="" class="form">
                             <div class="input-box">
                                 <input id="codigo" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />
-                                <button type="button" class="button button-secondary"><i class="bi bi-file-text"></i></button>
                             </div>
                             <div class="input-box">
                                 <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
@@ -193,7 +196,7 @@
                                 <span class="span-for-input-error"></span>
                             </div>
                             <div class="buttons-box">
-                                <button type="button"  class="button button-secondary">Cancelar</button>
+                                <button type="button" class="button button-secondary">Cancelar</button>
                                 <button type="submit" class="button button-primary">Actualizar</button>
                             </div>
                         </form>
