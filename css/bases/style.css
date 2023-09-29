@@ -27,6 +27,14 @@ body {
     padding: 0rem 1rem;
 }
 
+.main-home {
+    padding: 2rem;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 .title, .title-modal {
     font-weight: bold;
 }
@@ -48,6 +56,13 @@ body {
 
 .strong {
     font-weight: bold;
+}
+
+@media screen and (max-width:480px) {
+    .main-home {
+        padding: 1rem;
+        justify-content: center;
+    }
 }
 
 /* 
@@ -92,45 +107,3 @@ body {
     padding: 1rem 0;
 } */
 /* 
-
-.card {
-    width: 180px;
-    height: 150px;
-    background-color: #849a30;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-}
-
-.card h1 {
-    color: white;
-    font-weight: bold;
-}
-
-.card p {
-    color: white;
-    font-weight: 100;
-}
-
-
-
-@media (max-width: 600px) {
-    .modal-content {
-        width: 80%;
-    }
-}
-
-ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-ul {
-    list-style-type: disc;
-    list-style-position: outside;
-    margin: 1rem;
-} */
