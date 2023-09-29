@@ -30,7 +30,7 @@ body {
 .main-home {
     padding: 2rem;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
 }
