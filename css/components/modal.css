@@ -18,6 +18,7 @@
 }
 
 .modal-content {
+    margin-top: 0.7rem;
     position: relative;
     background-color: var(--white-color);
     padding: 2rem;

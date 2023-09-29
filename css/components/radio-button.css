@@ -1,0 +1,22 @@
+.radio-section-box {
+    font-size: 0.9rem;
+}
+
+.radio-section-box-title {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.radio-section-box-elements {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.radio-section-box-elements > * {
+    cursor: pointer;
+}
+
+#departments,
+#units {
+    display: none;
+}
