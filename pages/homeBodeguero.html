@@ -1,50 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <link rel="stylesheet" href="../css/bases/reset.css" />
+        <link rel="stylesheet" href="../css/bases/style.css" />
+        <link rel="stylesheet" href="../css/components/header.css" />
+        <link rel="stylesheet" href="../css/components/card.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-</head>
-
-<body>
-
-    <div class="contenedor-principal">
-        <nav>
-            <i>
-                <img src="./logo.png" alt="" width="80px" height="35px">
-            </i>
-            <i class="bi bi-box-arrow-right bi-xl"></i>
-        </nav>
-
-        <main class="component-horizontal">
-
-            <a href="./suministrosUnidades.html">
-                <div class="card">
-                    <h1>Suministros de la bodega perteneciente</h1>
-                    <p>Lista de suministros de tu unidad</p>
-                </div>
-            </a>
-
-            <a href="./IngresoSuministro.html">
-                <div class="card">
-                    <h1>Ingreso de suministro</h1>
-                    <p>Ingreso de suministro</p>
-                </div>
-            </a>
-
-            <a href="./listarProveedores.html">
-                <div class="card">
-                    <h1>Gestion de proveedores</h1>
-                    <p>Registro, editar, eliminar y ver los diferentes proveedores</p>
-                </div>
-            </a>
-
-        </main>
-    </div>
-</body>
-
+    <body>
+        <div class="main-container">
+            <header class="header">
+                <nav class="nav-header">
+                    <a href="#" class="nav-link"><img src="../assets/images/logo.png" alt="" width="80px" height="50px" /></a>
+                    <a href="#" class="nav-link"><i class="bi bi-box-arrow-right bi-xl"></i></a>
+                </nav>
+            </header>
+            <main class="main-home">
+                <a href="./solicitar.html" class="card-link">
+                    <div class="card">
+                        <h2 class="card-title">Suministros de la bodega perteneciente</h2>
+                        <span class="card-description">Lista de suministros de tu unidad</span>
+                    </div>
+                </a>
+                <a href="./suministrosUnidades.html" class="card-link">
+                    <div class="card">
+                        <h2 class="card-title">Ingreso de suministro</h2>
+                        <span class="card-description"> Ingreso de suministro </span>
+                    </div>
+                </a>
+                <a href="./suministrosUnidades.html" class="card-link">
+                    <div class="card">
+                        <h2 class="card-title">Gestion de proveedores</h2>
+                        <span class="card-description"> Registro, editar y ver los diferentes proveedores </span>
+                    </div>
+                </a>
+            </main>
+        </div>
+    </body>
 </html>
