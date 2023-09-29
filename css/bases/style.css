@@ -46,6 +46,10 @@ body {
     gap: 1rem;
 }
 
+.strong {
+    font-weight: bold;
+}
+
 /* 
 
 .component-vertical {

@@ -1,9 +1,10 @@
 .modal {
+    padding: 5rem;
     display: grid;
     place-items: center;
     position: fixed;
     z-index: 2;
-    left: 0;
+    left: -20rem;
     top: 0;
     width: 0;
     height: 0;
@@ -13,11 +14,14 @@
 }
 
 .modal-active {
+    left: 0;
     width: 100%;
     height: 100%;
 }
 
 .modal-content {
+    display: grid;
+    place-items: center;
     margin-top: 0.7rem;
     position: relative;
     background-color: var(--white-color);
@@ -41,5 +45,25 @@
     &:hover {
         cursor: pointer;
         transform: scale(1.1);
+    }
+}
+
+.modal-main-requests {
+    margin: 1rem 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+@media screen and (max-width:690px) {
+    .modal-main-requests {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal, .modal-content {
+        padding: 1rem;
     }
 }
