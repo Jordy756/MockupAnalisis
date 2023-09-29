@@ -1,4 +1,4 @@
-import { validate } from "../utils/validateErrors.js";
+import { validate } from "../../utils/validateErrors.js";
 
 const errorTypes = ["valueMissing", "patternMismatch"];
 const errorMessages = {

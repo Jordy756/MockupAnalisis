@@ -1,0 +1,51 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-head {
+    background-color: var(--green-color);
+    color: var(--white-color);
+}
+
+.body-row:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.head-column,
+.body-column {
+    text-align: center;
+    padding: 0.5rem 0.7rem;
+    border: 0.0625rem solid black;
+}
+
+.table-button {
+    color: var(--white-color);
+    border: none;
+    border-radius: 0.3125rem;
+    padding: 0.4rem 0.6rem;
+    transition: all 20ms ease-in-out;
+}
+
+.table-button:hover,
+.table-button:active {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.button-delete {
+    background-color: #e60202;
+}
+
+.button-update {
+    background-color: #ffc107;
+}
+
+.button-details {
+    background-color: #0066ff;
+}
+
+.btn-aceptar {
+    background-color: #289a2a;
+}

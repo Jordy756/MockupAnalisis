@@ -1,0 +1,124 @@
+:root {
+    --green-color: #849a30;
+    --button-hover-green-color: #738529;
+    --white-color: #f9f9f9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white-color);
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.main-container {
+    position: relative;
+}
+
+.main {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 0rem 1rem;
+}
+
+.title {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.form {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+/* 
+
+.component-vertical {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.component-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    height: 100%;
+    margin: 1rem 0 0 0;
+}
+
+.no-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: 100%;
+    margin: 1rem 0 0 0;
+} */
+
+/* .component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+} */
+/* 
+
+.card {
+    width: 180px;
+    height: 150px;
+    background-color: #849a30;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.card h1 {
+    color: white;
+    font-weight: bold;
+}
+
+.card p {
+    color: white;
+    font-weight: 100;
+}
+
+
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 80%;
+    }
+}
+
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin: 1rem;
+} */

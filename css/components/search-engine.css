@@ -1,0 +1,21 @@
+.section-search-engine {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.input-box-search-engine {
+    position: relative;
+    width: 15rem;
+}
+
+.button-search-engine {
+    position: absolute;
+    right: 0.3rem;
+    top: 0.3rem;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}

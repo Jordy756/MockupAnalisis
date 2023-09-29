@@ -1,14 +1,14 @@
-import { validate } from "../utils/validateErrors.js";
+import { validate } from "../../utils/validateErrors.js";
 
-const errorTypes = ["valueMissing", "typeMismatch", "tooShort"];
+const errorTypes = ["valueMissing", "patternMismatch"];
 const errorMessages = {
-    email: {
+    codigoSuministro: {
         valueMissing: "Este campo no puede ir vacío",
-        typeMismatch: "Formato no válido",
+        patternMismatch: "Formato no válido",
     },
-    password: {
+    cantidad: {
         valueMissing: "Este campo no puede ir vacío",
-        tooShort: "La contraseña debe tener mínimo 8 y máximo 10 dígitos",
+        patternMismatch: "No debe ingresar caracteres especiales",
     },
 };
 
