@@ -13,11 +13,9 @@ const mostrarMensaje = (titulo, accion, mensaje) => {
 
 document.getElementById("btn-eliminar").addEventListener("click", () => mostrarMensaje("Eliminado", "eliminar", "Se ha eliminado correctamente"));
 
-//  mostrarMensaje("Eliminado", "eliminar", "Se ha eliminado correctamente")
-
-document
-    .getElementById("btn-confirmacion-actualizacion")
-    .addEventListener("click", () => mostrarMensaje("Actualizado", "actualizar", "Se ha actualizado correctamente"));
+// document
+//     .getElementById("btn-confirmacion-actualizacion")
+//     .addEventListener("click", () => mostrarMensaje("Actualizado", "actualizar", "Se ha actualizado correctamente"));
 
 function mostrarModal(id) {
     const modal = document.getElementById(id);
