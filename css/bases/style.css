@@ -35,7 +35,8 @@ body {
     gap: 1rem;
 }
 
-.title, .title-modal {
+.title,
+.title-modal {
     font-weight: bold;
 }
 
@@ -49,7 +50,6 @@ body {
 }
 
 .form {
-    margin-top: 1rem;
     display: grid;
     gap: 1rem;
 }
@@ -58,52 +58,9 @@ body {
     font-weight: bold;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width: 480px) {
     .main-home {
         padding: 1rem;
         justify-content: center;
     }
 }
-
-/* 
-
-.component-vertical {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    height: 100%;
-}
-
-.component-horizontal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 5rem;
-    height: 100%;
-    margin: 1rem 0 0 0;
-}
-
-.no-result {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    height: 100%;
-    margin: 1rem 0 0 0;
-} */
-
-/* .component {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem 0;
-} */
-/* 

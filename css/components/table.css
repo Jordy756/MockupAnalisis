@@ -16,7 +16,7 @@
 .body-column {
     text-align: center;
     padding: 0.5rem 0.7rem;
-    border: 0.0625rem solid black;
+    border: 0.0625rem solid gray;
 }
 
 .table-button {
@@ -24,6 +24,7 @@
     border: none;
     border-radius: 0.3125rem;
     padding: 0.4rem 0.6rem;
+    outline: none;
     transition: all 20ms ease-in-out;
 }
 
@@ -46,6 +47,6 @@
     background-color: #0066ff;
 }
 
-.btn-aceptar {
+.button-accept {
     background-color: #289a2a;
 }

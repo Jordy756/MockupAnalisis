@@ -22,16 +22,17 @@
 .modal-content {
     display: grid;
     place-items: center;
+    gap: 1rem;
     margin-top: 0.7rem;
     position: relative;
     background-color: var(--white-color);
     padding: 2rem;
     border: none;
-    border-radius: .3125rem;
+    border-radius: 0.3125rem;
 }
 
 .button-close-modal {
-    padding: 0.15rem 0.5rem;
+    padding: 0.2rem 0.5rem;
     position: absolute;
     top: -0.5rem;
     right: -0.5rem;
@@ -48,22 +49,28 @@
     }
 }
 
+.modal-main {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+}
+
 .modal-main-requests {
-    margin: 1rem 0rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
 }
 
-@media screen and (max-width:690px) {
+@media screen and (max-width: 690px) {
     .modal-main-requests {
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .modal, .modal-content {
+    .modal,
+    .modal-content {
         padding: 1rem;
     }
 }
