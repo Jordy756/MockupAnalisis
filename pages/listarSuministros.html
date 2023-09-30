@@ -48,67 +48,68 @@
                         <button type="submit" class="button-search-engine"><img src="../assets/icons/search.svg" alt="Buscar" /></button>
                     </form>
                 </section>
-
-                <table class="table">
-                    <thead class="table-head">
-                        <tr class="head-row">
-                            <th class="head-column">Código</th>
-                            <th class="head-column">Nombre</th>
-                            <th class="head-column">Marca</th>
-                            <th class="head-column">Cantidad</th>
-                            <th class="head-column">Detalles</th>
-                            <th class="head-column">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-body">
-                        <tr class="body-row">
-                            <td class="body-column">INTA001</td>
-                            <td class="body-column">Nombre1</td>
-                            <td class="body-column">Marcar1</td>
-                            <td class="body-column">2</td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <button class="table-button button-details" onclick="mostrarModal('myModal1')">
-                                        <img src="../assets/icons/eye.svg" alt="detalles" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <button class="table-button button-update" onclick="mostrarModal('update-supply')">
-                                        <img src="../assets/icons/pencil.svg" alt="Editar" />
-                                    </button>
-                                    <button id="btn-eliminar" class="table-button button-delete">
-                                        <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="body-row">
-                            <td class="body-column">INTA0002</td>
-                            <td class="body-column">Nombre1</td>
-                            <td class="body-column">Marca2</td>
-                            <td class="body-column">5</td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <button class="table-button button-details" onclick="mostrarModal('myModal1')">
-                                        <img src="../assets/icons/eye.svg" alt="detalles" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <button class="table-button button-update" onclick="mostrarModal('update-supply')">
-                                        <img src="../assets/icons/pencil.svg" alt="Editar" />
-                                    </button>
-                                    <button id="btn-eliminar" class="table-button button-delete">
-                                        <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <section class="table-container">
+                    <table class="table">
+                        <thead class="table-head">
+                            <tr class="head-row">
+                                <th class="head-column sticky-column">Código</th>
+                                <th class="head-column">Nombre</th>
+                                <th class="head-column">Marca</th>
+                                <th class="head-column">Cantidad</th>
+                                <th class="head-column">Detalles</th>
+                                <th class="head-column">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">INTA001</td>
+                                <td class="body-column">Nombre1</td>
+                                <td class="body-column">Marcar1</td>
+                                <td class="body-column">2</td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-details" onclick="mostrarModal('myModal1')">
+                                            <img src="../assets/icons/eye.svg" alt="detalles" />
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-update" onclick="mostrarModal('update-supply')">
+                                            <img src="../assets/icons/pencil.svg" alt="Editar" />
+                                        </button>
+                                        <button id="btn-eliminar" class="table-button button-delete">
+                                            <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">INTA0002</td>
+                                <td class="body-column">Nombre1</td>
+                                <td class="body-column">Marca2</td>
+                                <td class="body-column">5</td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-details" onclick="mostrarModal('myModal1')">
+                                            <img src="../assets/icons/eye.svg" alt="detalles" />
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-update" onclick="mostrarModal('update-supply')">
+                                            <img src="../assets/icons/pencil.svg" alt="Editar" />
+                                        </button>
+                                        <button id="btn-eliminar" class="table-button button-delete">
+                                            <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
                 <div>
                     <button id="previous-button" type="submit" class="button button-secondary pagination-button">
                         <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
@@ -126,7 +127,7 @@
                         <form action="" class="form">
                             <div class="input-box input-box-with-button">
                                 <input id="codigo" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />
-                                <button type="button" class="button button-secondary"> <img src="../assets/icons/file.svg" alt="Rellenar"></button>
+                                <button type="button" class="button button-secondary"><img src="../assets/icons/file.svg" alt="Rellenar" /></button>
                             </div>
                             <div class="input-box">
                                 <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />

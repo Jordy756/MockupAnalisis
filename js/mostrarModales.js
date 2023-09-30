@@ -22,7 +22,7 @@ function mostrarModal(id) {
     const cerrar = modal.querySelector(".button-close-modal");
     modal.classList.add("modal-active");
     cerrar.addEventListener("click", () => modal.classList.remove("modal-active"));
-    window.addEventListener("click", evento => evento.target == modal && modal.classList.remove("modal-active"));
+    // window.addEventListener("click", evento => evento.target == modal && modal.classList.remove("modal-active"));
 }
 
 // No se para que es, aún

@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="../css/buttons.css" />
         <link rel="stylesheet" href="../css/components/input.css" />
         <link rel="stylesheet" href="../css/components/table.css" />
+        <link rel="stylesheet" href="../css/make-request.css" />
         <link rel="stylesheet" href="../css/components/modal.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     </head>
     <body>
         <div class="main-container">
@@ -22,100 +22,120 @@
                     <a href="#" class="nav-link"><i class="bi bi-box-arrow-right bi-xl"></i></a>
                 </nav>
             </header>
-            <main class="main">
+            <main class="main-make-request">
                 <h1 class="title">Formulario de solicitud</h1>
-                <section class="section-search-engine">
-                    <form class="input-box-search-engine">
-                        <input
-                            id="busqueda"
-                            type="text"
-                            class="input"
-                            placeholder="¿Qué deseas encontrar?"
-                            required
-                            pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
-                        />
-                        <span class="span-for-input-error"></span>
-                        <button type="submit" class="button-search-engine"><i class="bi bi-search"></i></button>
+                <section class="make-request-section">
+                    <section class="section-search-engine">
+                        <form class="input-box-search-engine">
+                            <input
+                                id="busqueda"
+                                type="text"
+                                class="input"
+                                placeholder="¿Qué deseas encontrar?"
+                                required
+                                pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                            <button type="submit" class="button-search-engine"><img src="../assets/icons/search.svg" alt="Buscar" /></button>
+                        </form>
+                    </section>
+                    <table class="table request-table">
+                        <thead class="table-head">
+                            <tr class="head-row">
+                                <th class="head-column">Código</th>
+                                <th class="head-column">Descripcion</th>
+                                <th class="head-column">Cantidad</th>
+                                <th class="head-column">Detalles</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr class="body-row">
+                                <td class="body-column">INTA512</td>
+                                <td class="body-column">Toner jsndknaskdn akdsjnkasjnd kajsdnkasjnd kjasdnkjasnd</td>
+                                <td class="body-column">3</td>
+                                <td class="body-column">
+                                    <button class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button id="previous-button" type="submit" class="button button-secondary pagination-button">
+                            <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
+                        </button>
+                        <button id="next-button" type="submit" class="button button-secondary pagination-button">
+                            <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
+                        </button>
+                    </div>
+                </section>
+                <section class="make-request-section">
+                    <h2 class="title-modal">Lista de suministros en la solicitud</h2>
+                    <form action="" class="form">
+                        <div class="input-box">
+                            <input
+                                id="codigoSuministro"
+                                type="text"
+                                class="input"
+                                placeholder="Código del Suministro"
+                                required
+                                pattern="[a-zA-Z0-9]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <div class="input-box">
+                            <input id="cantidad" type="text" class="input" min="1" placeholder="Ingrese la cantidad" required pattern="^[0-9]+$" />
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <button id="myButton" type="submit" class="button button-primary">Anadir</button>
+                    </form>
+
+                    <table class="table">
+                        <thead class="table-head">
+                            <tr class="head-row">
+                                <th class="head-column sticky-column">Código</th>
+                                <th class="head-column">Descripcion</th>
+                                <th class="head-column">Cantidad</th>
+                                <th class="head-column">Detalles</th>
+                                <th class="head-column">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">INTA512</td>
+                                <td class="body-column">Toner jsndknaskdn akdsjnkasjnd kajsdnkasjnd kjasdnkjasndxvcvxvxcvxc</td>
+                                <td class="body-column">3</td>
+                                <td class="body-column">
+                                    <button class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                    </button>
+                                </td>
+                                <td class="body-column">
+                                    <button id="btn-eliminar" class="table-button button-delete">
+                                        <img src="../assets/icons/trash.svg" alt="Detalles" />
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div>
+                        <button id="previous-button" type="submit" class="button button-secondary pagination-button">
+                            <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
+                        </button>
+                        <button id="next-button" type="submit" class="button button-secondary pagination-button">
+                            <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
+                        </button>
+                    </div>
+
+                    
+
+                    <form action="" class="form">
+                        <textarea placeholder="Descripcion de la necesidad" class="textarea" required></textarea>
+                        <button id="myButton" type="submit" class="button button-primary">Enviar</button>
                     </form>
                 </section>
-
-                <table class="table">
-                    <thead class="table-head">
-                        <tr class="head-row">
-                            <th class="head-column">Código</th>
-                            <th class="head-column">Descripcion</th>
-                            <th class="head-column">Cantidad</th>
-                            <th class="head-column">Detalles</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-body">
-                        <tr class="body-row">
-                            <td class="body-column">INTA512</td>
-                            <td class="body-column">Toner</td>
-                            <td class="body-column">3</td>
-                            <td class="body-column">
-                                <button class="table-button button-details" onclick="mostrarModal('supply-details')">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div>
-                    <button id="previous-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-left"></i></button>
-                    <button id="next-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-right"></i></button>
-                </div>
-
-                <h2 class="title-modal">Lista de suministros en la solicitud</h2>
-                <form action="" class="form">
-                    <div class="input-box">
-                        <input id="codigoSuministro" type="text" class="input" placeholder="Código del Suministro" required pattern="[a-zA-Z0-9]+" />
-                        <span class="span-for-input-error"></span>
-                    </div>
-                    <div class="input-box">
-                        <input id="cantidad" type="text" class="input" min="1" placeholder="Ingrese la cantidad" required pattern="^[0-9]+$" />
-                        <span class="span-for-input-error"></span>
-                    </div>
-                    <button id="myButton" type="submit" class="button button-primary">Anadir</button>
-                </form>
-
-                <table class="table">
-                    <thead class="table-head">
-                        <tr class="head-row">
-                            <th class="head-column">Código</th>
-                            <th class="head-column">Descripcion</th>
-                            <th class="head-column">Cantidad</th>
-                            <th class="head-column">Detalles</th>
-                            <th class="head-column">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-body">
-                        <tr class="body-row">
-                            <td class="body-column">INTA512</td>
-                            <td class="body-column">Toner</td>
-                            <td class="body-column">3</td>
-                            <td class="body-column">
-                                <button class="table-button button-details" onclick="mostrarModal('supply-details')">
-                                    <i class="bi bi-eye"></i>
-                                </button>
-                            </td>
-                            <td class="body-column">
-                                <button id="btn-eliminar" class="table-button button-delete"><i class="bi bi-trash"></i></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div>
-                    <button id="previous-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-left"></i></button>
-                    <button id="next-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-right"></i></button>
-                </div>
-
-                <form action="" class="form">
-                    <textarea placeholder="Descripcion de la necesidad" class="textarea"  required></textarea>
-                    <button id="myButton" type="submit" class="button button-primary">Enviar</button>
-                </form>
 
                 <!-- MODALS -->
                 <div id="supply-details" class="modal">

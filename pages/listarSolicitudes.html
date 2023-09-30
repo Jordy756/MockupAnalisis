@@ -12,14 +12,13 @@
         <link rel="stylesheet" href="../css/components/input.css" />
         <link rel="stylesheet" href="../css/components/table.css" />
         <link rel="stylesheet" href="../css/components/modal.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     </head>
     <body>
         <div class="main-container">
             <header class="header">
                 <nav class="nav-header">
                     <a href="#" class="nav-link"><img src="../assets/images/logo.webp" alt="" width="80px" height="50px" /></a>
-                    <a href="#" class="nav-link"><i class="bi bi-box-arrow-right bi-xl"></i></a>
+                    <a href="#" class="nav-link"><img src="../assets/icons/logout.svg" alt="Logout" /></a>
                 </nav>
             </header>
             <main class="main">
@@ -29,37 +28,66 @@
                     <form class="input-box-search-engine">
                         <input id="busqueda" type="text" class="input" placeholder="Buscar solicitud" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                         <span class="span-for-input-error"></span>
-                        <button type="submit" class="button-search-engine"><i class="bi bi-search"></i></button>
+                        <button type="submit" class="button-search-engine"><img src="../assets/icons/search.svg" alt="Buscar" /></button>
                     </form>
                 </section>
-                <table class="table">
-                    <thead class="table-head">
-                        <tr class="head-row">
-                            <th class="head-column">Descripcion</th>
-                            <th class="head-column">Estado</th>
-                            <th class="head-column">Detalles</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-body">
-                        <tr class="body-row">
-                            <td class="body-column">Agenda</td>
-                            <td class="body-column"><i class="bi bi-check2"></i></td>
-                            <td class="body-column">
-                                <button class="table-button button-details" onclick="mostrarModal('details')"><i class="bi bi-eye"></i></button>
-                            </td>
-                        </tr>
-                        <tr class="body-row">
-                            <td class="body-column">Toner</td>
-                            <td class="body-column"><i class="bi bi-check2"></i></td>
-                            <td class="body-column">
-                                <button class="table-button button-details" onclick="mostrarModal('details')"><i class="bi bi-eye"></i></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <section class="table-container">
+                    <table class="table">
+                        <thead class="table-head">
+                            <tr class="head-row">
+                                <th class="head-column sticky-column">Nombre</th>
+                                <th class="head-column sticky-column">Marca</th>
+                                <th class="head-column">Estado</th>
+                                <th class="head-column">Detalles</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">Agenda</td>
+                                <td class="body-column">Patito</td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-accept">
+                                            <img src="../assets/icons/check.svg" alt="Aceptada" />
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-details" onclick="mostrarModal('details')">
+                                            <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">Toner</td>
+                                <td class="body-column">Patito2</td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-accept">
+                                            <img src="../assets/icons/check.svg" alt="Aceptada" />
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-details" onclick="mostrarModal('details')">
+                                            <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
                 <div>
-                    <button id="previous-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-left"></i></button>
-                    <button id="next-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-right"></i></button>
+                    <button id="previous-button" type="submit" class="button button-secondary pagination-button">
+                        <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
+                    </button>
+                    <button id="next-button" type="submit" class="button button-secondary pagination-button">
+                        <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
+                    </button>
                 </div>
 
                 <!-- MODALS -->

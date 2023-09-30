@@ -1,3 +1,8 @@
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
 .table {
     border-collapse: collapse;
     width: 100%;
@@ -17,6 +22,14 @@
     text-align: center;
     padding: 0.5rem 0.7rem;
     border: 0.15rem solid var(--green-color);
+}
+
+.sticky-column {
+    position: sticky;
+    left: -2px;
+    z-index: 1;
+    color: var(--white-color);
+    background-color: var(--green-color);
 }
 
 .actions {

@@ -33,72 +33,74 @@
                         <button type="submit" class="button-search-engine"><img src="../assets/icons/search.svg" alt="Buscar" /></button>
                     </form>
                 </section>
-                <table class="table">
-                    <thead class="table-head">
-                        <tr class="head-row">
-                            <th class="head-column">Nombre</th>
-                            <th class="head-column">Apellido</th>
-                            <th class="head-column">Email</th>
-                            <th class="head-column">Rol</th>
-                            <th class="head-column">Sección</th>
-                            <th class="head-column">Acciones</th>
-                            <th class="head-column">Historial</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-body">
-                        <tr class="body-row">
-                            <td class="body-column">Daylan</td>
-                            <td class="body-column">Arias</td>
-                            <td class="body-column">ejemplo@ejem.com</td>
-                            <td class="body-column">Usuario</td>
-                            <td class="body-column">Unidad: Carlos Duran</td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <button class="table-button button-update" onclick="mostrarModal('update-user')">
-                                        <img src="../assets/icons/pencil.svg" alt="Editar" />
-                                    </button>
-                                    <button id="btn-eliminar" class="table-button button-delete">
-                                        <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <a class="table-button button-details" href="./listarHistorial.html">
-                                        <img src="../assets/icons/eye.svg" alt="detalles" />
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="body-row">
-                            <td class="body-column">Jordy</td>
-                            <td class="body-column">Castro</td>
-                            <td class="body-column">jordy@ejem.com</td>
-                            <td class="body-column">Admin</td>
-                            <td class="body-column">Departamento: Laboratorios</td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <button class="table-button button-update" onclick="mostrarModal('update-user')">
-                                        <img src="../assets/icons/pencil.svg" alt="Editar" />
-                                    </button>
-                                    <button id="btn-eliminar" class="table-button button-delete">
-                                        <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <a class="table-button button-details" href="./listarHistorial.html">
-                                        <img src="../assets/icons/eye.svg" alt="detalles" />
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <section class="table-container">
+                    <table class="table">
+                        <thead class="table-head">
+                            <tr class="head-row">
+                                <th class="head-column sticky-column">Nombre</th>
+                                <th class="head-column">Apellido</th>
+                                <th class="head-column">Email</th>
+                                <th class="head-column">Rol</th>
+                                <th class="head-column">Sección</th>
+                                <th class="head-column">Acciones</th>
+                                <th class="head-column">Historial</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">Daylan</td>
+                                <td class="body-column">Arias</td>
+                                <td class="body-column">ejemplo@ejem.com</td>
+                                <td class="body-column">Usuario</td>
+                                <td class="body-column">Unidad: Carlos Duran</td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-update" onclick="mostrarModal('update-user')">
+                                            <img src="../assets/icons/pencil.svg" alt="Editar" />
+                                        </button>
+                                        <button id="btn-eliminar" class="table-button button-delete">
+                                            <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <a class="table-button button-details" href="./listarHistorial.html">
+                                            <img src="../assets/icons/eye.svg" alt="detalles" />
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">Jordy</td>
+                                <td class="body-column">Castro</td>
+                                <td class="body-column">jordy@ejem.com</td>
+                                <td class="body-column">Admin</td>
+                                <td class="body-column">Departamento: Laboratorios</td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-update" onclick="mostrarModal('update-user')">
+                                            <img src="../assets/icons/pencil.svg" alt="Editar" />
+                                        </button>
+                                        <button id="btn-eliminar" class="table-button button-delete">
+                                            <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <a class="table-button button-details" href="./listarHistorial.html">
+                                            <img src="../assets/icons/eye.svg" alt="detalles" />
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
                 <div>
                     <button id="previous-button" type="submit" class="button button-secondary pagination-button">
-                        <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda"/>
+                        <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
                     </button>
                     <button id="next-button" type="submit" class="button button-secondary pagination-button">
                         <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
