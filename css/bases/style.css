@@ -41,8 +41,9 @@ body {
 }
 
 .title {
+    width: 100%;
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .title-modal {

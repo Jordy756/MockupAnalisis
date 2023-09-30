@@ -9,23 +9,32 @@
 }
 
 .body-row:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: var(--white-color);
 }
 
 .head-column,
 .body-column {
     text-align: center;
     padding: 0.5rem 0.7rem;
-    border: 0.0625rem solid gray;
+    border: 0.15rem solid var(--green-color);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .table-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--white-color);
     border: none;
+    padding: 0.2rem;
     border-radius: 0.3125rem;
-    padding: 0.4rem 0.6rem;
-    outline: none;
-    transition: all 20ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 .table-button:hover,

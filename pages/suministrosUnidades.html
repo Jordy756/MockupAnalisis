@@ -3,116 +3,209 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="../css/reset.css" />
-        <link rel="stylesheet" href="../css/style.css" />
+        <title>Suministros</title>
+        <link rel="stylesheet" href="../css/bases/reset.css" />
+        <link rel="stylesheet" href="../css/bases/style.css" />
+        <link rel="stylesheet" href="../css/components/header.css" />
+        <link rel="stylesheet" href="../css/components/select.css" />
+        <link rel="stylesheet" href="../css/components/search-engine.css" />
+        <link rel="stylesheet" href="../css/buttons.css" />
+        <link rel="stylesheet" href="../css/components/input.css" />
+        <link rel="stylesheet" href="../css/components/table.css" />
+        <link rel="stylesheet" href="../css/components/modal.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     </head>
-
     <body>
-        <div class="contenedor-principal">
-            <nav>
-                <i>
-                    <img src="./logo.png" alt="" width="80px" height="35px" />
-                </i>
-                <i class="bi bi-box-arrow-right bi-xl"></i>
-            </nav>
+        <div class="main-container">
+            <header class="header">
+                <nav class="nav-header">
+                    <a href="#" class="nav-link"><img src="../assets/images/logo.webp" alt="" width="80px" height="50px" /></a>
+                    <a href="#" class="nav-link"><i class="bi bi-box-arrow-right bi-xl"></i></a>
+                </nav>
+            </header>
+            <main class="main">
+                <h1 class="title">Suministros</h1>
+                <select class="select" name="" id="">
+                    <option value="" selected disabled>Selecciona una unidad</option>
+                    <option value="">La Managua</option>
+                    <option value="">Los diamantes</option>
+                    <option value="">Carlos Duran</option>
+                </select>
 
-            <main class="component">
-                <h1>Suministros de las unidades</h1>
+                <section class="section-search-engine">
+                    <form class="input-box-search-engine">
+                        <button class="button button-primary" onclick="mostrarModal('new-supply')">Nuevo suministro</button>
+                        <input
+                            id="busqueda"
+                            type="text"
+                            class="input"
+                            placeholder="Buscar suministro"
+                            required
+                            pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                        />
+                        <span class="span-for-input-error"></span>
+                        <button type="submit" class="button-search-engine"><i class="bi bi-search"></i></button>
+                    </form>
+                </section>
 
-                <form action="" class="component">
-                    <select name="" id="">
-                        <option value="" selected disabled>Selecciona una unidad</option>
-                        <option value="">La Managua</option>
-                        <option value="">Los diamantes</option>
-                        <option value="">Carlos Duran</option>
-                    </select>
-                    <div class="componente-relativo">
-                        <input type="text" placeholder="¿Qué deseas encontrar?" class="input-busqueda" required />
-                        <button type="submit" class="boton-busqueda"><i class="bi bi-search"></i></button>
-                    </div>
-                </form>
-
-                <script>
-                    function abrirModal(idModal) {
-                        const modal = document.getElementById(idModal);
-
-                        const cerrar = modal.querySelector(".close");
-
-                        modal.style.display = "block";
-
-                        cerrar.addEventListener("click", () => {
-                            modal.style.display = "none";
-                        });
-
-                        window.addEventListener("click", evento => {
-                            if (evento.target == modal) {
-                                modal.style.display = "none";
-                            }
-                        });
-                    }
-                </script>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Descripcion</th>
-                            <th>Cantidad</th>
-                            <th>Detalles</th>
+                <table class="table">
+                    <thead class="table-head">
+                        <tr class="head-row">
+                            <th class="head-column">Código</th>
+                            <th class="head-column">Nombre</th>
+                            <th class="head-column">Marca</th>
+                            <th class="head-column">Cantidad</th>
+                            <th class="head-column">Detalles</th>
+                            <th class="head-column">Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Lapicero</td>
-                            <td>3</td>
-                            <td>
-                                <button class="btn-CRUD btn-detalles" onclick="abrirModal('myModal1')"><i class="bi bi-eye"></i></button>
+                    <tbody class="table-body">
+                        <tr class="body-row">
+                            <td class="body-column">INTA001</td>
+                            <td class="body-column">Nombre1</td>
+                            <td class="body-column">Marcar1</td>
+                            <td class="body-column">2</td>
+                            <td class="body-column">
+                                <button class="table-button button-details" onclick="mostrarModal('myModal1')"><i class="bi bi-eye"></i></button>
+                            </td>
+                            <td class="body-column">
+                                <button class="table-button button-update" onclick="mostrarModal('update-supply')">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button id="btn-eliminar" class="table-button button-delete"><i class="bi bi-trash"></i></button>
                             </td>
                         </tr>
-                        <tr>
-                            <td>Toner</td>
-                            <td>3</td>
-                            <td>
-                                <button class="btn-CRUD btn-detalles" onclick="abrirModal('myModal1')"><i class="bi bi-eye"></i></button>
+                        <tr class="body-row">
+                            <td class="body-column">INTA0002</td>
+                            <td class="body-column">Nombre1</td>
+                            <td class="body-column">Marca2</td>
+                            <td class="body-column">5</td>
+                            <td class="body-column">
+                                <button class="table-button button-details" onclick="mostrarModal('myModal1')"><i class="bi bi-eye"></i></button>
                             </td>
-                        </tr>
-
-                        <tr>
-                            <td>Toner</td>
-                            <td>3</td>
-                            <td>
-                                <button class="btn-CRUD btn-detalles" onclick="abrirModal('myModal1')"><i class="bi bi-eye"></i></button>
+                            <td class="body-column">
+                                <button class="table-button button-update" onclick="mostrarModal('update-supply')">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button id="btn-eliminar" class="table-button button-delete"><i class="bi bi-trash"></i></button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-
                 <div>
-                    <button id="myButton" type="submit" class="btn-secundary"><i class="bi bi-arrow-left"></i></button>
-                    <button id="myButton" type="submit" class="btn-secundary"><i class="bi bi-arrow-right"></i></button>
+                    <button id="previous-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-left"></i></button>
+                    <button id="next-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-right"></i></button>
+                </div>
+
+                <!-- MODALS -->
+                <div id="new-supply" class="modal">
+                    <div class="modal-content">
+                        <button class="button-close-modal">&times;</button>
+                        <h2 class="title-modal">Agregar nuevo suministro</h2>
+                        <form action="" class="form">
+                            <div class="input-box input-box-with-button">
+                                <input id="codigo" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />
+                                <button type="button" class="button button-secondary"><i class="bi bi-file-text"></i></button>
+                            </div>
+                            <div class="input-box">
+                                <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="grupo" type="text" class="input" placeholder="Grupo" required />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+" />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="unidadDeMedida" type="text" class="input" placeholder="Unidad de medida" required />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="subgrupo" type="text" class="input" placeholder="Sub grupo" required />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="marca" type="text" class="input" placeholder="Marca" required />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="valorPorUnidad" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="proveedor" type="text" class="input" placeholder="Proveedor" required />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="cantidad" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$" />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="buttons-box">
+                                <button type="button" class="button button-secondary">Cancelar</button>
+                                <button type="submit" class="button button-primary">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="update-supply" class="modal">
+                    <div class="modal-content">
+                        <button class="button-close-modal">&times;</button>
+                        <h2 class="title-modal">Actualizar suministro</h2>
+                        <form action="" class="form">
+                            <div class="input-box">
+                                <input id="codigo" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />
+                            </div>
+                            <div class="input-box">
+                                <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="grupo" type="text" class="input" placeholder="Grupo" required />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+" />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="unidadDeMedida" type="text" class="input" placeholder="Unidad de medida" required />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="subgrupo" type="text" class="input" placeholder="Sub grupo" required />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="marca" type="text" class="input" placeholder="Marca" required />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="valorPorUnidad" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="proveedor" type="text" class="input" placeholder="Proveedor" required />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="input-box">
+                                <input id="cantidad" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$" />
+                                <span class="span-for-input-error"></span>
+                            </div>
+                            <div class="buttons-box">
+                                <button type="button" class="button button-secondary">Cancelar</button>
+                                <button type="submit" class="button button-primary">Actualizar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </main>
-
-            <div id="myModal1" class="modal">
-                <div class="modal-content">
-                    <div class="botonesAC">
-                        <header>Detalles de Suministro</header>
-                        <span class="close">&times;</span>
-                    </div>
-                    <ul>
-                        <li><strong>Código del Suministro: </strong>INTA512</li>
-                        <li><strong>Cuenta contable: </strong>xxx</li>
-                        <li><strong>Grupo: </strong>xxx</li>
-                        <li><strong>Nombre: </strong>Toner</li>
-                        <li><strong>Unidad de medida: </strong>kg</li>
-                        <li><strong>Sub grupo: </strong>xxx</li>
-                        <li><strong>Marca: </strong>xxx</li>
-                        <li><strong>Valor por unidad: </strong>2500.00</li>
-                        <li><strong>Proveedor: </strong>xxx</li>
-                    </ul>
-                </div>
-            </div>
         </div>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/google-libphonenumber/7.3.0/libphonenumber.min.js"></script> -->
+        <script src="../js/libraries/swetalert.js"></script>
+        <script src="../js/mostrarModales.js"></script>
     </body>
 </html>

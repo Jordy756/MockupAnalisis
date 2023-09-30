@@ -13,26 +13,28 @@
         <link rel="stylesheet" href="../css/components/input.css" />
         <link rel="stylesheet" href="../css/components/table.css" />
         <link rel="stylesheet" href="../css/components/modal.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     </head>
     <body>
         <div class="main-container">
             <header class="header">
                 <nav class="nav-header">
                     <a href="#" class="nav-link"><img src="../assets/images/logo.webp" alt="" width="80px" height="50px" /></a>
-                    <a href="#" class="nav-link"><i class="bi bi-box-arrow-right bi-xl"></i></a>
+                    <a href="#" class="nav-link"><img src="../assets/icons/logout.svg" alt="Logout" /></a>
                 </nav>
             </header>
             <main class="main">
                 <h1 class="title">Suministros</h1>
-                <select class="select" name="" id="">
-                    <option value="" selected disabled>Selecciona una unidad</option>
-                    <option value="">La Managua</option>
-                    <option value="">Los diamantes</option>
-                    <option value="">Carlos Duran</option>
-                </select>
+                <div class="input-box">
+                    <select class="select" name="" id="">
+                        <option value="" selected disabled>Selecciona una unidad</option>
+                        <option value="">La Managua</option>
+                        <option value="">Los diamantes</option>
+                        <option value="">Carlos Duran</option>
+                    </select>
+                </div>
 
                 <section class="section-search-engine">
+                    <button class="button button-primary" onclick="mostrarModal('new-supply')">Nuevo suministro</button>
                     <form class="input-box-search-engine">
                         <input
                             id="busqueda"
@@ -43,9 +45,8 @@
                             pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
                         />
                         <span class="span-for-input-error"></span>
-                        <button type="submit" class="button-search-engine"><i class="bi bi-search"></i></button>
+                        <button type="submit" class="button-search-engine"><img src="../assets/icons/search.svg" alt="Buscar" /></button>
                     </form>
-                    <button class="button button-primary" onclick="mostrarModal('new-supply')">Nuevo suministro</button>
                 </section>
 
                 <table class="table">
@@ -66,13 +67,21 @@
                             <td class="body-column">Marcar1</td>
                             <td class="body-column">2</td>
                             <td class="body-column">
-                                <button class="table-button button-details" onclick="mostrarModal('myModal1')"><i class="bi bi-eye"></i></button>
+                                <div class="actions">
+                                    <button class="table-button button-details" onclick="mostrarModal('myModal1')">
+                                        <img src="../assets/icons/eye.svg" alt="detalles" />
+                                    </button>
+                                </div>
                             </td>
                             <td class="body-column">
-                                <button class="table-button button-update" onclick="mostrarModal('update-supply')">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button id="btn-eliminar" class="table-button button-delete"><i class="bi bi-trash"></i></button>
+                                <div class="actions">
+                                    <button class="table-button button-update" onclick="mostrarModal('update-supply')">
+                                        <img src="../assets/icons/pencil.svg" alt="Editar" />
+                                    </button>
+                                    <button id="btn-eliminar" class="table-button button-delete">
+                                        <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                         <tr class="body-row">
@@ -81,20 +90,32 @@
                             <td class="body-column">Marca2</td>
                             <td class="body-column">5</td>
                             <td class="body-column">
-                                <button class="table-button button-details" onclick="mostrarModal('myModal1')"><i class="bi bi-eye"></i></button>
+                                <div class="actions">
+                                    <button class="table-button button-details" onclick="mostrarModal('myModal1')">
+                                        <img src="../assets/icons/eye.svg" alt="detalles" />
+                                    </button>
+                                </div>
                             </td>
                             <td class="body-column">
-                                <button class="table-button button-update" onclick="mostrarModal('update-supply')">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button id="btn-eliminar" class="table-button button-delete"><i class="bi bi-trash"></i></button>
+                                <div class="actions">
+                                    <button class="table-button button-update" onclick="mostrarModal('update-supply')">
+                                        <img src="../assets/icons/pencil.svg" alt="Editar" />
+                                    </button>
+                                    <button id="btn-eliminar" class="table-button button-delete">
+                                        <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <div>
-                    <button id="previous-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-left"></i></button>
-                    <button id="next-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-right"></i></button>
+                    <button id="previous-button" type="submit" class="button button-secondary pagination-button">
+                        <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
+                    </button>
+                    <button id="next-button" type="submit" class="button button-secondary pagination-button">
+                        <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
+                    </button>
                 </div>
 
                 <!-- MODALS -->
@@ -105,7 +126,7 @@
                         <form action="" class="form">
                             <div class="input-box input-box-with-button">
                                 <input id="codigo" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />
-                                <button type="button" class="button button-secondary"><i class="bi bi-file-text"></i></button>
+                                <button type="button" class="button button-secondary"> <img src="../assets/icons/file.svg" alt="Rellenar"></button>
                             </div>
                             <div class="input-box">
                                 <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
@@ -154,7 +175,7 @@
                 <div id="update-supply" class="modal">
                     <div class="modal-content">
                         <button class="button-close-modal">&times;</button>
-                        <h2 class="title-modal">Actualizar suministro</h2¬>
+                        <h2 class="title-modal">Actualizar suministro</h2>
                         <form action="" class="form">
                             <div class="input-box">
                                 <input id="codigo" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />

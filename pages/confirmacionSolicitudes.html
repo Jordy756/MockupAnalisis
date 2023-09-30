@@ -19,7 +19,7 @@
             <header class="header">
                 <nav class="nav-header">
                     <a href="#" class="nav-link"><img src="../assets/images/logo.webp" alt="" width="80px" height="50px" /></a>
-                    <a href="#" class="nav-link"><i class="bi bi-box-arrow-right bi-xl"></i></a>
+                    <a href="#" class="nav-link"><img src="../assets/icons/logout.svg" alt="Logout" /></a>
                 </nav>
             </header>
             <main class="main">
@@ -36,40 +36,52 @@
                         <tr class="body-row">
                             <td class="body-column">Agenda</td>
                             <td class="body-column">
-                                <button class="table-button button-details" onclick="mostrarModal('request-details')">
-                                    <i class="bi bi-eye"></i>
-                                </button>
+                                <div class="actions">
+                                    <button class="table-button button-details" onclick="mostrarModal('request-details')">
+                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                    </button>
+                                </div>
                             </td>
                             <td class="body-column">
-                                <button class="table-button button-accept" onclick="mostrarModal('accept-request')">
-                                    <i class="bi bi-check2"></i>
-                                </button>
-                                <button class="table-button button-delete" onclick="mostrarModal('decline-request')">
-                                    <i class="bi bi-x-lg"></i>
-                                </button>
+                                <div class="actions">
+                                    <button class="table-button button-accept" onclick="mostrarModal('accept-request')">
+                                        <img src="../assets/icons/check.svg" alt="Aceptar" />
+                                    </button>
+                                    <button class="table-button button-delete" onclick="mostrarModal('decline-request')">
+                                        <img src="../assets/icons/x.svg" alt="Rechazar" />
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                         <tr class="body-row">
                             <td class="body-column">Toner</td>
                             <td class="body-column">
-                                <button class="table-button button-details" onclick="mostrarModal('request-details')">
-                                    <i class="bi bi-eye"></i>
-                                </button>
+                                <div class="actions">
+                                    <button class="table-button button-details" onclick="mostrarModal('request-details')">
+                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                    </button>
+                                </div>
                             </td>
                             <td class="body-column">
-                                <button class="table-button button-accept" onclick="mostrarModal('accept-request')">
-                                    <i class="bi bi-check2"></i>
-                                </button>
-                                <button class="table-button button-delete" onclick="mostrarModal('decline-request')">
-                                    <i class="bi bi-x-lg"></i>
-                                </button>
+                                <div class="actions">
+                                    <button class="table-button button-accept" onclick="mostrarModal('accept-request')">
+                                        <img src="../assets/icons/check.svg" alt="Aceptar" />
+                                    </button>
+                                    <button class="table-button button-delete" onclick="mostrarModal('decline-request')">
+                                        <img src="../assets/icons/x.svg" alt="Rechazar" />
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <div>
-                    <button id="previous-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-left"></i></button>
-                    <button id="next-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-right"></i></button>
+                    <button id="previous-button" type="submit" class="button button-secondary pagination-button">
+                        <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
+                    </button>
+                    <button id="next-button" type="submit" class="button button-secondary pagination-button">
+                        <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
+                    </button>
                 </div>
 
                 <!-- MODALS -->

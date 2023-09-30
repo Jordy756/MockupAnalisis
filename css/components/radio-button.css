@@ -12,11 +12,13 @@
     gap: 0.5rem;
 }
 
-.radio-section-box-elements > * {
+.radio-section-box-elements > input {
     cursor: pointer;
 }
 
-#departments,
-#units {
+#departments-insert,
+#units-insert,
+#departments-update,
+#units-update {
     display: none;
 }
