@@ -1,0 +1,11 @@
+.nav-header {
+    background-color: var(--green-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem 0.5rem;
+}
+
+.nav-link {
+    cursor: pointer;
+}

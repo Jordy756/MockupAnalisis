@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <link rel="stylesheet" href="../css/bases/reset.css" />
+        <link rel="stylesheet" href="../css/bases/style.css" />
+        <link rel="stylesheet" href="../css/components/header.css" />
+        <link rel="stylesheet" href="../css/components/card.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-</head>
-
-<body>
-
-    <div class="contenedor-principal">
-        <nav>
-            <i>
-                <img src="./logo.png" alt="" width="80px" height="35px">
-            </i>
-            <i class="bi bi-box-arrow-right bi-xl"></i>
-        </nav>
-
-        <main class="component-horizontal">
-            <a href="./solicitar.html">
-                <div class="card">
-                    <h1>Solicitar</h1>
-                    <p>Solicitud a provedurias</p>
-                </div>
-            </a>
-            <a href="./listaSolicitudes.html">
-                <div class="card">
-                    <h1>Listar solicitar</h1>
-                    <p>Lista de tus solicitudes</p>
-                </div>
-            </a>
-
-            <a href="./suministrosUnidades.html">
-                <div class="card">
-                    <h1>Suministros de la bodega perteneciente</h1>
-                    <p>Lista de suministros de tu unidad</p>
-                </div>
-            </a>
-        </main>
-    </div>
-</body>
-
+    <body>
+        <div class="main-container">
+            <header class="header">
+                <nav class="nav-header">
+                    <a href="#" class="nav-link"><img src="../assets/images/logo.webp" alt="" width="80px" height="50px" /></a>
+                    <a href="#" class="nav-link"><img src="../assets/icons/logout.svg" alt="Logout" /></a>
+                </nav>
+            </header>
+            <main class="main-home">
+                <a href="./solicitar.html" class="card-link">
+                    <div class="card">
+                        <h2 class="card-title">Realizar solicitud</h2>
+                        <span class="card-description">Solicitud a provedurias</span>
+                    </div>
+                </a>
+                <a href="./listarSolicitudes.html" class="card-link">
+                    <div class="card">
+                        <h2 class="card-title">Solicitudes</h2>
+                        <span class="card-description">Lista de tus solicitudes</span>
+                    </div>
+                </a>
+                <a href="./suministrosUnidades.html" class="card-link">
+                    <div class="card">
+                        <h2 class="card-title">Suministros de la bodega perteneciente</h2>
+                        <span class="card-description">
+                            Lista de suministros de tu unidad, klajdosndaknsldnas askndkjasnd kjandknsad ansdkjnasd asdnkjasdnk asdkndkasjnd
+                            aksjdnaskjdn kasjdnkjasnd
+                        </span>
+                    </div>
+                </a>
+            </main>
+        </div>
+    </body>
 </html>

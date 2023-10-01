@@ -1,21 +1,15 @@
-import { validate } from "../utils/validateErrors.js";
+import { validate } from "../../utils/validateErrors.js";
 
 const errorTypes = ["valueMissing", "typeMismatch", "tooShort"];
 const errorMessages = {
-    nombre: {
+    email: {
         valueMissing: "Este campo no puede ir vacío",
         typeMismatch: "Formato no válido",
     },
-    codigo: {
+    password: {
         valueMissing: "Este campo no puede ir vacío",
         tooShort: "La contraseña debe tener mínimo 8 y máximo 10 dígitos",
     },
-    coojsd: {
-
-    },
-    jahd: {
-        
-    }
 };
 
 const inputs = document.querySelectorAll(".input");

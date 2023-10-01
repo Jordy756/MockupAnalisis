@@ -1,0 +1,75 @@
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-head {
+    background-color: var(--green-color);
+    color: var(--white-color);
+}
+
+.body-row:nth-child(even) {
+    background-color: var(--white-color);
+}
+
+.head-column,
+.body-column {
+    text-align: center;
+    padding: 0.5rem 0.7rem;
+    border: 0.15rem solid var(--green-color);
+}
+
+.sticky-column {
+    position: sticky;
+    top: -0.125rem;
+    left: -0.20rem;
+    z-index: 1;
+    color: var(--white-color);
+    background-color: var(--green-color);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.table-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    border: none;
+    padding: 0.2rem;
+    border-radius: 0.3125rem;
+    transition: all 200ms ease-in-out;
+}
+
+.table-button:hover,
+.table-button:active {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.button-delete {
+    background-color: #e60202;
+}
+
+.button-update {
+    background-color: #ffc107;
+}
+
+.button-details {
+    background-color: #0066ff;
+}
+
+.button-accept {
+    background-color: #289a2a;
+}

@@ -1,0 +1,37 @@
+.section-search-engine {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.make-request-section-search-engine {
+    justify-content: center;
+}
+
+.input-box-search-engine {
+    position: relative;
+    width: 15rem;
+}
+
+.make-request-input-box-search-engine {
+    width: 80%;
+}
+
+.button-search-engine {
+    position: absolute;
+    right: 0.3rem;
+    top: 0.3rem;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .make-request-input-box-search-engine {
+        width: 100%;
+    }
+}

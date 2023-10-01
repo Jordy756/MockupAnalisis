@@ -1,68 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reportes</title>
+        <link rel="stylesheet" href="../css/bases/reset.css" />
+        <link rel="stylesheet" href="../css/bases/style.css" />
+        <link rel="stylesheet" href="../css/components/header.css" />
+        <link rel="stylesheet" href="../css/components/select.css" />
+        <link rel="stylesheet" href="../css/buttons.css" />
+        <link rel="stylesheet" href="../css/components/input.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    </head>
+    <body>
+        <div class="main-container">
+            <header class="header">
+                <nav class="nav-header">
+                    <a href="#" class="nav-link"><img src="../assets/images/logo.webp" alt="" width="80px" height="50px" /></a>
+                    <a href="#" class="nav-link"><i class="bi bi-box-arrow-right bi-xl"></i></a>
+                </nav>
+            </header>
+            <main class="main">
+                <h1 class="title">Reportes</h1>
+                <form action="" class="form">
+                    <div class="input-box">
+                        <select class="select" name="" id="">
+                            <option value="" selected disabled>Selecciona una unidad</option>
+                            <option value="">La Managua</option>
+                            <option value="">Los diamantes</option>
+                            <option value="">Carlos Duran</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <select class="select" name="" id="">
+                            <option value="" selected disabled>Selecciona el tipo de reporte</option>
+                            <option value="">Salidas</option>
+                            <option value="">Gastos</option>
+                            <option value="">Inventario</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="">Fecha de inicio</label>
+                        <input type="date" class="input" data-format="dd-mm-yyyy" id="fechaInicio" />
+                    </div>
+                    <div class="input-box">
+                        <label for="">Fecha de final</label>
+                        <input type="date" class="input" data-format="dd-mm-yyyy" id="fechaFinal" />
+                    </div>
+                    <button type="submit" class="button button-primary">Descargar reporte</button>
+                </form>
+            </main>
+        </div>
+    </body>
+</html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-</head>
-
-<body>
-
-    <div class="contenedor-principal">
-        <nav>
-            <i>
-                <img src="./logo.png" alt="" width="80px" height="35px">
-            </i>
-            <i class="bi bi-box-arrow-right bi-xl"></i>
-        </nav>
-
-        <main class="component">
-            <h1>Suministros de las unidades</h1>
-
-            <select name="" id="">
-                <option value="" selected disabled>Selecciona una unidad</option>
-                <option value="">La Managua</option>
-                <option value="">Los diamantes</option>
-                <option value="">Carlos Duran</option>
-            </select>
-
-
-            <select name="" id="">
-                <option value="" selected disabled>Selecciona el tipo de reporte</option>
-                <option value="">Salidas</option>
-                <option value="">Gastos</option>
-                <option value="">Inventario</option>
-            </select>
-
-            <label for="">Fecha de inicio</label>
-            <input type="date" data-format="dd-mm-yyyy" id="fechaInicio">
-
-            <label for="">Fecha de final</label>
-            <input type="date" data-format="dd-mm-yyyy" id="fechaFinal">
-
-            <button class="btn-primary">Descargar reporte</button>
-
-        </main>
-    </div>
-</body>
-
-<script>
+<!-- <script>
     // Se obtiene una referencia a las fechas
     const fechaInicioInput = document.getElementById("fechaInicio");
     const fechaFinalInput = document.getElementById("fechaFinal");
-  
+
     // Se obtiene la fecha actual en formato (yyyy-mm-dd)
     const fechaActual = new Date().toISOString().split("T")[0];
-  
+
     // Se establece la fecha mínima para ambos campos de fecha
     fechaInicioInput.setAttribute("max", fechaActual);
     fechaFinalInput.setAttribute("max", fechaActual);
 
     // Error: Tira un día de más. Posible solución: Sincronizar con la hora del server.
-  </script>
-
-</html>
+</script> -->

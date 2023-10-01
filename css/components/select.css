@@ -1,0 +1,12 @@
+.select {
+    padding: 0.5rem 2rem 0.5rem 0.6rem;
+    border: 0.0625rem solid gray;
+    border-radius: 0.3125rem;
+    outline: none;
+    width: 100%;
+}
+
+.select:focus {
+    border: 1px solid var(--green-color);
+    box-shadow: 0px 0px 3px 0px var(--green-color);
+}

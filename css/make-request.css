@@ -1,0 +1,35 @@
+.main-make-request {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.make-request-section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-make-request {
+    width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    .form-make-request {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-make-request {
+        flex-direction: column;
+    }
+
+    .make-request-section {
+        width: 100%;
+    }
+}
