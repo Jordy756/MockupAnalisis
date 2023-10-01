@@ -3,32 +3,28 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="../css/reset.css" />
-        <link rel="stylesheet" href="../css/style.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+        <title>Registrar suministro</title>
+        <link rel="stylesheet" href="../css/bases/reset.css" />
+        <link rel="stylesheet" href="../css/bases/style.css" />
+        <link rel="stylesheet" href="../css/components/header.css" />
+        <link rel="stylesheet" href="../css/buttons.css" />
+        <link rel="stylesheet" href="../css/components/input.css" />
     </head>
-
     <body>
-        <div class="contenedor-principal">
-            <nav>
-                <i>
-                    <img src="../assets/images/logo.png" alt="" width="80px" height="35px" />
-                </i>
-                <i class="bi bi-box-arrow-right bi-xl"></i>
-            </nav>
-
-            <main class="component">
-                <h1>Ingresar suministro</h1>
-
-                <form action="" class="component">
-                    <div style="margin-left: 50px">
-                        <input id="codigo" type="text" placeholder="Codigo del suministro" required pattern="[a-zA-Z0-9]+" />
-                        <button type="button" class="btn-secundary">
-                            <i class="bi bi-file-text"></i>
-                        </button>
+        <div class="main-container">
+            <header class="header">
+                <nav class="nav-header">
+                    <a href="#" class="nav-link"><img src="../assets/images/logo.webp" alt="" width="80px" height="50px" /></a>
+                    <a href="#" class="nav-link"><img src="../assets/icons/logout.svg" alt="Logout" /></a>
+                </nav>
+            </header>
+            <main class="main">
+                <h1 class="title title-in-center">Agregar nuevo suministro</h1>
+                <form action="" class="form">
+                    <div class="input-box input-box-with-button">
+                        <input id="codigo" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />
+                        <button type="button" class="button button-secondary"><img src="../assets/icons/file.svg" alt="Rellenar" /></button>
                     </div>
-
                     <div class="input-box">
                         <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
                         <span class="span-for-input-error"></span>
@@ -37,44 +33,38 @@
                         <input id="grupo" type="text" class="input" placeholder="Grupo" required />
                         <span class="span-for-input-error"></span>
                     </div>
-
                     <div class="input-box">
                         <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+" />
                         <span class="span-for-input-error"></span>
                     </div>
-
                     <div class="input-box">
                         <input id="unidadDeMedida" type="text" class="input" placeholder="Unidad de medida" required />
                         <span class="span-for-input-error"></span>
                     </div>
-
                     <div class="input-box">
                         <input id="subgrupo" type="text" class="input" placeholder="Sub grupo" required />
                         <span class="span-for-input-error"></span>
                     </div>
-
                     <div class="input-box">
                         <input id="marca" type="text" class="input" placeholder="Marca" required />
                         <span class="span-for-input-error"></span>
                     </div>
-
                     <div class="input-box">
                         <input id="valorPorUnidad" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
                         <span class="span-for-input-error"></span>
                     </div>
-
                     <div class="input-box">
                         <input id="proveedor" type="text" class="input" placeholder="Proveedor" required />
                         <span class="span-for-input-error"></span>
                     </div>
-
                     <div class="input-box">
                         <input id="cantidad" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$" />
                         <span class="span-for-input-error"></span>
                     </div>
-
-                    <button class="btn-primary">Registrar ingreso</button>
-                    <button class="btn-primary">Cancelar</button>
+                    <div class="buttons-box">
+                        <button type="button" class="button button-secondary">Cancelar</button>
+                        <button type="submit" class="button button-primary">Registrar</button>
+                    </div>
                 </form>
             </main>
         </div>
