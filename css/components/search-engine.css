@@ -7,9 +7,17 @@
     gap: 1rem;
 }
 
+.make-request-section-search-engine {
+    justify-content: center;
+}
+
 .input-box-search-engine {
     position: relative;
     width: 15rem;
+}
+
+.make-request-input-box-search-engine {
+    width: 80%;
 }
 
 .button-search-engine {
@@ -20,4 +28,10 @@
     background-color: transparent;
     cursor: pointer;
     border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .make-request-input-box-search-engine {
+        width: 100%;
+    }
 }

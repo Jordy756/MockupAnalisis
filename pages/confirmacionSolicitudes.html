@@ -23,57 +23,62 @@
             </header>
             <main class="main">
                 <h1 class="title">Solicitudes</h1>
-                <table class="table">
-                    <thead class="table-head">
-                        <tr class="head-row">
-                            <th class="head-column">Descripcion</th>
-                            <th class="head-column">Detalles</th>
-                            <th class="head-column">Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-body">
-                        <tr class="body-row">
-                            <td class="body-column">Agenda</td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <button class="table-button button-details" onclick="mostrarModal('request-details')">
-                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <button class="table-button button-accept" onclick="mostrarModal('accept-request')">
-                                        <img src="../assets/icons/check.svg" alt="Aceptar" />
-                                    </button>
-                                    <button class="table-button button-delete" onclick="mostrarModal('decline-request')">
-                                        <img src="../assets/icons/x.svg" alt="Rechazar" />
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="body-row">
-                            <td class="body-column">Toner</td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <button class="table-button button-details" onclick="mostrarModal('request-details')">
-                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
-                                    </button>
-                                </div>
-                            </td>
-                            <td class="body-column">
-                                <div class="actions">
-                                    <button class="table-button button-accept" onclick="mostrarModal('accept-request')">
-                                        <img src="../assets/icons/check.svg" alt="Aceptar" />
-                                    </button>
-                                    <button class="table-button button-delete" onclick="mostrarModal('decline-request')">
-                                        <img src="../assets/icons/x.svg" alt="Rechazar" />
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <section class="table-container">
+                    <table class="table">
+                        <thead class="table-head">
+                            <tr class="head-row">
+                                <th class="head-column sticky-column">Nombre</th>
+                                <th class="head-column">Marca</th>
+                                <th class="head-column">Detalles</th>
+                                <th class="head-column">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">Agenda</td>
+                                <td class="body-column">Patito</td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-details" onclick="mostrarModal('request-details')">
+                                            <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-accept" onclick="mostrarModal('accept-request')">
+                                            <img src="../assets/icons/check.svg" alt="Aceptar" />
+                                        </button>
+                                        <button class="table-button button-delete" onclick="mostrarModal('decline-request')">
+                                            <img src="../assets/icons/x.svg" alt="Rechazar" />
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">Agenda</td>
+                                <td class="body-column">Patito2</td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-details" onclick="mostrarModal('request-details')">
+                                            <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="body-column">
+                                    <div class="actions">
+                                        <button class="table-button button-accept" onclick="mostrarModal('accept-request')">
+                                            <img src="../assets/icons/check.svg" alt="Aceptar" />
+                                        </button>
+                                        <button class="table-button button-delete" onclick="mostrarModal('decline-request')">
+                                            <img src="../assets/icons/x.svg" alt="Rechazar" />
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
                 <div>
                     <button id="previous-button" type="submit" class="button button-secondary pagination-button">
                         <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />

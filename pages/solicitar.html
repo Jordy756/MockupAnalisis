@@ -19,14 +19,15 @@
             <header class="header">
                 <nav class="nav-header">
                     <a href="#" class="nav-link"><img src="../assets/images/logo.webp" alt="" width="80px" height="50px" /></a>
-                    <a href="#" class="nav-link"><i class="bi bi-box-arrow-right bi-xl"></i></a>
+                    <a href="#" class="nav-link"><img src="../assets/icons/logout.svg" alt="Logout" /></a>
                 </nav>
             </header>
             <main class="main-make-request">
-                <h1 class="title">Formulario de solicitud</h1>
+                <h1 class="title title-in-center">Formulario de solicitud</h1>
                 <section class="make-request-section">
-                    <section class="section-search-engine">
-                        <form class="input-box-search-engine">
+                    <h2 class="subtitle title-in-center">Buscar suministros</h2>
+                    <section class="section-search-engine make-request-section-search-engine">
+                        <form class="input-box-search-engine make-request-input-box-search-engine">
                             <input
                                 id="busqueda"
                                 type="text"
@@ -39,28 +40,82 @@
                             <button type="submit" class="button-search-engine"><img src="../assets/icons/search.svg" alt="Buscar" /></button>
                         </form>
                     </section>
-                    <table class="table request-table">
-                        <thead class="table-head">
-                            <tr class="head-row">
-                                <th class="head-column">Código</th>
-                                <th class="head-column">Descripcion</th>
-                                <th class="head-column">Cantidad</th>
-                                <th class="head-column">Detalles</th>
-                            </tr>
-                        </thead>
-                        <tbody class="table-body">
-                            <tr class="body-row">
-                                <td class="body-column">INTA512</td>
-                                <td class="body-column">Toner jsndknaskdn akdsjnkasjnd kajsdnkasjnd kjasdnkjasnd</td>
-                                <td class="body-column">3</td>
-                                <td class="body-column">
-                                    <button class="table-button button-details" onclick="mostrarModal('supply-details')">
-                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <section class="table-container">
+                        <table class="table request-table">
+                            <thead class="table-head">
+                                <tr class="head-row">
+                                    <th class="head-column sticky-column">Código</th>
+                                    <th class="head-column">Nombre</th>
+                                    <th class="head-column">Marca</th>
+                                    <th class="head-column">Cantidad</th>
+                                    <th class="head-column">Detalles</th>
+                                    <th class="head-column">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-body">
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">INTA512</td>
+                                    <td class="body-column">Toner</td>
+                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                                <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-accept" onclick="mostrarModal('supply-details')">
+                                                <img src="../assets/icons/check.svg" alt="Detalles" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">INTA512</td>
+                                    <td class="body-column">Toner</td>
+                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                                <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-accept" onclick="mostrarModal('supply-details')">
+                                                <img src="../assets/icons/check.svg" alt="Detalles" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">INTA512</td>
+                                    <td class="body-column">Toner</td>
+                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                                <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-accept" onclick="mostrarModal('supply-details')">
+                                                <img src="../assets/icons/check.svg" alt="Detalles" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
                     <div>
                         <button id="previous-button" type="submit" class="button button-secondary pagination-button">
                             <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
@@ -71,55 +126,123 @@
                     </div>
                 </section>
                 <section class="make-request-section">
-                    <h2 class="title-modal">Lista de suministros en la solicitud</h2>
-                    <form action="" class="form">
-                        <div class="input-box">
-                            <input
-                                id="codigoSuministro"
-                                type="text"
-                                class="input"
-                                placeholder="Código del Suministro"
-                                required
-                                pattern="[a-zA-Z0-9]+"
-                            />
-                            <span class="span-for-input-error"></span>
-                        </div>
-                        <div class="input-box">
-                            <input id="cantidad" type="text" class="input" min="1" placeholder="Ingrese la cantidad" required pattern="^[0-9]+$" />
-                            <span class="span-for-input-error"></span>
-                        </div>
-                        <button id="myButton" type="submit" class="button button-primary">Anadir</button>
-                    </form>
-
-                    <table class="table">
-                        <thead class="table-head">
-                            <tr class="head-row">
-                                <th class="head-column sticky-column">Código</th>
-                                <th class="head-column">Descripcion</th>
-                                <th class="head-column">Cantidad</th>
-                                <th class="head-column">Detalles</th>
-                                <th class="head-column">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody class="table-body">
-                            <tr class="body-row">
-                                <td class="body-column sticky-column">INTA512</td>
-                                <td class="body-column">Toner jsndknaskdn akdsjnkasjnd kajsdnkasjnd kjasdnkjasndxvcvxvxcvxc</td>
-                                <td class="body-column">3</td>
-                                <td class="body-column">
-                                    <button class="table-button button-details" onclick="mostrarModal('supply-details')">
-                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
-                                    </button>
-                                </td>
-                                <td class="body-column">
-                                    <button id="btn-eliminar" class="table-button button-delete">
-                                        <img src="../assets/icons/trash.svg" alt="Detalles" />
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
+                    <h2 class="subtitle title-in-center">Lista de suministros</h2>
+                    <section class="table-container">
+                        <table class="table request-table">
+                            <thead class="table-head">
+                                <tr class="head-row">
+                                    <th class="head-column sticky-column">Código</th>
+                                    <th class="head-column">Nombre</th>
+                                    <th class="head-column">Marca</th>
+                                    <th class="head-column">Cantidad</th>
+                                    <th class="head-column">Detalles</th>
+                                    <th class="head-column">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-body">
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">INTA512</td>
+                                    <td class="body-column">Toner</td>
+                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                                <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-delete">
+                                                <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">INTA512</td>
+                                    <td class="body-column">Toner</td>
+                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                                <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-delete">
+                                                <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">INTA512</td>
+                                    <td class="body-column">Toner</td>
+                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                                <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-delete">
+                                                <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">INTA512</td>
+                                    <td class="body-column">Toner</td>
+                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                                <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-delete">
+                                                <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">INTA512</td>
+                                    <td class="body-column">Toner</td>
+                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                                <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button class="table-button button-delete">
+                                                <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
                     <div>
                         <button id="previous-button" type="submit" class="button button-secondary pagination-button">
                             <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
@@ -128,36 +251,11 @@
                             <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
                         </button>
                     </div>
-
-                    
-
-                    <form action="" class="form">
+                    <form action="" class="form form-make-request">
                         <textarea placeholder="Descripcion de la necesidad" class="textarea" required></textarea>
                         <button id="myButton" type="submit" class="button button-primary">Enviar</button>
                     </form>
                 </section>
-
-                <!-- MODALS -->
-                <div id="supply-details" class="modal">
-                    <div class="modal-content">
-                        <button class="button-close-modal">&times;</button>
-                        <h2 class="title-modal">Actualizar cuenta contable</h2>
-                        <form action="" class="form">
-                            <div class="input-box">
-                                <input id="codigo" type="text" class="input" placeholder="Código" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ., ]+" />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="input-box">
-                                <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ]+" />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="buttons-box">
-                                <button type="button" class="button button-secondary">Cancelar</button>
-                                <button type="submit" class="button button-primary">Actualizar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </main>
         </div>
         <script src="../js/libraries/swetalert.js"></script>
@@ -184,3 +282,22 @@
                     </ul>
                 </div>
             </div> -->
+
+<!-- <form action="" class="form form-make-request">
+                        <div class="input-box">
+                            <input
+                                id="codigoSuministro"
+                                type="text"
+                                class="input"
+                                placeholder="Código del Suministro"
+                                required
+                                pattern="[a-zA-Z0-9]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <div class="input-box">
+                            <input id="cantidad" type="text" class="input" min="1" placeholder="Ingrese la cantidad" required pattern="^[0-9]+$" />
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <button id="myButton" type="submit" class="button button-primary">Añadir</button>
+                    </form> -->

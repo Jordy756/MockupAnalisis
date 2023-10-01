@@ -38,17 +38,21 @@ body {
 }
 
 .title,
-.title-modal {
+.subtitle {
+    width: 100%;
     font-weight: bold;
 }
 
 .title {
-    width: 100%;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.title-modal {
+.title-in-center {
+    text-align: center;
+}
+
+.subtitle {
     font-size: 1.5rem;
 }
 
@@ -65,5 +69,13 @@ body {
     .main-home {
         padding: 1rem;
         justify-content: center;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
     }
 }

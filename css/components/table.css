@@ -26,7 +26,8 @@
 
 .sticky-column {
     position: sticky;
-    left: -2px;
+    top: -0.125rem;
+    left: -0.20rem;
     z-index: 1;
     color: var(--white-color);
     background-color: var(--green-color);
