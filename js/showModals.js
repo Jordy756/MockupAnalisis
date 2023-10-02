@@ -1,4 +1,4 @@
-const mostrarMensaje = (titulo, accion, mensaje) => {
+const showMessage = (titulo, accion, mensaje) => {
     Swal.fire({
         title: "¿Estás seguro?",
         icon: "warning",
@@ -11,17 +11,17 @@ const mostrarMensaje = (titulo, accion, mensaje) => {
     }).then(result => result.isConfirmed && Swal.fire(titulo, mensaje, "success"));
 };
 
-document.getElementById("btn-eliminar").addEventListener("click", () => mostrarMensaje("Eliminado", "eliminar", "Se ha eliminado correctamente"));
+document.getElementById("btn-eliminar").addEventListener("click", () => showMessage("Eliminado", "eliminar", "Se ha eliminado correctamente"));
 
 // document
 //     .getElementById("btn-confirmacion-actualizacion")
 //     .addEventListener("click", () => mostrarMensaje("Actualizado", "actualizar", "Se ha actualizado correctamente"));
 
-function mostrarModal(id) {
+function showModal(id) {
     const modal = document.getElementById(id);
-    const cerrar = modal.querySelector(".button-close-modal");
+    const close = modal.querySelector(".button-close-modal");
     modal.classList.add("modal-active");
-    cerrar.addEventListener("click", () => modal.classList.remove("modal-active"));
+    close.addEventListener("click", () => modal.classList.remove("modal-active"));
     // window.addEventListener("click", evento => evento.target == modal && modal.classList.remove("modal-active"));
 }
 

@@ -39,17 +39,17 @@
                                 <td class="body-column">Patito</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button class="table-button button-details" onclick="mostrarModal('request-details')">
+                                        <button type="button" class="table-button button-details" onclick="showModal('request-details')">
                                             <img src="../assets/icons/eye.svg" alt="Detalles" />
                                         </button>
                                     </div>
                                 </td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button class="table-button button-accept" onclick="mostrarModal('accept-request')">
+                                        <button type="button" class="table-button button-accept" onclick="showModal('accept-request')">
                                             <img src="../assets/icons/check.svg" alt="Aceptar" />
                                         </button>
-                                        <button class="table-button button-delete" onclick="mostrarModal('decline-request')">
+                                        <button type="button" class="table-button button-delete" onclick="showModal('decline-request')">
                                             <img src="../assets/icons/x.svg" alt="Rechazar" />
                                         </button>
                                     </div>
@@ -60,17 +60,17 @@
                                 <td class="body-column">Patito2</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button class="table-button button-details" onclick="mostrarModal('request-details')">
+                                        <button type="button" class="table-button button-details" onclick="showModal('request-details')">
                                             <img src="../assets/icons/eye.svg" alt="Detalles" />
                                         </button>
                                     </div>
                                 </td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button class="table-button button-accept" onclick="mostrarModal('accept-request')">
+                                        <button type="button" class="table-button button-accept" onclick="showModal('accept-request')">
                                             <img src="../assets/icons/check.svg" alt="Aceptar" />
                                         </button>
-                                        <button class="table-button button-delete" onclick="mostrarModal('decline-request')">
+                                        <button type="button" class="table-button button-delete" onclick="showModal('decline-request')">
                                             <img src="../assets/icons/x.svg" alt="Rechazar" />
                                         </button>
                                     </div>
@@ -80,10 +80,10 @@
                     </table>
                 </section>
                 <div>
-                    <button id="previous-button" type="submit" class="button button-secondary pagination-button">
+                    <button id="previous-button" type="button" class="button button-secondary pagination-button">
                         <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
                     </button>
-                    <button id="next-button" type="submit" class="button button-secondary pagination-button">
+                    <button id="next-button" type="button" class="button button-secondary pagination-button">
                         <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
                     </button>
                 </div>
@@ -92,8 +92,8 @@
                 <div id="request-details" class="modal">
                     <div class="modal-content">
                         <header class="modal-header">
-                            <span class="button-close-modal">&times;</span>
-                            <h2 class="title-modal">Lista de suministros</h2>
+                            <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
+                            <h2 class="subtitle title-in-center">Lista de suministros</h2>
                         </header>
                         <main class="modal-main-requests">
                             <ul class="list">
@@ -124,50 +124,57 @@
                 <div id="accept-request" class="modal">
                     <div class="modal-content">
                         <header class="modal-header">
-                            <h1 class="title-modal">Aceptar Solicitud</h1>
-                            <button class="button-close-modal">&times;</button>
+                            <h1 class="subtitle title-in-center">Aceptar Solicitud</h1>
+                            <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
                         </header>
                         <main class="">
-                            <table class="table">
-                                <thead class="table-head">
-                                    <tr class="head-row">
-                                        <th class="head-column">Nombre</th>
-                                        <th class="head-column">Detalles</th>
-                                        <th class="head-column">Cantidad</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="table-body">
-                                    <tr class="body-row">
-                                        <td class="body-column">Solicitud de toner</td>
-                                        <td class="body-column">
-                                            <div class="actions">
-                                                <button class="table-button button-details" onclick="mostrarModal('request-details')">
-                                                    <img src="../assets/icons/eye.svg" alt="Detalles" />
-                                                </button>
-                                            </div>
-                                        </td>
-                                        <td class="body-column">
-                                            <div class="input-box">
-                                                <input
-                                                    id="cantidad"
-                                                    type="text"
-                                                    class="input"
-                                                    placeholder="Cantidad"
-                                                    min="0"
-                                                    required
-                                                    pattern="^[0-9]+$"
-                                                />
-                                                <span class="span-for-input-error"></span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <section class="table-container">
+                                <table class="table">
+                                    <thead class="table-head">
+                                        <tr class="head-row">
+                                            <th class="head-column sticky-column">Código</th>
+                                            <th class="head-column">Nombre</th>
+                                            <th class="head-column">Marca</th>
+                                            <th class="head-column">Cantidad</th>
+                                            <th class="head-column">Detalles</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-body">
+                                        <tr class="body-row">
+                                            <td class="body-column sticky-column">INTA001</td>
+                                            <td class="body-column">Toner</td>
+                                            <td class="body-column">Patito</td>
+                                            <td class="body-column">
+                                                <div class="actions">
+                                                    <button class="table-button button-details" onclick="showModal('request-details')">
+                                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td class="body-column">
+                                                <div class="input-box">
+                                                    <input
+                                                        id="quantity"
+                                                        type="text"
+                                                        class="input"
+                                                        placeholder="Cantidad"
+                                                        min="0"
+                                                        required
+                                                        pattern="^[0-9]+$"
+                                                    />
+                                                    <span class="span-for-input-error"></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
                         </main>
                         <footer>
-                            <form action="" class="form">
+                            <form id="accept-request-form" action="" class="form">
                                 <div class="input-box">
-                                    <textarea placeholder="Motivo" name="" class="textarea" required></textarea>
+                                    <textarea id="motive" placeholder="Motivo" name="" class="textarea" required></textarea>
+                                    <span class="span-for-input-error"></span>
                                 </div>
                                 <button class="button button-primary">Aceptar</button>
                             </form>
@@ -178,12 +185,21 @@
                 <div id="decline-request" class="modal">
                     <div class="modal-content">
                         <header class="modal-header">
-                            <h1 class="title-modal">Rechazar solicitud</h1>
-                            <button class="button-close-modal">&times;</button>
+                            <h1 class="subtitle title-in-center">Rechazar solicitud</h1>
+                            <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
                         </header>
-                        <main>
-                            <form action="" class="form">
-                                <textarea placeholder="Comentario" name="" class="textarea" required=" Debe ingresar un comentario"></textarea>
+                        <main class="modal-main">
+                            <form id="decline-request-form" action="" class="form">
+                                <div class="input-box">
+                                    <textarea
+                                        id="motive"
+                                        placeholder="Comentario"
+                                        name=""
+                                        class="textarea"
+                                        required="Debe ingresar un comentario"
+                                    ></textarea>
+                                    <span class="span-for-input-error"></span>
+                                </div>
                                 <button class="button button-primary">Rechazar</button>
                             </form>
                         </main>
@@ -191,6 +207,7 @@
                 </div>
             </main>
         </div>
-        <script src="../js/mostrarModales.js"></script>
+        <script src="../js/showModals.js"></script>
+        <script type="module" src="../js/validations/validationsHandleRequest.js"></script>
     </body>
 </html>

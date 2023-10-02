@@ -1,250 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <body>
+        <div class="contenedor-principal">
+            <nav>
+                <i>
+                    <img src="../assets/images/logo.png" alt="" width="80px" height="35px" />
+                </i>
+                <i class="bi bi-box-arrow-right bi-xl"></i>
+            </nav>
 
-</head>
+            <main class="component">
+                <h1>Suministros de las unidades</h1>
 
-<body>
+                <form action="" class="component">
+                    <select name="" id="" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
+                        <option value="" selected disabled>Selecciona una unidad</option>
+                        <option value="">La Managua</option>
+                        <option value="">Los diamantes</option>
+                        <option value="">Carlos Duran</option>
+                    </select>
+                    <div class="input-box componente-relativo">
+                        <input
+                            id="busqueda"
+                            type="text"
+                            class="input input-busqueda"
+                            placeholder="Buscar el nombre del suministro"
+                            required
+                            pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                            pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                        />
+                        <button type="submit" class="boton-busqueda"><i class="bi bi-search"></i></button>
+                        <span class="span-for-input-error"></span>
+                    </div>
+                    <button class="btn-primary" onclick="abrirModalRegistrar('myModal1')">Nueva usuario</button>
+                </form>
 
-    <div class="contenedor-principal">
-        <nav>
-            <i>
-                <img src="../assets/images/logo.png" alt="" width="80px" height="35px">
-            </i>
-            <i class="bi bi-box-arrow-right bi-xl"></i>
-        </nav>
+                <script>
+                    function abrirModal(idModal) {
+                        const modal = document.getElementById(idModal);
 
-        <main class="component">
-            <h1>Suministros de las unidades</h1>
+                        const cerrar = modal.querySelector(".close");
 
-            <form action="" class="component">
-                <select name="" id="" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
-                    <option value="" selected disabled>Selecciona una unidad</option>
-                    <option value="">La Managua</option>
-                    <option value="">Los diamantes</option>
-                    <option value="">Carlos Duran</option>
-                </select>
-                <div class="input-box componente-relativo">
-                    <input id="busqueda" type="text" class="input input-busqueda"
-                        placeholder="Buscar el nombre del suministro" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
-                    <button type="submit" class="boton-busqueda"><i class="bi bi-search"></i></button>
-                    <span class="span-for-input-error"></span>
+                        modal.style.display = "block";
+
+                        cerrar.addEventListener("click", () => {
+                            modal.style.display = "none";
+                        });
+
+                        window.addEventListener("click", evento => {
+                            if (evento.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        });
+                    }
+                </script>
+
+                <!-- Sin datos <h1><i class="bi bi-exclamation-diamond"></i>No cuenta con solicitudes</h1> -->
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descripcion</th>
+                            <th>Cantidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Toner</td>
+                            <td>3</td>
+                            <td>
+                                <button class="btn-CRUD btn-detalles" onclick="abrirModal('myModal1')">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                                <button class="btn-CRUD btn-editar" onclick="abrirModal('myModal2')">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn-CRUD btn-editar" onclick="abrirModal('myModal3')">
+                                    <i class="bi bi-arrow-down-up"></i>
+                                </button>
+                                <button id="btn-eliminar" class="btn-CRUD btn-eliminar">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <script>
+                    document.getElementById("btn-eliminar").addEventListener("click", function () {
+                        Swal.fire({
+                            title: "¿Estás seguro?",
+                            text: "Esta acción eliminará el elemento, solo visualmente",
+                            icon: "warning",
+                            showCancelButton: true,
+                            confirmButtonColor: "#0066ff",
+                            cancelButtonColor: "#FF0000",
+                            iconColor: "#FF0000",
+                            confirmButtonText: "Sí, eliminar",
+                            cancelButtonText: "Cancelar",
+                        }).then(result => {
+                            if (result.isConfirmed) {
+                                Swal.fire("Eliminado", "El elemento ha sido eliminado correctamente.", "success");
+                            }
+                        });
+                    });
+                </script>
+
+                <div>
+                    <button id="myButton" type="submit" class="btn-secundary"><i class="bi bi-arrow-left"></i></button>
+                    <button id="myButton" type="submit" class="btn-secundary"><i class="bi bi-arrow-right"></i></button>
                 </div>
-                <button class="btn-primary" onclick="abrirModalRegistrar('myModal1')">Nueva usuario</button>
-            </form>
+            </main>
 
             <script>
                 function abrirModal(idModal) {
                     const modal = document.getElementById(idModal);
 
-                    const cerrar = modal.querySelector('.close');
+                    const cerrar = modal.querySelector(".close");
 
-                    modal.style.display = 'block';
+                    modal.style.display = "block";
 
-                    cerrar.addEventListener('click', () => {
-                        modal.style.display = 'none';
+                    cerrar.addEventListener("click", () => {
+                        modal.style.display = "none";
                     });
 
-                    window.addEventListener('click', (evento) => {
+                    window.addEventListener("click", evento => {
                         if (evento.target == modal) {
-                            modal.style.display = 'none';
+                            modal.style.display = "none";
                         }
                     });
                 }
             </script>
 
-            <!-- Sin datos <h1><i class="bi bi-exclamation-diamond"></i>No cuenta con solicitudes</h1> -->
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Descripcion</th>
-                        <th>Cantidad</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Toner</td>
-                        <td>3</td>
-                        <td>
-                            <button class="btn-CRUD btn-detalles" onclick="abrirModal('myModal1')">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                            <button class="btn-CRUD btn-editar" onclick="abrirModal('myModal2')">
-                                <i class="bi bi-pencil"></i>
-                            </button>
-                            <button class="btn-CRUD btn-editar" onclick="abrirModal('myModal3')">
-                                <i class="bi bi-arrow-down-up"></i>
-                            </button>
-                            <button id="btn-eliminar" class="btn-CRUD btn-eliminar">
-                                <i class="bi bi-trash"></i>
-                            </button>
-
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <script>
-                document.getElementById("btn-eliminar").addEventListener("click", function () {
-                    Swal.fire({
-                        title: "¿Estás seguro?",
-                        text: "Esta acción eliminará el elemento, solo visualmente",
-                        icon: "warning",
-                        showCancelButton: true,
-                        confirmButtonColor: "#0066ff",
-                        cancelButtonColor: "#FF0000",
-                        iconColor: "#FF0000",
-                        confirmButtonText: "Sí, eliminar",
-                        cancelButtonText: "Cancelar"
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            Swal.fire("Eliminado", "El elemento ha sido eliminado correctamente.", "success");
-                        }
-                    });
-                });
-            </script>
-
-
-            <div>
-                <button id="myButton" type="submit" class="btn-secundary"><i class="bi bi-arrow-left"></i></button>
-                <button id="myButton" type="submit" class="btn-secundary"><i class="bi bi-arrow-right"></i></button>
-            </div>
-        </main>
-
-
-        <script>
-            function abrirModal(idModal) {
-                const modal = document.getElementById(idModal);
-
-                const cerrar = modal.querySelector('.close');
-
-                modal.style.display = 'block';
-
-                cerrar.addEventListener('click', () => {
-                    modal.style.display = 'none';
-                });
-
-                window.addEventListener('click', (evento) => {
-                    if (evento.target == modal) {
-                        modal.style.display = 'none';
-                    }
-                });
-            }
-        </script>
-
-        <div id="myModal1" class="modal">
-            <div class="modal-content">
-                <div class="botonesAC">
-                    <header>Detalles de Suministro</header>
-                    <span class="close">&times;</span>
+            <div id="myModal1" class="modal">
+                <div class="modal-content">
+                    <div class="botonesAC">
+                        <header>Detalles de Suministro</header>
+                        <span class="close">&times;</span>
+                    </div>
+                    <ul>
+                        <li><strong>Código del Suministro: </strong>INTA512</li>
+                        <li><strong>Cuenta contable: </strong>xxx</li>
+                        <li><strong>Grupo: </strong>xxx</li>
+                        <li><strong>Nombre: </strong>Toner</li>
+                        <li><strong>Unidad de medida: </strong>kg</li>
+                        <li><strong>Sub grupo: </strong>xxx</li>
+                        <li><strong>Marca: </strong>xxx</li>
+                        <li><strong>Valor por unidad: </strong>2500.00</li>
+                        <li><strong>Proveedor: </strong>xxx</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li><strong>Código del Suministro: </strong>INTA512</li>
-                    <li><strong>Cuenta contable: </strong>xxx</li>
-                    <li><strong>Grupo: </strong>xxx</li>
-                    <li><strong>Nombre: </strong>Toner</li>
-                    <li><strong>Unidad de medida: </strong>kg</li>
-                    <li><strong>Sub grupo: </strong>xxx</li>
-                    <li><strong>Marca: </strong>xxx</li>
-                    <li><strong>Valor por unidad: </strong>2500.00</li>
-                    <li><strong>Proveedor: </strong>xxx</li>
-                </ul>
+            </div>
+
+            <div id="myModal3" class="modal">
+                <div class="modal-content">
+                    <div class="botonesAC">
+                        <header>Actualizar numero de Suministro</header>
+                        <span class="close">&times;</span>
+                    </div>
+
+                    <form action="" class="component">
+                        <div class="input-box">
+                            <input id="cantidad" class="input" type="text" placeholder="Cantidad del suministro" required pattern="[0-9]+" />
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <div>
+                            <textarea id="nota" cols="30" rows="5" placeholder="Nota por modificarlo"></textarea>
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <button class="btn-primary">Actualizar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="myModal2" class="modal">
+                <div class="modal-content">
+                    <div class="botonesAC">
+                        <header>Editar Suministro</header>
+                        <span class="close">&times;</span>
+                    </div>
+                    <form action="">
+                        <div class="input-box">
+                            <input
+                                id="codigo"
+                                class="input"
+                                type="text"
+                                placeholder="Codigo del suministro"
+                                required
+                                pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <div class="input-box">
+                            <input
+                                id="cuentaContable"
+                                class="input"
+                                type="text"
+                                class="input"
+                                placeholder="Cuenta contable"
+                                required
+                                pattern="[0-9.]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                        </div>
+                        <div class="input-box">
+                            <input
+                                id="grupo"
+                                class="input"
+                                type="text"
+                                class="input"
+                                placeholder="Grupo"
+                                required
+                                pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                        </div>
+
+                        <div class="input-box">
+                            <input
+                                id="nombre"
+                                class="input"
+                                type="text"
+                                class="input"
+                                placeholder="Nombre"
+                                required
+                                pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                        </div>
+
+                        <div class="input-box">
+                            <input
+                                id="unidadDeMedida"
+                                class="input"
+                                type="text"
+                                class="input"
+                                placeholder="Unidad de medida"
+                                required
+                                pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                        </div>
+
+                        <div class="input-box">
+                            <input
+                                id="subgrupo"
+                                class="input"
+                                type="text"
+                                class="input"
+                                placeholder="Sub grupo"
+                                required
+                                pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                        </div>
+
+                        <div class="input-box">
+                            <input
+                                id="marca"
+                                class="input"
+                                type="text"
+                                class="input"
+                                placeholder="Marca"
+                                required
+                                pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                        </div>
+
+                        <div class="input-box">
+                            <input
+                                id="valorPorUnidad"
+                                class="input"
+                                type="text"
+                                class="input"
+                                placeholder="Valor por unidad"
+                                required
+                                pattern="[0-9,]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                        </div>
+
+                        <div class="input-box">
+                            <input
+                                id="proveedor"
+                                class="input"
+                                type="text"
+                                class="input"
+                                placeholder="Proveedor"
+                                required
+                                pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                            />
+                            <span class="span-for-input-error"></span>
+                        </div>
+
+                        <button class="btn-primary">Actualizar</button>
+                    </form>
+                </div>
             </div>
         </div>
-
-        <div id="myModal3" class="modal">
-            <div class="modal-content">
-                <div class="botonesAC">
-                    <header>Actualizar numero de Suministro</header>
-                    <span class="close">&times;</span>
-                </div>
-
-                <form action="" class="component">
-                    <div class="input-box">
-                        <input id="cantidad" class="input" type="text" placeholder="Cantidad del suministro" required pattern="[0-9]+">
-                        <span class="span-for-input-error"></span>
-                    </div>
-                    <div>
-                        <textarea id="nota" cols="30" rows="5" placeholder="Nota por modificarlo"></textarea>
-                        <span class="span-for-input-error"></span>
-                    </div>
-                    <button class="btn-primary">Actualizar</button>
-                </form>
-
-            </div>
-        </div>
-
-        <div id="myModal2" class="modal">
-            <div class="modal-content">
-                <div class="botonesAC">
-                    <header>Editar Suministro</header>
-                    <span class="close">&times;</span>
-                </div>
-                <form action="">
-                    <div class="input-box">
-                        <input id="codigo" class="input" type="text" placeholder="Codigo del suministro" required
-                            pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
-                        <span class="span-for-input-error"></span>
-                    </div>
-                    <div class="input-box">
-                        <input id="cuentaContable" class="input" type="text" class="input" placeholder="Cuenta contable"
-                            required pattern="[0-9.]+">
-                        <span class="span-for-input-error"></span>
-                    </div>
-                    <div class="input-box">
-                        <input id="grupo" class="input" type="text" class="input" placeholder="Grupo" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
-                        <span class="span-for-input-error"></span>
-                    </div>
-
-                    <div class="input-box">
-                        <input id="nombre" class="input" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
-                        <span class="span-for-input-error"></span>
-                    </div>
-
-                    <div class="input-box">
-                        <input id="unidadDeMedida" class="input" type="text" class="input"
-                            placeholder="Unidad de medida" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
-                        <span class="span-for-input-error"></span>
-                    </div>
-
-                    <div class="input-box">
-                        <input id="subgrupo" class="input" type="text" class="input" placeholder="Sub grupo" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
-                        <span class="span-for-input-error"></span>
-                    </div>
-
-                    <div class="input-box">
-                        <input id="marca" class="input" type="text" class="input" placeholder="Marca" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
-                        <span class="span-for-input-error"></span>
-                    </div>
-
-                    <div class="input-box">
-                        <input id="valorPorUnidad" class="input" type="text" class="input"
-                            placeholder="Valor por unidad" required pattern="[0-9,]+">
-                        <span class="span-for-input-error"></span>
-                    </div>
-
-                    <div class="input-box">
-                        <input id="proveedor" class="input" type="text" class="input" placeholder="Proveedor" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+">
-                        <span class="span-for-input-error"></span>
-                    </div>
-
-                    <button class="btn-primary">Actualizar</button>
-                </form>
-            </div>
-        </div>
-
-    </div>
-    <script type="module" src="../js/validationSuministrosAdmin.js"></script>
-</body>
-
+        <script type="module" src="../js/validationSuministrosAdmin.js"></script>
+    </body>
 </html>

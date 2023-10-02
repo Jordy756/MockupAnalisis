@@ -30,7 +30,7 @@
                         <button type="button" class="button button-primary button-in-line-with-search">Añadir</button>
                         <form class="input-box-search-engine make-request-input-box-search-engine">
                             <input
-                                id="busqueda"
+                                id="search"
                                 type="text"
                                 class="input"
                                 placeholder="Buscar suministros"
@@ -56,7 +56,7 @@
                                 <tr class="body-row">
                                     <td class="body-column sticky-column">
                                         <div class="select-supply-container">
-                                            <input type="checkbox" value="INTA512">
+                                            <input type="checkbox" value="INTA512" />
                                             <span>INTA512</span>
                                         </div>
                                     </td>
@@ -65,7 +65,7 @@
                                     <td class="body-column">3</td>
                                     <td class="body-column">
                                         <div class="actions">
-                                            <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                            <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
                                         </div>
@@ -83,7 +83,7 @@
                                     <td class="body-column">3</td>
                                     <td class="body-column">
                                         <div class="actions">
-                                            <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                            <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
                                         </div>
@@ -101,7 +101,7 @@
                                     <td class="body-column">3</td>
                                     <td class="body-column">
                                         <div class="actions">
-                                            <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                            <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
                                         </div>
@@ -139,12 +139,13 @@
                                     <td class="body-column">Patito</td>
                                     <td class="body-column">
                                         <div class="input-box">
-                                            <input type="text" class="input" value="3" />
+                                            <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
+                                            <span class="span-for-input-error"></span>
                                         </div>
                                     </td>
                                     <td class="body-column">
                                         <div class="actions">
-                                            <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                            <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
                                             <button id="btn-eliminar" type="button" class="table-button button-delete">
@@ -159,12 +160,13 @@
                                     <td class="body-column">Patito</td>
                                     <td class="body-column">
                                         <div class="input-box">
-                                            <input type="text" class="input" value="3" />
+                                            <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
+                                            <span class="span-for-input-error"></span>
                                         </div>
                                     </td>
                                     <td class="body-column">
                                         <div class="actions">
-                                            <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                            <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
                                             <button id="btn-eliminar" type="button" class="table-button button-delete">
@@ -179,12 +181,13 @@
                                     <td class="body-column">Patito</td>
                                     <td class="body-column">
                                         <div class="input-box">
-                                            <input type="text" class="input" value="3" />
+                                            <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
+                                            <span class="span-for-input-error"></span>
                                         </div>
                                     </td>
                                     <td class="body-column">
                                         <div class="actions">
-                                            <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                            <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
                                             <button id="btn-eliminar" type="button" class="table-button button-delete">
@@ -199,12 +202,13 @@
                                     <td class="body-column">Patito</td>
                                     <td class="body-column">
                                         <div class="input-box">
-                                            <input type="text" class="input" value="3" />
+                                            <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
+                                            <span class="span-for-input-error"></span>
                                         </div>
                                     </td>
                                     <td class="body-column">
                                         <div class="actions">
-                                            <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                            <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
                                             <button id="btn-eliminar" type="button" class="table-button button-delete">
@@ -219,12 +223,13 @@
                                     <td class="body-column">Patito</td>
                                     <td class="body-column">
                                         <div class="input-box">
-                                            <input type="text" class="input" value="3" />
+                                            <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
+                                            <span class="span-for-input-error"></span>
                                         </div>
                                     </td>
                                     <td class="body-column">
                                         <div class="actions">
-                                            <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
+                                            <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
                                             <button id="btn-eliminar" type="button" class="table-button button-delete">
@@ -244,8 +249,11 @@
                             <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
                         </button>
                     </div>
-                    <form action="" class="form form-make-request">
-                        <textarea placeholder="Descripcion de la necesidad" class="textarea" required></textarea>
+                    <form id="form-make-request" action="" class="form form-make-request">
+                        <div class="input-box">
+                            <textarea id="description" placeholder="Descripción de la necesidad" class="textarea" required></textarea>
+                            <span class="span-for-input-error"></span>
+                        </div>
                         <button type="submit" class="button button-primary">Enviar</button>
                     </form>
                 </section>
@@ -285,6 +293,7 @@
             </main>
         </div>
         <script src="../js/libraries/swetalert.js"></script>
-        <script src="../js/mostrarModales.js"></script>
+        <script src="../js/showModals.js"></script>
+        <script type="module" src="../js/validations/validationsMakeRequest.js"></script>
     </body>
 </html>

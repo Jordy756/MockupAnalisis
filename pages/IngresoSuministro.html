@@ -20,54 +20,56 @@
             </header>
             <main class="main">
                 <h1 class="title title-in-center">Registrar suministro</h1>
-                <form action="" class="form">
+                <form id="add-supply-form" action="" class="form">
                     <div class="input-box input-box-with-button">
-                        <input id="codigo" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />
-                        <button type="button" class="button button-secondary"><img src="../assets/icons/file.svg" alt="Rellenar" /></button>
+                        <input id="cod" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />
+                        <button type="button" class="button button-secondary">
+                            <img src="../assets/icons/file.svg" alt="Rellenar" />
+                        </button>
                     </div>
                     <div class="input-box">
-                        <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
+                        <input id="accountingAccount" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
                         <span class="span-for-input-error"></span>
                     </div>
                     <div class="input-box">
-                        <input id="grupo" type="text" class="input" placeholder="Grupo" required />
+                        <input id="group" type="text" class="input" placeholder="Grupo" required />
                         <span class="span-for-input-error"></span>
                     </div>
                     <div class="input-box">
-                        <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+" />
+                        <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+" />
                         <span class="span-for-input-error"></span>
                     </div>
                     <div class="input-box">
-                        <input id="unidadDeMedida" type="text" class="input" placeholder="Unidad de medida" required />
+                        <input id="unitMeasurement" type="text" class="input" placeholder="Unidad de medida" required />
                         <span class="span-for-input-error"></span>
                     </div>
                     <div class="input-box">
-                        <input id="subgrupo" type="text" class="input" placeholder="Sub grupo" required />
+                        <input id="subgroup" type="text" class="input" placeholder="Sub grupo" required />
                         <span class="span-for-input-error"></span>
                     </div>
                     <div class="input-box">
-                        <input id="marca" type="text" class="input" placeholder="Marca" required />
+                        <input id="brand" type="text" class="input" placeholder="Marca" required />
                         <span class="span-for-input-error"></span>
                     </div>
                     <div class="input-box">
-                        <input id="valorPorUnidad" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
+                        <input id="unitValue" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
                         <span class="span-for-input-error"></span>
                     </div>
                     <div class="input-box">
-                        <input id="proveedor" type="text" class="input" placeholder="Proveedor" required />
+                        <input id="supplier" type="text" class="input" placeholder="Proveedor" required />
                         <span class="span-for-input-error"></span>
                     </div>
                     <div class="input-box">
-                        <input id="cantidad" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$" />
+                        <input id="quantity" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$" />
                         <span class="span-for-input-error"></span>
                     </div>
                     <div class="buttons-box">
-                        <button type="button" class="button button-secondary">Cancelar</button>
                         <button type="submit" class="button button-primary">Registrar</button>
+                        <button type="button" class="button button-secondary">Cancelar</button>
                     </div>
                 </form>
             </main>
         </div>
-        <script type="module" src="../js/validationIngresoSuministro.js"></script>
+        <script type="module" src="../js/validations/validationsSupply.js"></script>
     </body>
 </html>

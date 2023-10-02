@@ -26,9 +26,9 @@
             <main class="main">
                 <h1 class="title">Usuarios</h1>
                 <section class="section-search-engine">
-                    <button type="button" class="button button-primary" onclick="mostrarModal('new-user')">Nuevo usuario</button>
+                    <button type="button" class="button button-primary" onclick="showModal('new-user')">Nuevo usuario</button>
                     <form class="input-box-search-engine">
-                        <input id="busqueda" type="text" class="input" placeholder="Buscar usuario" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                        <input id="search" type="text" class="input" placeholder="Buscar usuario" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                         <span class="span-for-input-error"></span>
                         <button type="submit" class="button-search-engine"><img src="../assets/icons/search.svg" alt="Buscar" /></button>
                     </form>
@@ -55,7 +55,7 @@
                                 <td class="body-column">Unidad: Carlos Duran</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-user')">
+                                        <button type="button" class="table-button button-update" onclick="showModal('update-user')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
                                         <button id="btn-eliminar" type="button" class="table-button button-delete">
@@ -79,7 +79,7 @@
                                 <td class="body-column">Departamento: Laboratorios</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-user')">
+                                        <button type="button" class="table-button button-update" onclick="showModal('update-user')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
                                         <button id="btn-eliminar" type="button" class="table-button button-delete">
@@ -115,18 +115,18 @@
                             <h2 class="subtitle title-in-center">Registrar usuario</h2>
                         </header>
                         <main class="modal-main">
-                            <form action="" class="form">
+                            <form id="add-user-form" action="" class="form">
                                 <div class="input-box">
                                     <input id="email" type="email" class="input" placeholder="Correo electrónico" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
                                     <input
-                                        id="apellido"
+                                        id="surname"
                                         type="text"
                                         class="input"
                                         placeholder="Apellido"
@@ -136,7 +136,7 @@
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="rol" type="text" class="input" placeholder="Rol" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                                    <input id="role" type="text" class="input" placeholder="Rol" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="radio-section-box">
@@ -178,18 +178,18 @@
                             <h2 class="subtitle title-in-center">Actualizar usuario</h2>
                         </header>
                         <main class="modal-main">
-                            <form action="" class="form">
+                            <form id="update-user-form" action="" class="form">
                                 <div class="input-box">
                                     <input id="email" type="email" class="input" placeholder="Correo electrónico" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
                                     <input
-                                        id="apellido"
+                                        id="surname"
                                         type="text"
                                         class="input"
                                         placeholder="Apellido"
@@ -199,7 +199,7 @@
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="rol" type="text" class="input" placeholder="Rol" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                                    <input id="role" type="text" class="input" placeholder="Rol" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="radio-section-box">
@@ -236,7 +236,8 @@
             </main>
         </div>
         <script src="../js/libraries/swetalert.js"></script>
-        <script src="../js/mostrarModales.js"></script>
+        <script src="../js/showModals.js"></script>
         <script src="../js/chooseSection.js"></script>
+        <script type="module" src="../js/validations/validationsUser.js"></script>
     </body>
 </html>

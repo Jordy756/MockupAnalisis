@@ -24,10 +24,10 @@
             <main class="main">
                 <h1 class="title">Departamentos</h1>
                 <section class="section-search-engine">
-                    <button type="button" class="button button-primary" onclick="mostrarModal('new-department')">Nuevo departamento</button>
+                    <button type="button" class="button button-primary" onclick="showModal('new-department')">Nuevo departamento</button>
                     <form class="input-box-search-engine">
                         <input
-                            id="busqueda"
+                            id="search"
                             type="text"
                             class="input"
                             placeholder="Buscar departamentos"
@@ -43,7 +43,7 @@
                         <thead class="table-head">
                             <tr class="head-row">
                                 <th class="head-column sticky-column">Código</th>
-                                <th class="head-column">Nombre</th>
+                                <th class="head-column">name</th>
                                 <th class="head-column">Dirección</th>
                                 <th class="head-column">Acciones</th>
                             </tr>
@@ -55,7 +55,7 @@
                                 <td class="body-column">San José, San Pedro</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-department')">
+                                        <button type="button" class="table-button button-update" onclick="showModal('update-department')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
                                         <button type="button" id="btn-eliminar" class="table-button button-delete">
@@ -84,18 +84,18 @@
                             <h2 class="subtitle title-in-center">Agregar departamento</h2>
                         </header>
                         <main class="modal-main">
-                            <form action="" class="form">
+                            <form id="add-department-form" action="" class="form">
                                 <div class="input-box">
-                                    <input id="codigo" type="text" class="input" placeholder="Código" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ-, ]+" />
+                                    <input id="cod" type="text" class="input" placeholder="Código" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ-, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
+                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
                                     <input
-                                        id="direction"
+                                        id="address"
                                         type="text"
                                         class="input"
                                         placeholder="Dirección"
@@ -120,18 +120,18 @@
                             <h2 class="subtitle title-in-center">Actualizar departamento</h2>
                         </header>
                         <main class="modal-main">
-                            <form action="" class="form">
+                            <form id="update-department-form" action="" class="form">
                                 <div class="input-box">
-                                    <input id="codigo" type="text" class="input" placeholder="Código" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ-, ]+" />
+                                    <input id="cod" type="text" class="input" placeholder="Código" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ-, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
+                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
                                     <input
-                                        id="direction"
+                                        id="address"
                                         type="text"
                                         class="input"
                                         placeholder="Dirección"
@@ -151,6 +151,7 @@
             </main>
         </div>
         <script src="../js/libraries/swetalert.js"></script>
-        <script src="../js/mostrarModales.js"></script>
+        <script src="../js/showModals.js"></script>
+        <script type="module" src="../js/validations/validationsDepartment.js"></script>
     </body>
 </html>

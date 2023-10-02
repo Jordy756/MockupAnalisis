@@ -24,9 +24,9 @@
             <main class="main">
                 <h1 class="title">Unidades</h1>
                 <section class="section-search-engine">
-                    <button type="button" class="button button-primary" onclick="mostrarModal('new-unit')">Nueva unidad</button>
+                    <button type="button" class="button button-primary" onclick="showModal('new-unit')">Nueva unidad</button>
                     <form class="input-box-search-engine">
-                        <input id="busqueda" type="text" class="input" placeholder="Buscar unidad" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                        <input id="search" type="text" class="input" placeholder="Buscar unidad" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                         <span class="span-for-input-error"></span>
                         <button type="submit" class="button-search-engine"><img src="../assets/icons/search.svg" alt="Buscar" /></button>
                     </form>
@@ -48,7 +48,7 @@
                                 <td class="body-column">San José, San Pedro</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-unit')">
+                                        <button type="button" class="table-button button-update" onclick="showModal('update-unit')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
                                         <button id="btn-eliminar" type="button" class="table-button button-delete">
@@ -77,18 +77,18 @@
                             <h2 class="subtitle title-in-center">Agregar unidad</h2>
                         </header>
                         <main class="modal-main">
-                            <form action="" class="form">
+                            <form id="add-unit-form" action="" class="form">
                                 <div class="input-box">
-                                    <input id="codigo" type="text" class="input" placeholder="Código" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ-, ]+" />
+                                    <input id="cod" type="text" class="input" placeholder="Código" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ-, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
+                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
                                     <input
-                                        id="direction"
+                                        id="address"
                                         type="text"
                                         class="input"
                                         placeholder="Dirección"
@@ -113,18 +113,18 @@
                             <h2 class="subtitle title-in-center">Actualizar unidad</h2>
                         </header>
                         <main class="modal-main">
-                            <form action="" class="form">
+                            <form id="update-unit-form" action="" class="form">
                                 <div class="input-box">
-                                    <input id="codigo" type="text" class="input" placeholder="Código" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ-, ]+" />
+                                    <input id="cod" type="text" class="input" placeholder="Código" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ-, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
+                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
                                     <input
-                                        id="direction"
+                                        id="address"
                                         type="text"
                                         class="input"
                                         placeholder="Dirección"
@@ -144,6 +144,7 @@
             </main>
         </div>
         <script src="../js/libraries/swetalert.js"></script>
-        <script src="../js/mostrarModales.js"></script>
+        <script src="../js/showModals.js"></script>
+        <script type="module" src="../js/validations/validationsUnit.js"></script>
     </body>
 </html>

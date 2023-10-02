@@ -34,10 +34,10 @@
                 </div>
 
                 <section class="section-search-engine">
-                    <button type="button" class="button button-primary" onclick="mostrarModal('new-supply')">Nuevo suministro</button>
+                    <button type="button" class="button button-primary" onclick="showModal('new-supply')">Nuevo suministro</button>
                     <form class="input-box-search-engine">
                         <input
-                            id="busqueda"
+                            id="search"
                             type="text"
                             class="input"
                             placeholder="Buscar suministro"
@@ -67,10 +67,10 @@
                                 <td class="body-column">2</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button type="button" class="table-button button-details" onclick="mostrarModal('myModal1')">
+                                        <button type="button" class="table-button button-details" onclick="showModal('myModal1')">
                                             <img src="../assets/icons/eye.svg" alt="detalles" />
                                         </button>
-                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-supply')">
+                                        <button type="button" class="table-button button-update" onclick="showModal('update-supply')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
                                         <button id="btn-eliminar" type="button" class="table-button button-delete">
@@ -86,10 +86,10 @@
                                 <td class="body-column">5</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button type="button" class="table-button button-details" onclick="mostrarModal('myModal1')">
+                                        <button type="button" class="table-button button-details" onclick="showModal('myModal1')">
                                             <img src="../assets/icons/eye.svg" alt="detalles" />
                                         </button>
-                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-supply')">
+                                        <button type="button" class="table-button button-update" onclick="showModal('update-supply')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
                                         <button id="btn-eliminar" type="button" class="table-button button-delete">
@@ -115,13 +115,13 @@
                     <div class="modal-content">
                         <header class="modal-header">
                             <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
-                            <h2 class="subtitle title-in-center">Agregar nuevo suministro</h2>
+                            <h2 class="subtitle title-in-center">Agregar suministro</h2>
                         </header>
                         <main class="modal-main">
-                            <form action="" class="form">
+                            <form id="add-supply-form" action="" class="form">
                                 <div class="input-box input-box-with-button">
                                     <input
-                                        id="codigo"
+                                        id="cod"
                                         type="text"
                                         class="input"
                                         placeholder="Código del suministro"
@@ -133,39 +133,39 @@
                                     </button>
                                 </div>
                                 <div class="input-box">
-                                    <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
+                                    <input id="accountingAccount" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="grupo" type="text" class="input" placeholder="Grupo" required />
+                                    <input id="group" type="text" class="input" placeholder="Grupo" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+" />
+                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="unidadDeMedida" type="text" class="input" placeholder="Unidad de medida" required />
+                                    <input id="unitMeasurement" type="text" class="input" placeholder="Unidad de medida" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="subgrupo" type="text" class="input" placeholder="Sub grupo" required />
+                                    <input id="subgroup" type="text" class="input" placeholder="Sub grupo" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="marca" type="text" class="input" placeholder="Marca" required />
+                                    <input id="brand" type="text" class="input" placeholder="Marca" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="valorPorUnidad" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
+                                    <input id="unitValue" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="proveedor" type="text" class="input" placeholder="Proveedor" required />
+                                    <input id="supplier" type="text" class="input" placeholder="Proveedor" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="cantidad" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$" />
+                                    <input id="quantity" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="buttons-box">
@@ -184,10 +184,10 @@
                             <h2 class="subtitle title-in-center">Actualizar suministro</h2>
                         </header>
                         <main class="modal-main">
-                            <form action="" class="form">
+                            <form id="update-supply-form" action="" class="form">
                                 <div class="input-box">
                                     <input
-                                        id="codigo"
+                                        id="cod"
                                         type="text"
                                         class="input"
                                         placeholder="Código del suministro"
@@ -197,39 +197,39 @@
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="cuentaContable" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
+                                    <input id="accountingAccount" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="grupo" type="text" class="input" placeholder="Grupo" required />
+                                    <input id="group" type="text" class="input" placeholder="Grupo" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+" />
+                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="unidadDeMedida" type="text" class="input" placeholder="Unidad de medida" required />
+                                    <input id="unitMeasurement" type="text" class="input" placeholder="Unidad de medida" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="subgrupo" type="text" class="input" placeholder="Sub grupo" required />
+                                    <input id="subgroup" type="text" class="input" placeholder="Sub grupo" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="marca" type="text" class="input" placeholder="Marca" required />
+                                    <input id="brand" type="text" class="input" placeholder="Marca" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="valorPorUnidad" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
+                                    <input id="unitValue" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="proveedor" type="text" class="input" placeholder="Proveedor" required />
+                                    <input id="supplier" type="text" class="input" placeholder="Proveedor" required />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="cantidad" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$" />
+                                    <input id="quantity" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="buttons-box">
@@ -243,6 +243,7 @@
             </main>
         </div>
         <script src="../js/libraries/swetalert.js"></script>
-        <script src="../js/mostrarModales.js"></script>
+        <script src="../js/showModals.js"></script>
+        <script type="module" src="../js/validations/validationsSupply.js"></script>
     </body>
 </html>

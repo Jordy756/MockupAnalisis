@@ -1,50 +1,52 @@
-import { validate } from "../../utils/validateErrors.js";
+import { validate, send } from "../../utils/validateErrors.js";
 
-const errorTypes = ["valueMissing","patternMismatch"];
 const errorMessages = {
-    cuentaContable: {
-        valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No se permiten caracteres especiales",
-    },
-    grupo: {
-        valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No se permiten caracteres especiales",
-    },
-    nombre: {
-        valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No se permiten caracteres especiales",
-    },
-    unidadDeMedida: {
-        valueMissing: "Este campo no puede ir vacío",
-    },
-    subgrupo: {
-        valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No se permiten caracteres especiales",
-    },
-    marca: {
-        valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No se permiten caracteres especiales",
-    },
-    proveedor: {
-        valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No se permiten caracteres especiales",
-    },
-    cantidad: {
-        valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "Solo se permite ingresar valores numéricos",
-    },
-    valorPorUnidad: {
-        valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "Solo se permite ingresar valores numéricos",
-    },
-    codigo: {
-        valueMissing: "Este campo no puede ir vacío",
-    },
-    busqueda: {
+    search: {
         patternMismatch: "No se permiten caracteres especiales",
         valueMissing: "Para buscar es necesario ingresar un nombre",
     },
+    accountingAccount: {
+        valueMissing: "Este campo no puede ir vacío",
+        patternMismatch: "No se permiten caracteres especiales",
+    },
+    group: {
+        valueMissing: "Este campo no puede ir vacío",
+        patternMismatch: "No se permiten caracteres especiales",
+    },
+    name: {
+        valueMissing: "Este campo no puede ir vacío",
+        patternMismatch: "No se permiten caracteres especiales",
+    },
+    unitMeasurement: {
+        valueMissing: "Este campo no puede ir vacío",
+    },
+    subgroup: {
+        valueMissing: "Este campo no puede ir vacío",
+        patternMismatch: "No se permiten caracteres especiales",
+    },
+    brand: {
+        valueMissing: "Este campo no puede ir vacío",
+        patternMismatch: "No se permiten caracteres especiales",
+    },
+    supplier: {
+        valueMissing: "Este campo no puede ir vacío",
+        patternMismatch: "No se permiten caracteres especiales",
+    },
+    quantity: {
+        valueMissing: "Este campo no puede ir vacío",
+        patternMismatch: "Solo se permite ingresar valores numéricos",
+    },
+    unitValue: {
+        valueMissing: "Este campo no puede ir vacío",
+        patternMismatch: "Solo se permite ingresar valores numéricos",
+    },
+    cod: {
+        valueMissing: "Este campo no puede ir vacío",
+    },
 };
 
-const inputs = document.querySelectorAll(".input");
-inputs.forEach(input => input.addEventListener("input", input => validate(input.target, errorTypes, errorMessages)));
+document.querySelectorAll(".input").forEach(input => input.addEventListener("input", () => validate(input, errorMessages)));
+const formAdd = document.getElementById("add-supply-form");
+const formUpdate = document.getElementById("update-supply-form");
+formAdd.addEventListener("submit", e => send(formAdd, e));
+formUpdate.addEventListener("submit", e => send(formUpdate, e));

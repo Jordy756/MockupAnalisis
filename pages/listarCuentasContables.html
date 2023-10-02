@@ -24,10 +24,12 @@
             <main class="main">
                 <h1 class="title">Cuentas contables</h1>
                 <section class="section-search-engine">
-                    <button class="button button-primary button-in-line-with-search" onclick="mostrarModal('new-accounting-account')">Nueva cuenta contable</button>
+                    <button class="button button-primary button-in-line-with-search" onclick="showModal('new-accounting-account')">
+                        Nueva cuenta contable
+                    </button>
                     <form class="input-box-search-engine">
                         <input
-                            id="busqueda"
+                            id="search"
                             type="text"
                             class="input"
                             placeholder="Buscar cuenta contable"
@@ -53,7 +55,7 @@
                                 <td class="body-column">Inventarios</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-accounting-account')">
+                                        <button type="button" class="table-button button-update" onclick="showModal('update-accounting-account')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
                                         <button type="button" id="btn-eliminar" class="table-button button-delete">
@@ -67,7 +69,7 @@
                                 <td class="body-column">Materiales y suministros para consumo y prestación de servicios</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-accounting-account')">
+                                        <button type="button" class="table-button button-update" onclick="showModal('update-accounting-account')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
                                         <button id="btn-eliminar" type="button" class="table-button button-delete">
@@ -96,13 +98,13 @@
                             <h2 class="subtitle title-in-center">Agregar cuenta contable</h2>
                         </header>
                         <main class="modal-main">
-                            <form action="" class="form">
+                            <form id="add-accounting-account" action="" class="form">
                                 <div class="input-box">
-                                    <input id="codigo" type="text" class="input" placeholder="Código" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ., ]+" />
+                                    <input id="cod" type="text" class="input" placeholder="Código" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ., ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ]+" />
+                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="buttons-box">
@@ -121,13 +123,13 @@
                             <h2 class="subtitle title-in-center">Actualizar cuenta contable</h2>
                         </header>
                         <main class="modal-main">
-                            <form action="" class="form">
+                            <form id="update-accounting-account" action="" class="form">
                                 <div class="input-box">
-                                    <input id="codigo" type="text" class="input" placeholder="Código" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ., ]+" />
+                                    <input id="cod" type="text" class="input" placeholder="Código" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ., ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ]+" />
+                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="buttons-box">
@@ -141,6 +143,7 @@
             </main>
         </div>
         <script src="../js/libraries/swetalert.js"></script>
-        <script src="../js/mostrarModales.js"></script>
+        <script src="../js/showModals.js"></script>
+        <script type="module" src="../js/validations/validationsAccountingAccount.js"></script>
     </body>
 </html>
