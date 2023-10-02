@@ -36,14 +36,7 @@
                 <section class="section-search-engine">
                     <button type="button" class="button button-primary" onclick="showModal('new-supply')">Nuevo suministro</button>
                     <form class="input-box-search-engine">
-                        <input
-                            id="search"
-                            type="text"
-                            class="input"
-                            placeholder="Buscar suministro"
-                            required
-                            pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
-                        />
+                        <input id="search" type="text" class="input" placeholder="Buscar suministro" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                         <span class="span-for-input-error"></span>
                         <button type="submit" class="button-search-engine"><img src="../assets/icons/search.svg" alt="Buscar" /></button>
                     </form>
@@ -53,18 +46,21 @@
                         <thead class="table-head">
                             <tr class="head-row">
                                 <th class="head-column sticky-column">Código</th>
-                                <th class="head-column">Nombre</th>
-                                <th class="head-column">Marca</th>
+                                <th class="head-column">Identidad</th>
                                 <th class="head-column quantitative-column">Cantidad</th>
+                                <th class="head-column quantitative-column">Valor unidad</th>
                                 <th class="head-column">Acciones</th>
                             </tr>
                         </thead>
                         <tbody class="table-body">
                             <tr class="body-row">
                                 <td class="body-column sticky-column">INTA001</td>
-                                <td class="body-column">Nombre1</td>
-                                <td class="body-column">Marcar1</td>
+                                <td class="body-column">
+                                    <span class="identity-name">Nombre1</span>
+                                    <span class="identity-brand">Marca1</span>
+                                </td>
                                 <td class="body-column quantitative-column">2</td>
+                                <td class="body-column quantitative-column"><span class="price">84724.09</span></td>
                                 <td class="body-column">
                                     <div class="actions">
                                         <button type="button" class="table-button button-details" onclick="showModal('myModal1')">
@@ -81,9 +77,12 @@
                             </tr>
                             <tr class="body-row">
                                 <td class="body-column sticky-column">INTA0002</td>
-                                <td class="body-column">Nombre1</td>
-                                <td class="body-column">Marca2</td>
-                                <td class="body-column quantitative-column">5</td>
+                                <td class="body-column">
+                                    <span class="identity-name">Nombre1</span>
+                                    <span class="identity-brand">Marca2</span>
+                                </td>
+                                <td class="body-column quantitative-column">4</td>
+                                <td class="body-column quantitative-column"><span class="price">872384.42</span></td>
                                 <td class="body-column">
                                     <div class="actions">
                                         <button type="button" class="table-button button-details" onclick="showModal('myModal1')">
@@ -120,20 +119,20 @@
                         <main class="modal-main">
                             <form id="add-supply-form" action="" class="form">
                                 <div class="input-box input-box-with-button">
-                                    <input
-                                        id="cod"
-                                        type="text"
-                                        class="input"
-                                        placeholder="Código del suministro"
-                                        required
-                                        pattern="[a-zA-Z0-9]+"
-                                    />
+                                    <input id="cod" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />
                                     <button type="button" class="button button-secondary">
                                         <img src="../assets/icons/file.svg" alt="Rellenar" />
                                     </button>
                                 </div>
                                 <div class="input-box">
-                                    <input id="accountingAccount" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
+                                    <input
+                                        id="accountingAccount"
+                                        type="text"
+                                        class="input"
+                                        placeholder="Cuenta contable"
+                                        required
+                                        pattern="[0-9.]+"
+                                    />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
@@ -186,18 +185,18 @@
                         <main class="modal-main">
                             <form id="update-supply-form" action="" class="form">
                                 <div class="input-box">
-                                    <input
-                                        id="cod"
-                                        type="text"
-                                        class="input"
-                                        placeholder="Código del suministro"
-                                        required
-                                        pattern="[a-zA-Z0-9]+"
-                                    />
+                                    <input id="cod" type="text" class="input" placeholder="Código del suministro" required pattern="[a-zA-Z0-9]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
-                                    <input id="accountingAccount" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
+                                    <input
+                                        id="accountingAccount"
+                                        type="text"
+                                        class="input"
+                                        placeholder="Cuenta contable"
+                                        required
+                                        pattern="[0-9.]+"
+                                    />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">

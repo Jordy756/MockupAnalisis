@@ -25,10 +25,6 @@
     background-color: var(--table-background);
 }
 
-.quantitative-column {
-    text-align: right;
-}
-
 .sticky-column::before {
     pointer-events: none;
     content: "";
@@ -42,6 +38,24 @@
     border-right-color: var(--table-border);
     border-left-color: var(--table-border);
     box-shadow: 0.125rem 0 0.1875rem var(--table-border);
+}
+
+.identity-name,
+.indentity-brand {
+    display: block;
+}
+
+.identity-brand {
+    font-size: 0.9rem;
+    color: var(--gray-light-color);
+}
+
+.quantitative-column {
+    text-align: right;
+}
+
+.price::before {
+    content: "₡ ";
 }
 
 .actions {

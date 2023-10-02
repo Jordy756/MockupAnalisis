@@ -46,9 +46,9 @@
                             <thead class="table-head">
                                 <tr class="head-row">
                                     <th class="head-column sticky-column">Código</th>
-                                    <th class="head-column">Nombre</th>
-                                    <th class="head-column">Marca</th>
+                                    <th class="head-column">Identidad</th>
                                     <th class="head-column quantitative-column">Cantidad</th>
+                                    <th class="head-column quantitative-column">Valor unidad</th>
                                     <th class="head-column">Acciones</th>
                                 </tr>
                             </thead>
@@ -60,9 +60,12 @@
                                             <span>INTA512</span>
                                         </div>
                                     </td>
-                                    <td class="body-column">Toner</td>
-                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">
+                                        <span class="identity-name">Toner</span>
+                                        <span class="identity-brand">Patito</span>
+                                    </td>
                                     <td class="body-column quantitative-column">3</td>
+                                    <td class="body-column quantitative-column"><span class="price">372.83</span></td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
@@ -73,14 +76,17 @@
                                 </tr>
                                 <tr class="body-row">
                                     <td class="body-column sticky-column">
-                                        <div select-supply-container>
-                                            <input type="checkbox" />
+                                        <div class="select-supply-container">
+                                            <input type="checkbox" value="INTA512" />
                                             <span>INTA512</span>
                                         </div>
                                     </td>
-                                    <td class="body-column">Toner</td>
-                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">
+                                        <span class="identity-name">Toner</span>
+                                        <span class="identity-brand">Patito</span>
+                                    </td>
                                     <td class="body-column quantitative-column">3</td>
+                                    <td class="body-column quantitative-column"><span class="price">372.83</span></td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
@@ -91,14 +97,17 @@
                                 </tr>
                                 <tr class="body-row">
                                     <td class="body-column sticky-column">
-                                        <div select-supply-container>
-                                            <input type="checkbox" />
+                                        <div class="select-supply-container">
+                                            <input type="checkbox" value="INTA512" />
                                             <span>INTA512</span>
                                         </div>
                                     </td>
-                                    <td class="body-column">Toner</td>
-                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">
+                                        <span class="identity-name">Toner</span>
+                                        <span class="identity-brand">Patito</span>
+                                    </td>
                                     <td class="body-column quantitative-column">3</td>
+                                    <td class="body-column quantitative-column"><span class="price">372.83</span></td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
@@ -126,23 +135,26 @@
                             <thead class="table-head">
                                 <tr class="head-row">
                                     <th class="head-column sticky-column">Código</th>
-                                    <th class="head-column">Nombre</th>
-                                    <th class="head-column">Marca</th>
-                                    <th class="head-column">Cantidad</th>
+                                    <th class="head-column">Identidad</th>
+                                    <th class="head-column quantitative-column">Cantidad</th>
+                                    <th class="head-column quantitative-column">Valor unidad</th>
                                     <th class="head-column">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody class="table-body">
                                 <tr class="body-row">
                                     <td class="body-column sticky-column">INTA512</td>
-                                    <td class="body-column">Toner</td>
-                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">
+                                        <span class="identity-name">Toner</span>
+                                        <span class="identity-brand">Patito</span>
+                                    </td>
                                     <td class="body-column">
                                         <div class="input-box">
                                             <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
                                             <span class="span-for-input-error"></span>
                                         </div>
                                     </td>
+                                    <td class="body-column quantitative-column"><span class="price">372.83</span></td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
@@ -156,14 +168,17 @@
                                 </tr>
                                 <tr class="body-row">
                                     <td class="body-column sticky-column">INTA512</td>
-                                    <td class="body-column">Toner</td>
-                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">
+                                        <span class="identity-name">Toner</span>
+                                        <span class="identity-brand">Patito</span>
+                                    </td>
                                     <td class="body-column">
                                         <div class="input-box">
                                             <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
                                             <span class="span-for-input-error"></span>
                                         </div>
                                     </td>
+                                    <td class="body-column quantitative-column"><span class="price">372.83</span></td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
@@ -177,14 +192,17 @@
                                 </tr>
                                 <tr class="body-row">
                                     <td class="body-column sticky-column">INTA512</td>
-                                    <td class="body-column">Toner</td>
-                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">
+                                        <span class="identity-name">Toner</span>
+                                        <span class="identity-brand">Patito</span>
+                                    </td>
                                     <td class="body-column">
                                         <div class="input-box">
                                             <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
                                             <span class="span-for-input-error"></span>
                                         </div>
                                     </td>
+                                    <td class="body-column quantitative-column"><span class="price">372.83</span></td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
@@ -198,14 +216,17 @@
                                 </tr>
                                 <tr class="body-row">
                                     <td class="body-column sticky-column">INTA512</td>
-                                    <td class="body-column">Toner</td>
-                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">
+                                        <span class="identity-name">Toner</span>
+                                        <span class="identity-brand">Patito</span>
+                                    </td>
                                     <td class="body-column">
                                         <div class="input-box">
                                             <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
                                             <span class="span-for-input-error"></span>
                                         </div>
                                     </td>
+                                    <td class="body-column quantitative-column"><span class="price">372.83</span></td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
@@ -219,14 +240,17 @@
                                 </tr>
                                 <tr class="body-row">
                                     <td class="body-column sticky-column">INTA512</td>
-                                    <td class="body-column">Toner</td>
-                                    <td class="body-column">Patito</td>
+                                    <td class="body-column">
+                                        <span class="identity-name">Toner</span>
+                                        <span class="identity-brand">Patito</span>
+                                    </td>
                                     <td class="body-column">
                                         <div class="input-box">
                                             <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
                                             <span class="span-for-input-error"></span>
                                         </div>
                                     </td>
+                                    <td class="body-column quantitative-column"><span class="price">372.83</span></td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
