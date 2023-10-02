@@ -7,17 +7,13 @@
     gap: 1rem;
 }
 
-.make-request-section-search-engine {
-    justify-content: center;
-}
-
 .input-box-search-engine {
     position: relative;
     width: 15rem;
 }
 
 .make-request-input-box-search-engine {
-    width: 80%;
+    flex: 1;
 }
 
 .button-search-engine {
@@ -30,8 +26,19 @@
     border: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 260px) {
     .make-request-input-box-search-engine {
+        flex: none;
+        width: 100%;
+    }
+
+    .button-in-line-with-search {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 484px) {
+    .input-box-search-engine {
         width: 100%;
     }
 }

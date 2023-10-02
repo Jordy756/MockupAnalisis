@@ -1,6 +1,5 @@
-import { validate } from "../../utils/validateErrors.js";
+import { validate, send } from "../../utils/validateErrors.js";
 
-const errorTypes = ["valueMissing", "typeMismatch", "tooShort"];
 const errorMessages = {
     email: {
         valueMissing: "Este campo no puede ir vacío",
@@ -12,5 +11,7 @@ const errorMessages = {
     },
 };
 
-const inputs = document.querySelectorAll(".input");
-inputs.forEach(input => input.addEventListener("input", input => validate(input.target, errorTypes, errorMessages)));
+document.querySelectorAll(".input").forEach(input => input.addEventListener("input", () => validate(input, errorMessages)));
+
+const form = document.getElementById("login-form");
+form.addEventListener("submit", e => send(form, e));

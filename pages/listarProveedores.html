@@ -24,7 +24,7 @@
             <main class="main">
                 <h1 class="title">Proveedores</h1>
                 <section class="section-search-engine">
-                    <button class="button button-primary" onclick="mostrarModal('new-supplier')">Nuevo proveedor</button>
+                    <button type="button" class="button button-primary" onclick="mostrarModal('new-supplier')">Nuevo proveedor</button>
                     <form class="input-box-search-engine">
                         <input id="busqueda" type="text" class="input" placeholder="Buscar proveedor" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                         <span class="span-for-input-error"></span>
@@ -48,10 +48,10 @@
                                 <td class="body-column">87788778</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button class="table-button button-update" onclick="mostrarModal('update-supplier')">
+                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-supplier')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
-                                        <button id="btn-eliminar" class="table-button button-delete">
+                                        <button id="btn-eliminar" type="button" class="table-button button-delete">
                                             <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
                                         </button>
                                     </div>
@@ -63,10 +63,10 @@
                                 <td class="body-column">87788778</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button class="table-button button-update" onclick="mostrarModal('update-supplier')">
+                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-supplier')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
-                                        <button id="btn-eliminar" class="table-button button-delete">
+                                        <button id="btn-eliminar" type="button" class="table-button button-delete">
                                             <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
                                         </button>
                                     </div>
@@ -78,10 +78,10 @@
                                 <td class="body-column">87788778</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button class="table-button button-update" onclick="mostrarModal('update-supplier')">
+                                        <button class="table-button button-update" type="button" onclick="mostrarModal('update-supplier')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
-                                        <button id="btn-eliminar" class="table-button button-delete">
+                                        <button id="btn-eliminar" type="button" class="table-button button-delete">
                                             <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
                                         </button>
                                     </div>
@@ -91,10 +91,10 @@
                     </table>
                 </section>
                 <div>
-                    <button id="previous-button" type="submit" class="button button-secondary pagination-button">
+                    <button id="previous-button" type="button" class="button button-secondary pagination-button">
                         <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
                     </button>
-                    <button id="next-button" type="submit" class="button button-secondary pagination-button">
+                    <button id="next-button" type="button" class="button button-secondary pagination-button">
                         <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
                     </button>
                 </div>
@@ -102,83 +102,91 @@
                 <!-- MODALS -->
                 <div id="new-supplier" class="modal">
                     <div class="modal-content">
-                        <button class="button-close-modal">&times;</button>
-                        <h2 class="title-modal">Agregar proveedor</h2>
-                        <form action="" class="form">
-                            <div class="input-box">
-                                <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="input-box">
-                                <input
-                                    id="direction"
-                                    type="text"
-                                    class="input"
-                                    placeholder="Dirección"
-                                    required
-                                    pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
-                                />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="input-box">
-                                <input
-                                    id="telefono"
-                                    type="text"
-                                    class="input"
-                                    placeholder="Teléfono"
-                                    required
-                                    oninput="formatPhone(this); validatePhone(this);"
-                                    required
-                                    maxlength="9"
-                                />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="buttons-box">
-                                <button type="button" class="button button-secondary">Cancelar</button>
-                                <button type="submit" class="button button-primary">Registrar</button>
-                            </div>
-                        </form>
+                        <header class="modal-header">
+                            <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
+                            <h2 class="subtitle title-in-center">Agregar proveedor</h2>
+                        </header>
+                        <main class="modal-main">
+                            <form action="" class="form">
+                                <div class="input-box">
+                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="input-box">
+                                    <input
+                                        id="direction"
+                                        type="text"
+                                        class="input"
+                                        placeholder="Dirección"
+                                        required
+                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                                    />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="input-box">
+                                    <input
+                                        id="telefono"
+                                        type="text"
+                                        class="input"
+                                        placeholder="Teléfono"
+                                        required
+                                        oninput="formatPhone(this); validatePhone(this);"
+                                        required
+                                        maxlength="9"
+                                    />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="buttons-box">
+                                    <button type="submit" class="button button-primary">Registrar</button>
+                                    <button type="button" class="button button-secondary">Cancelar</button>
+                                </div>
+                            </form>
+                        </main>
                     </div>
                 </div>
 
                 <div id="update-supplier" class="modal">
                     <div class="modal-content">
-                        <button class="button-close-modal">&times;</button>
-                        <h2 class="title-modal">Actualizar proveedor</h2>
-                        <form action="" class="form">
-                            <div class="input-box">
-                                <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="input-box">
-                                <input
-                                    id="direction"
-                                    type="text"
-                                    class="input"
-                                    placeholder="Dirección"
-                                    required
-                                    pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
-                                />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="input-box">
-                                <input
-                                    id="telefono"
-                                    type="text"
-                                    class="input"
-                                    placeholder="Teléfono"
-                                    required
-                                    oninput="formatPhone(this); validatePhone(this);"
-                                    required
-                                    maxlength="9"
-                                />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="buttons-box">
-                                <button type="button" class="button button-secondary">Cancelar</button>
-                                <button type="submit" class="button button-primary">Actualizar</button>
-                            </div>
-                        </form>
+                        <header class="modal-header">
+                            <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
+                            <h2 class="subtitle title-in-center">Actualizar proveedor</h2>
+                        </header>
+                        <main class="modal-main">
+                            <form action="" class="form">
+                                <div class="input-box">
+                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="input-box">
+                                    <input
+                                        id="direction"
+                                        type="text"
+                                        class="input"
+                                        placeholder="Dirección"
+                                        required
+                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                                    />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="input-box">
+                                    <input
+                                        id="telefono"
+                                        type="text"
+                                        class="input"
+                                        placeholder="Teléfono"
+                                        required
+                                        oninput="formatPhone(this); validatePhone(this);"
+                                        required
+                                        maxlength="9"
+                                    />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="buttons-box">
+                                    <button type="submit" class="button button-primary">Actualizar</button>
+                                    <button type="button" class="button button-secondary">Cancelar</button>
+                                </div>
+                            </form>
+                        </main>
                     </div>
                 </div>
             </main>

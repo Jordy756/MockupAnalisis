@@ -9,47 +9,52 @@
         <link rel="stylesheet" href="../css/components/header.css" />
         <link rel="stylesheet" href="../css/buttons.css" />
         <link rel="stylesheet" href="../css/components/table.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     </head>
     <body>
         <div class="main-container">
             <header class="header">
                 <nav class="nav-header">
                     <a href="#" class="nav-link"><img src="../assets/images/logo.webp" alt="" width="80px" height="50px" /></a>
-                    <a href="#" class="nav-link"><i class="bi bi-box-arrow-right bi-xl"></i></a>
+                    <a href="#" class="nav-link"><img src="../assets/icons/logout.svg" alt="Cerrar sesión" /></a>
                 </nav>
             </header>
             <main class="main">
                 <h1 class="title">Historial</h1>
-                <table class="table">
-                    <thead class="table-head">
-                        <tr class="head-row">
-                            <th class="head-column">Acción</th>
-                            <th class="head-column">Fecha</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-body">
-                        <tr class="body-row">
-                            <td class="body-column">Borró el suministro alcohol en gel patito</td>
-                            <td class="body-column">26/09/2023 12:17:54</td>
-                        </tr>
-                        <tr class="body-row">
-                            <td class="body-column">Registro el suministro alcohol en gel 250 ml patito</td>
-                            <td class="body-column">26/09/2023 12:18:25</td>
-                        </tr>
-                        <tr class="body-row">
-                            <td class="body-column">Edito el suministro alcohol en gel patito</td>
-                            <td class="body-column">27/09/2023 9:34:45</td>
-                        </tr>
-                        <tr class="body-row">
-                            <td class="body-column">Registro el suministro agenda patito</td>
-                            <td class="body-column">28/09/2023 15:58:11</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <section class="table-container">
+                    <table class="table">
+                        <thead class="table-head">
+                            <tr class="head-row">
+                                <th class="head-column sticky-column">Acción</th>
+                                <th class="head-column">Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">Borró el suministro alcohol en gel patito</td>
+                                <td class="body-column">26/09/2023 12:17:54</td>
+                            </tr>
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">Registro el suministro alcohol en gel 250 ml patito</td>
+                                <td class="body-column">26/09/2023 12:18:25</td>
+                            </tr>
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">Edito el suministro alcohol en gel patito</td>
+                                <td class="body-column">27/09/2023 9:34:45</td>
+                            </tr>
+                            <tr class="body-row">
+                                <td class="body-column sticky-column">Registro el suministro agenda patito</td>
+                                <td class="body-column">28/09/2023 15:58:11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
                 <div>
-                    <button id="previous-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-left"></i></button>
-                    <button id="next-button" type="submit" class="button button-secondary"><i class="bi bi-arrow-right"></i></button>
+                    <button id="previous-button" type="button" class="button button-secondary pagination-button">
+                        <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
+                    </button>
+                    <button id="next-button" type="button" class="button button-secondary pagination-button">
+                        <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
+                    </button>
                 </div>
             </main>
         </div>

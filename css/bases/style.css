@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 :root {
     --green-color: #849a30;
     --button-hover-green-color: #738529;
     --white-color: #f9f9f9;
+    --table-background: #f4f6fd;
+    --table-border: #cdd6f6;
 }
 
 * {
@@ -12,7 +16,7 @@
 
 body {
     background-color: var(--white-color);
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1rem;
 }
 
@@ -20,7 +24,7 @@ body {
     position: relative;
 }
 
-.main {
+.main, .main-login {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,12 +33,20 @@ body {
     padding: 2rem 1rem;
 }
 
+.main-login {
+    min-height: 100vh;
+}
+
+.login-image-logo {
+    width: 20rem;
+    height: 15rem;
+}
+
 .main-home {
     padding: 2rem;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .title,
@@ -77,5 +89,11 @@ body {
 
     .subtitle {
         font-size: 1.2rem;
+    }
+
+    .login-image-logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 }

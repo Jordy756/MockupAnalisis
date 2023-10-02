@@ -26,13 +26,14 @@
                 <h1 class="title title-in-center">Formulario de solicitud</h1>
                 <section class="make-request-section">
                     <h2 class="subtitle title-in-center">Buscar suministros</h2>
-                    <section class="section-search-engine make-request-section-search-engine">
+                    <section class="section-search-engine">
+                        <button type="button" class="button button-primary button-in-line-with-search">Añadir</button>
                         <form class="input-box-search-engine make-request-input-box-search-engine">
                             <input
                                 id="busqueda"
                                 type="text"
                                 class="input"
-                                placeholder="¿Qué deseas encontrar?"
+                                placeholder="Buscar suministros"
                                 required
                                 pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
                             />
@@ -41,20 +42,24 @@
                         </form>
                     </section>
                     <section class="table-container">
-                        <table class="table request-table">
+                        <table class="table">
                             <thead class="table-head">
                                 <tr class="head-row">
                                     <th class="head-column sticky-column">Código</th>
                                     <th class="head-column">Nombre</th>
                                     <th class="head-column">Marca</th>
                                     <th class="head-column">Cantidad</th>
-                                    <th class="head-column">Detalles</th>
                                     <th class="head-column">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody class="table-body">
                                 <tr class="body-row">
-                                    <td class="body-column sticky-column">INTA512</td>
+                                    <td class="body-column sticky-column">
+                                        <div class="select-supply-container">
+                                            <input type="checkbox" value="INTA512">
+                                            <span>INTA512</span>
+                                        </div>
+                                    </td>
                                     <td class="body-column">Toner</td>
                                     <td class="body-column">Patito</td>
                                     <td class="body-column">3</td>
@@ -62,19 +67,17 @@
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="body-column">
-                                        <div class="actions">
-                                            <button type="button" class="table-button button-accept" onclick="mostrarModal('add-supply')">
-                                                <img src="../assets/icons/plus.svg" alt="Detalles" />
                                             </button>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr class="body-row">
-                                    <td class="body-column sticky-column">INTA512</td>
+                                    <td class="body-column sticky-column">
+                                        <div select-supply-container>
+                                            <input type="checkbox" />
+                                            <span>INTA512</span>
+                                        </div>
+                                    </td>
                                     <td class="body-column">Toner</td>
                                     <td class="body-column">Patito</td>
                                     <td class="body-column">3</td>
@@ -82,19 +85,17 @@
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="body-column">
-                                        <div class="actions">
-                                            <button type="button" class="table-button button-accept" onclick="mostrarModal('add-supply')">
-                                                <img src="../assets/icons/plus.svg" alt="Detalles" />
                                             </button>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr class="body-row">
-                                    <td class="body-column sticky-column">INTA512</td>
+                                    <td class="body-column sticky-column">
+                                        <div select-supply-container>
+                                            <input type="checkbox" />
+                                            <span>INTA512</span>
+                                        </div>
+                                    </td>
                                     <td class="body-column">Toner</td>
                                     <td class="body-column">Patito</td>
                                     <td class="body-column">3</td>
@@ -102,13 +103,6 @@
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="body-column">
-                                        <div class="actions">
-                                            <button type="button" class="table-button button-accept" onclick="mostrarModal('add-supply')">
-                                                <img src="../assets/icons/plus.svg" alt="Detalles" />
                                             </button>
                                         </div>
                                     </td>
@@ -128,14 +122,13 @@
                 <section class="make-request-section">
                     <h2 class="subtitle title-in-center">Lista de suministros</h2>
                     <section class="table-container">
-                        <table class="table request-table">
+                        <table class="table">
                             <thead class="table-head">
                                 <tr class="head-row">
                                     <th class="head-column sticky-column">Código</th>
                                     <th class="head-column">Nombre</th>
                                     <th class="head-column">Marca</th>
                                     <th class="head-column">Cantidad</th>
-                                    <th class="head-column">Detalles</th>
                                     <th class="head-column">Acciones</th>
                                 </tr>
                             </thead>
@@ -144,16 +137,16 @@
                                     <td class="body-column sticky-column">INTA512</td>
                                     <td class="body-column">Toner</td>
                                     <td class="body-column">Patito</td>
-                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="input-box">
+                                            <input type="text" class="input" value="3" />
+                                        </div>
+                                    </td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
-                                        </div>
-                                    </td>
-                                    <td class="body-column">
-                                        <div class="actions">
                                             <button id="btn-eliminar" type="button" class="table-button button-delete">
                                                 <img src="../assets/icons/trash.svg" alt="Eliminar" />
                                             </button>
@@ -164,17 +157,17 @@
                                     <td class="body-column sticky-column">INTA512</td>
                                     <td class="body-column">Toner</td>
                                     <td class="body-column">Patito</td>
-                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="input-box">
+                                            <input type="text" class="input" value="3" />
+                                        </div>
+                                    </td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
-                                        </div>
-                                    </td>
-                                    <td class="body-column">
-                                        <div class="actions">
-                                            <button type="button" class="table-button button-delete">
+                                            <button id="btn-eliminar" type="button" class="table-button button-delete">
                                                 <img src="../assets/icons/trash.svg" alt="Eliminar" />
                                             </button>
                                         </div>
@@ -184,17 +177,17 @@
                                     <td class="body-column sticky-column">INTA512</td>
                                     <td class="body-column">Toner</td>
                                     <td class="body-column">Patito</td>
-                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="input-box">
+                                            <input type="text" class="input" value="3" />
+                                        </div>
+                                    </td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
-                                        </div>
-                                    </td>
-                                    <td class="body-column">
-                                        <div class="actions">
-                                            <button type="button" class="table-button button-delete">
+                                            <button id="btn-eliminar" type="button" class="table-button button-delete">
                                                 <img src="../assets/icons/trash.svg" alt="Eliminar" />
                                             </button>
                                         </div>
@@ -204,17 +197,17 @@
                                     <td class="body-column sticky-column">INTA512</td>
                                     <td class="body-column">Toner</td>
                                     <td class="body-column">Patito</td>
-                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="input-box">
+                                            <input type="text" class="input" value="3" />
+                                        </div>
+                                    </td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
-                                        </div>
-                                    </td>
-                                    <td class="body-column">
-                                        <div class="actions">
-                                            <button type="button" class="table-button button-delete">
+                                            <button id="btn-eliminar" type="button" class="table-button button-delete">
                                                 <img src="../assets/icons/trash.svg" alt="Eliminar" />
                                             </button>
                                         </div>
@@ -224,17 +217,17 @@
                                     <td class="body-column sticky-column">INTA512</td>
                                     <td class="body-column">Toner</td>
                                     <td class="body-column">Patito</td>
-                                    <td class="body-column">3</td>
+                                    <td class="body-column">
+                                        <div class="input-box">
+                                            <input type="text" class="input" value="3" />
+                                        </div>
+                                    </td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-details" onclick="mostrarModal('supply-details')">
                                                 <img src="../assets/icons/eye.svg" alt="Detalles" />
                                             </button>
-                                        </div>
-                                    </td>
-                                    <td class="body-column">
-                                        <div class="actions">
-                                            <button type="button" class="table-button button-delete">
+                                            <button id="btn-eliminar" type="button" class="table-button button-delete">
                                                 <img src="../assets/icons/trash.svg" alt="Eliminar" />
                                             </button>
                                         </div>
@@ -253,7 +246,7 @@
                     </div>
                     <form action="" class="form form-make-request">
                         <textarea placeholder="Descripcion de la necesidad" class="textarea" required></textarea>
-                        <button id="myButton" type="submit" class="button button-primary">Enviar</button>
+                        <button type="submit" class="button button-primary">Enviar</button>
                     </form>
                 </section>
 
@@ -261,8 +254,8 @@
                 <div id="supply-details" class="modal">
                     <div class="modal-content">
                         <header class="modal-header">
-                            <span class="button-close-modal">&times;</span>
-                            <h2 class="title-modal">Lista de suministros</h2>
+                            <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
+                            <h2 class="subtitle title-in-center">Lista de suministros</h2>
                         </header>
                         <main class="modal-main-requests">
                             <ul class="list">
@@ -289,37 +282,9 @@
                         </footer>
                     </div>
                 </div>
-
-                <div id="add-supply" class="modal">
-                    <div class="modal-content">
-                        <header class="modal-header">
-                            <h2 class="subtitle">Añadir</h2>
-                            <span class="button-close-modal">&times;</span>
-                        </header>
-                        <main class="modal-main">
-                            <form action="" class="form">
-                                <div class="input-box">
-                                    <input
-                                        id="cantidad"
-                                        type="text"
-                                        class="input"
-                                        min="1"
-                                        placeholder="Ingrese la cantidad"
-                                        required
-                                        pattern="^[0-9]+$"
-                                    />
-                                    <span class="span-for-input-error"></span>
-                                </div>
-                                <button id="myButton" type="submit" class="button button-primary">Añadir</button>
-                            </form>
-                        </main>
-                    </div>
-                </div>
             </main>
         </div>
         <script src="../js/libraries/swetalert.js"></script>
         <script src="../js/mostrarModales.js"></script>
     </body>
 </html>
-
-<!--  -->

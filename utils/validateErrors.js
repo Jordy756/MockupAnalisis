@@ -1,18 +1,14 @@
-export const validate = (input, errorTypes, errorMessages) => {
+export const validate = (input, errorMessages) => {
     const span = input.parentElement.querySelector(".span-for-input-error");
-    if (input.validity.valid) {
-        span.textContent = "";
-        input.style.borderColor = "#849a30";
-    } else {
-        span.textContent = showMessage(input, errorTypes, errorMessages);
-        input.style.borderColor = "#f41d1d";
-    }
+    span.textContent = Object.keys(errorMessages[input.id])
+        .filter(error => input.validity[error])
+        .map(error => errorMessages[input.id][error])
+        .join(" ");
+    input.style.borderColor = span.textContent ? "#f41d1d" : "#849a30";
 };
 
-const showMessage = (input, errorTypes, errorMessages) => {
-    let message = "";
-    errorTypes.forEach(error => input.validity[error] && (message = errorMessages[input.id][error]));
-    return message;
+export const send = (form, e) => {
+    document.querySelectorAll(".input").forEach(validate);
+    const errorSpans = form.querySelectorAll(".span-for-input-error");
+    Array.from(errorSpans).some(span => span.textContent !== "") && e.preventDefault();
 };
-
-

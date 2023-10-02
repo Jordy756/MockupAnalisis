@@ -26,7 +26,7 @@
             <main class="main">
                 <h1 class="title">Usuarios</h1>
                 <section class="section-search-engine">
-                    <button class="button button-primary" onclick="mostrarModal('new-user')">Nuevo usuario</button>
+                    <button type="button" class="button button-primary" onclick="mostrarModal('new-user')">Nuevo usuario</button>
                     <form class="input-box-search-engine">
                         <input id="busqueda" type="text" class="input" placeholder="Buscar usuario" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                         <span class="span-for-input-error"></span>
@@ -55,10 +55,10 @@
                                 <td class="body-column">Unidad: Carlos Duran</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button class="table-button button-update" onclick="mostrarModal('update-user')">
+                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-user')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
-                                        <button id="btn-eliminar" class="table-button button-delete">
+                                        <button id="btn-eliminar" type="button" class="table-button button-delete">
                                             <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
                                         </button>
                                     </div>
@@ -79,10 +79,10 @@
                                 <td class="body-column">Departamento: Laboratorios</td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button class="table-button button-update" onclick="mostrarModal('update-user')">
+                                        <button type="button" class="table-button button-update" onclick="mostrarModal('update-user')">
                                             <img src="../assets/icons/pencil.svg" alt="Editar" />
                                         </button>
-                                        <button id="btn-eliminar" class="table-button button-delete">
+                                        <button id="btn-eliminar" type="button" class="table-button button-delete">
                                             <img src="../assets/icons/trash.svg" alt="Eliminar" srcset="" />
                                         </button>
                                     </div>
@@ -99,10 +99,10 @@
                     </table>
                 </section>
                 <div>
-                    <button id="previous-button" type="submit" class="button button-secondary pagination-button">
+                    <button id="previous-button" type="button" class="button button-secondary pagination-button">
                         <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
                     </button>
-                    <button id="next-button" type="submit" class="button button-secondary pagination-button">
+                    <button id="next-button" type="button" class="button button-secondary pagination-button">
                         <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
                     </button>
                 </div>
@@ -110,105 +110,127 @@
                 <!-- MODALS -->
                 <div id="new-user" class="modal">
                     <div class="modal-content">
-                        <button class="button-close-modal">&times;</button>
-                        <h2 class="title-modal">Agregar usuario</h2>
-                        <form action="" class="form">
-                            <div class="input-box">
-                                <input id="email" type="email" class="input" placeholder="Correo electrónico" required />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="input-box">
-                                <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="input-box">
-                                <input id="apellido" type="text" class="input" placeholder="Apellido" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="input-box">
-                                <input id="rol" type="text" class="input" placeholder="Rol" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="radio-section-box">
-                                <label class="radio-section-box-title" for="section">Sección:</label>
-                                <div class="radio-section-box-elements">
-                                    <input type="radio" id="department-insert" name="section" value="department" />
-                                    <label for="department">Departamento</label>
-                                    <input type="radio" id="unit-insert" name="section" value="unit" />
-                                    <label for="unit">Unidad</label>
+                        <header class="modal-header">
+                            <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
+                            <h2 class="subtitle title-in-center">Registrar usuario</h2>
+                        </header>
+                        <main class="modal-main">
+                            <form action="" class="form">
+                                <div class="input-box">
+                                    <input id="email" type="email" class="input" placeholder="Correo electrónico" required />
+                                    <span class="span-for-input-error"></span>
                                 </div>
-                            </div>
-                            <div id="departments-insert" class="input-box">
-                                <select class="select">
-                                    <option value="" disabled selected>Selecciona un departamento</option>
-                                    <option value="">Laboratios</option>
-                                    <option value="">No me acuerdo</option>
-                                </select>
-                            </div>
-                            <div id="units-insert" class="input-box">
-                                <select class="select">
-                                    <option value="" disabled selected>Selecciona una unidad</option>
-                                    <option value="">Carlos Duran</option>
-                                    <option value="">Los diamantes</option>
-                                </select>
-                            </div>
-                            <div class="buttons-box">
-                                <button type="button" class="button button-secondary">Cancelar</button>
-                                <button type="submit" class="button button-primary">Registrar</button>
-                            </div>
-                        </form>
+                                <div class="input-box">
+                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="input-box">
+                                    <input
+                                        id="apellido"
+                                        type="text"
+                                        class="input"
+                                        placeholder="Apellido"
+                                        required
+                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                                    />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="input-box">
+                                    <input id="rol" type="text" class="input" placeholder="Rol" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="radio-section-box">
+                                    <label class="radio-section-box-title" for="section">Sección:</label>
+                                    <div class="radio-section-box-elements">
+                                        <input type="radio" id="department-insert" name="section" value="department" />
+                                        <label for="department">Departamento</label>
+                                        <input type="radio" id="unit-insert" name="section" value="unit" />
+                                        <label for="unit">Unidad</label>
+                                    </div>
+                                </div>
+                                <div id="departments-insert" class="input-box">
+                                    <select class="select">
+                                        <option value="" disabled selected>Selecciona un departamento</option>
+                                        <option value="">Laboratios</option>
+                                        <option value="">No me acuerdo</option>
+                                    </select>
+                                </div>
+                                <div id="units-insert" class="input-box">
+                                    <select class="select">
+                                        <option value="" disabled selected>Selecciona una unidad</option>
+                                        <option value="">Carlos Duran</option>
+                                        <option value="">Los diamantes</option>
+                                    </select>
+                                </div>
+                                <div class="buttons-box">
+                                    <button type="button" class="button button-secondary">Cancelar</button>
+                                    <button type="submit" class="button button-primary">Registrar</button>
+                                </div>
+                            </form>
+                        </main>
                     </div>
                 </div>
 
                 <div id="update-user" class="modal">
                     <div class="modal-content">
-                        <button class="button-close-modal">&times;</button>
-                        <h2 class="title-modal">Actualizar usuario</h2>
-                        <form action="" class="form">
-                            <div class="input-box">
-                                <input id="email" type="email" class="input" placeholder="Correo electrónico" required />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="input-box">
-                                <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="input-box">
-                                <input id="apellido" type="text" class="input" placeholder="Apellido" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="input-box">
-                                <input id="rol" type="text" class="input" placeholder="Rol" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
-                                <span class="span-for-input-error"></span>
-                            </div>
-                            <div class="radio-section-box">
-                                <label class="radio-section-box-title" for="section">Sección:</label>
-                                <div class="radio-section-box-elements">
-                                    <input type="radio" id="department-update" name="section" value="department" />
-                                    <label for="department">Departamento</label>
-                                    <input type="radio" id="unit-update" name="section" value="unit" />
-                                    <label for="unit">Unidad</label>
+                        <header class="modal-header">
+                            <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
+                            <h2 class="subtitle title-in-center">Actualizar usuario</h2>
+                        </header>
+                        <main class="modal-main">
+                            <form action="" class="form">
+                                <div class="input-box">
+                                    <input id="email" type="email" class="input" placeholder="Correo electrónico" required />
+                                    <span class="span-for-input-error"></span>
                                 </div>
-                            </div>
-                            <div id="departments-update" class="input-box">
-                                <select class="select">
-                                    <option value="" disabled selected>Selecciona un departamento</option>
-                                    <option value="">Laboratios</option>
-                                    <option value="">No me acuerdo</option>
-                                </select>
-                            </div>
-                            <div id="units-update" class="input-box">
-                                <select class="select">
-                                    <option value="" disabled selected>Selecciona una unidad</option>
-                                    <option value="">Carlos Duran</option>
-                                    <option value="">Los diamantes</option>
-                                </select>
-                            </div>
-                            <div class="buttons-box">
-                                <button type="button" class="button button-secondary">Cancelar</button>
-                                <button type="submit" class="button button-primary">Actualizar</button>
-                            </div>
-                        </form>
+                                <div class="input-box">
+                                    <input id="nombre" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="input-box">
+                                    <input
+                                        id="apellido"
+                                        type="text"
+                                        class="input"
+                                        placeholder="Apellido"
+                                        required
+                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                                    />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="input-box">
+                                    <input id="rol" type="text" class="input" placeholder="Rol" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="radio-section-box">
+                                    <label class="radio-section-box-title" for="section">Sección:</label>
+                                    <div class="radio-section-box-elements">
+                                        <input type="radio" id="department-update" name="section" value="department" />
+                                        <label for="department">Departamento</label>
+                                        <input type="radio" id="unit-update" name="section" value="unit" />
+                                        <label for="unit">Unidad</label>
+                                    </div>
+                                </div>
+                                <div id="departments-update" class="input-box">
+                                    <select class="select">
+                                        <option value="" disabled selected>Selecciona un departamento</option>
+                                        <option value="">Laboratios</option>
+                                        <option value="">No me acuerdo</option>
+                                    </select>
+                                </div>
+                                <div id="units-update" class="input-box">
+                                    <select class="select">
+                                        <option value="" disabled selected>Selecciona una unidad</option>
+                                        <option value="">Carlos Duran</option>
+                                        <option value="">Los diamantes</option>
+                                    </select>
+                                </div>
+                                <div class="buttons-box">
+                                    <button type="button" class="button button-secondary">Cancelar</button>
+                                    <button type="submit" class="button button-primary">Actualizar</button>
+                                </div>
+                            </form>
+                        </main>
                     </div>
                 </div>
             </main>
