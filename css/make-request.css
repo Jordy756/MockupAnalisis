@@ -14,19 +14,9 @@
     gap: 1rem;
 }
 
-.form-make-request {
-    width: 80%;
-}
-
 .select-supply-container {
     display: flex;
     gap: 0.5rem;
-}
-
-@media screen and (max-width: 768px) {
-    .form-make-request {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 480px) {

@@ -132,52 +132,72 @@
                                     <thead class="table-head">
                                         <tr class="head-row">
                                             <th class="head-column sticky-column">Código</th>
-                                            <th class="head-column">Nombre</th>
-                                            <th class="head-column">Marca</th>
-                                            <th class="head-column">Cantidad</th>
-                                            <th class="head-column">Detalles</th>
+                                            <th class="head-column">Identidad</th>
+                                            <th class="head-column quantitative-column">Cantidad</th>
+                                            <th class="head-column quantitative-column">Valor unidad</th>
+                                            <th class="head-column">Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody class="table-body">
                                         <tr class="body-row">
-                                            <td class="body-column sticky-column">INTA001</td>
-                                            <td class="body-column">Toner</td>
-                                            <td class="body-column">Patito</td>
+                                            <td class="body-column sticky-column">INTA512</td>
                                             <td class="body-column">
-                                                <div class="actions">
-                                                    <button class="table-button button-details" onclick="showModal('request-details')">
-                                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
-                                                    </button>
-                                                </div>
+                                                <span class="identity-name">Toner</span>
+                                                <span class="identity-brand">Patito</span>
                                             </td>
                                             <td class="body-column">
                                                 <div class="input-box">
-                                                    <input
-                                                        id="quantity"
-                                                        type="text"
-                                                        class="input"
-                                                        placeholder="Cantidad"
-                                                        min="0"
-                                                        required
-                                                        pattern="^[0-9]+$"
-                                                    />
+                                                    <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
                                                     <span class="span-for-input-error"></span>
+                                                </div>
+                                            </td>
+                                            <td class="body-column quantitative-column"><span class="price">372.83</span></td>
+                                            <td class="body-column">
+                                                <div class="actions">
+                                                    <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
+                                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                                    </button>
+                                                    <button id="btn-eliminar" type="button" class="table-button button-delete">
+                                                        <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="body-row">
+                                            <td class="body-column sticky-column">INTA512</td>
+                                            <td class="body-column">
+                                                <span class="identity-name">Toner</span>
+                                                <span class="identity-brand">Patito</span>
+                                            </td>
+                                            <td class="body-column">
+                                                <div class="input-box">
+                                                    <input id="quantity" type="text" class="input" value="3" min="0" required pattern="^[0-9]+$" />
+                                                    <span class="span-for-input-error"></span>
+                                                </div>
+                                            </td>
+                                            <td class="body-column quantitative-column"><span class="price">372.83</span></td>
+                                            <td class="body-column">
+                                                <div class="actions">
+                                                    <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
+                                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                                    </button>
+                                                    <button id="btn-eliminar" type="button" class="table-button button-delete">
+                                                        <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                                    </button>
                                                 </div>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </section>
-                        </main>
-                        <footer>
-                            <form id="accept-request-form" action="" class="form">
+                            <form id="accept-request-form" action="" class="form form-reason">
                                 <div class="input-box">
                                     <textarea id="motive" placeholder="Motivo" name="" class="textarea" required></textarea>
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <button class="button button-primary">Aceptar</button>
                             </form>
-                        </footer>
+                        </main>
                     </div>
                 </div>
                 <div id="decline-request" class="modal">
@@ -187,7 +207,7 @@
                             <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
                         </header>
                         <main class="modal-main">
-                            <form id="decline-request-form" action="" class="form">
+                            <form id="decline-request-form" action="" class="form form-reason form-reason-in-decline-modal">
                                 <div class="input-box">
                                     <textarea
                                         id="motive"

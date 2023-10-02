@@ -6,8 +6,8 @@
     --white-color: #f9f9f9;
     --table-background: #f4f6fd;
     --table-border: #cdd6f6;
-    --black-color: #26282D;
-    --gray-light-color: #989AA1;
+    --black-color: #26282d;
+    --gray-light-color: #989aa1;
     --font: "Roboto", sans-serif;
 }
 
@@ -71,6 +71,10 @@ body {
 
 .strong {
     font-weight: bold;
+}
+
+.form-reason {
+    width: 100%;
 }
 
 @media screen and (max-width: 480px) {
