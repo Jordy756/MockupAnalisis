@@ -15,6 +15,7 @@
     background-color: var(--table-background);
     border: 0.0625rem solid var(--table-border);
     text-wrap: nowrap;
+    vertical-align: top;
 }
 
 .sticky-column {
@@ -22,6 +23,10 @@
     left: 0;
     z-index: 2;
     background-color: var(--table-background);
+}
+
+.number-column {
+    text-align: right;
 }
 
 .sticky-column::before {
