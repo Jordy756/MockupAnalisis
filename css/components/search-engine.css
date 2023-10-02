@@ -18,12 +18,14 @@
 
 .button-search-engine {
     position: absolute;
-    right: 0.3rem;
-    top: 0.3rem;
-    font-size: 1.25rem;
-    background-color: transparent;
+    display: grid;
+    place-items: center;
+    right: 0.5rem;
+    top: 50%;
+    background-color: white;
     cursor: pointer;
     border: none;
+    transform: translateY(-50%);
 }
 
 @media screen and (max-width: 260px) {

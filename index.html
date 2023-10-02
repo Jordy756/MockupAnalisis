@@ -6,14 +6,15 @@
         <title>Document</title>
         <link rel="stylesheet" href="./css/bases/reset.css" />
         <link rel="stylesheet" href="./css/bases/style.css" />
+        <link rel="stylesheet" href="./css/login.css" />
         <link rel="stylesheet" href="./css/components/input.css" />
         <link rel="stylesheet" href="./css/buttons.css" />
     </head>
     <body>
         <div class="main-container">
-            <main class="main">
-                <img src="./assets/images/logo.webp" class="login-image-logo" width="30%" height="30%" />
-                <form action="/login" method="post" class="form" id="login-form" novalidate>
+            <main class="main-login">
+                <img src="./assets/images/logo.webp" class="login-image-logo" />
+                <form id="login-form" action="/login" method="post" class="form login-form" novalidate>
                     <div class="input-box">
                         <input id="email" class="input" type="email" placeholder="Correo electrónico" required />
                         <span class="span-for-input-error"></span>

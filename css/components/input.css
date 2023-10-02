@@ -10,11 +10,13 @@
 
 .input,
 .textarea {
-    padding: 0.5rem 2rem 0.5rem 0.6rem;
+    padding: 0.8rem;
     border: 1px solid gray;
-    border-radius: 5px;
+    border-radius: .3125rem;
     outline: none;
     width: 100%;
+    font-size: 1rem;
+    font-family: var(--font);
 }
 
 .textarea {
@@ -25,8 +27,8 @@
 
 .input:focus,
 .textarea:focus {
-    border: 1px solid var(--green-color);
-    box-shadow: 0px 0px 3px 0px var(--green-color);
+    border: .0625rem solid var(--green-color);
+    box-shadow: 0 0 .1875rem 0 var(--green-color);
 }
 
 .span-for-input-error {
