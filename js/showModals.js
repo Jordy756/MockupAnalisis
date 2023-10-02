@@ -21,7 +21,13 @@ function showModal(id) {
     const modal = document.getElementById(id);
     const close = modal.querySelector(".button-close-modal");
     modal.classList.add("modal-active");
-    close.addEventListener("click", () => modal.classList.remove("modal-active"));
+    close.addEventListener("click", () => {
+        modal.classList.remove("modal-active");
+        modal.classList.add("modal-closing");
+        setTimeout(() => {
+            modal.classList.remove("modal-closing");
+        }, 450);
+    });
     // window.addEventListener("click", evento => evento.target == modal && modal.classList.remove("modal-active"));
 }
 
