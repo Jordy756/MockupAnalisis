@@ -25,7 +25,7 @@
     background-color: var(--table-background);
 }
 
-.number-column {
+.quantitative-column {
     text-align: right;
 }
 
