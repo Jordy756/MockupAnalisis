@@ -26,7 +26,7 @@ function showModal(id) {
         modal.classList.add("modal-closing");
         setTimeout(() => {
             modal.classList.remove("modal-closing");
-        }, 450);
+        }, 270);
     });
     // window.addEventListener("click", evento => evento.target == modal && modal.classList.remove("modal-active"));
 }

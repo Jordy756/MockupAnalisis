@@ -9,7 +9,7 @@
 
 .input-box-search-engine {
     position: relative;
-    width: 15rem;
+    width: 20rem;
 }
 
 .make-request-input-box-search-engine {
@@ -39,7 +39,7 @@
     }
 }
 
-@media screen and (max-width: 484px) {
+@media screen and (max-width: 564px) {
     .input-box-search-engine {
         width: 100%;
     }

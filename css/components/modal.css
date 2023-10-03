@@ -19,11 +19,11 @@
 }
 
 .modal-active {
-    animation: square-in-center 500ms ease-in-out;
+    animation: square-in-center 300ms ease-in-out;
 }
 
 .modal-closing {
-    animation: square-in-center-reverse 500ms ease-in-out;
+    animation: square-in-center-reverse 300ms ease-in-out;
 }
 
 .modal-content {
@@ -71,6 +71,10 @@
 
 .form-reason-in-decline-modal {
     min-width: 22rem;
+}
+
+.list-item:not(:last-child) {
+    margin-bottom: 0.5rem;
 }
 
 @keyframes square-in-center {
