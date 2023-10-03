@@ -10,13 +10,17 @@
 
 .input,
 .textarea {
-    padding: 0.8rem;
-    border: 1px solid gray;
-    border-radius: .3125rem;
+    padding: 0.5rem;
+    border: .0625rem solid #808080;
+    border-radius: 0.3125rem;
     outline: none;
     width: 100%;
     font-size: 1rem;
     font-family: var(--font);
+}
+
+.quantitative-input {
+    text-align: end;
 }
 
 .textarea {
@@ -27,8 +31,8 @@
 
 .input:focus,
 .textarea:focus {
-    border: .0625rem solid var(--green-color);
-    box-shadow: 0 0 .1875rem 0 var(--green-color);
+    border: 0.0625rem solid var(--green-color);
+    box-shadow: 0 0 0.1875rem 0 var(--green-color);
 }
 
 .span-for-input-error {

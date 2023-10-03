@@ -98,7 +98,7 @@
 }
 
 .button-delete {
-    background-color: #e60202;
+    background-color: var(--red-color);
 }
 
 .button-update {
