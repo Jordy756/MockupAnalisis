@@ -13,17 +13,18 @@
 }
 
 .modal-active,
-.modal-closing {
+.modal-content-active,
+.modal-content-closing {
     display: grid;
     place-items: center;
 }
 
-.modal-active {
-    animation: square-in-center 300ms ease-in-out;
+.modal-content-active {
+    animation: square-in-center 200ms ease-in-out;
 }
 
-.modal-closing {
-    animation: square-in-center-reverse 300ms ease-in-out;
+.modal-content-closing {
+    animation: square-in-center-reverse 200ms ease-in-out;
 }
 
 .modal-content {

@@ -8,11 +8,21 @@
     width: 100%;
 }
 
+.body-row:hover {
+    background-color: var(--dark-table-background);
+}
+
+.head-row,
+.body-row {
+    height: 3rem;
+    background-color: var(--light-table-background);
+}
+
 .head-column,
-.body-column {
+.body-column,
+.options-column {
     text-align: left;
     padding: 0.5rem 0.7rem;
-    background-color: var(--table-background);
     border: 0.0625rem solid var(--table-border);
     text-wrap: nowrap;
     vertical-align: top;
@@ -22,7 +32,7 @@
     position: sticky;
     left: 0;
     z-index: 2;
-    background-color: var(--table-background);
+    background-color: var(--light-table-background);
 }
 
 .sticky-column::before {
@@ -38,6 +48,11 @@
     border-right-color: var(--table-border);
     border-left-color: var(--table-border);
     box-shadow: 0.125rem 0 0.1875rem var(--table-border);
+}
+
+.options-column {
+    box-shadow: none;
+    background-color: var(--dark-table-background);
 }
 
 .identity-name,

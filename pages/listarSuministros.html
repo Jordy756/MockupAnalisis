@@ -24,14 +24,6 @@
             </header>
             <main class="main">
                 <h1 class="title">Suministros</h1>
-                <div class="input-box">
-                    <select class="select" name="" id="">
-                        <option value="" selected disabled>Selecciona una unidad</option>
-                        <option value="">La Managua</option>
-                        <option value="">Los diamantes</option>
-                        <option value="">Carlos Duran</option>
-                    </select>
-                </div>
                 <section class="section-search-engine">
                     <button type="button" class="button button-primary" onclick="showModal('new-supply')">Nuevo suministro</button>
                     <form class="input-box-search-engine">
@@ -43,6 +35,21 @@
                 <section class="table-container">
                     <table class="table">
                         <thead class="table-head">
+                            <tr class="head-row">
+                                <th colspan="2" class="options-column sticky-column">
+                                    <div class="input-box">
+                                        <select class="select" name="" id="">
+                                            <option value="">La Managua</option>
+                                            <option value="">Los diamantes</option>
+                                            <option value="">Carlos Duran</option>
+                                            <option value="">Estaciones experimentales</option>
+                                        </select>
+                                    </div>
+                                </th>
+                                <th class="options-column"></th>
+                                <th class="options-column"></th>
+                                <th class="options-column"></th>
+                            </tr>
                             <tr class="head-row">
                                 <th class="head-column sticky-column">Código</th>
                                 <th class="head-column">Identidad</th>

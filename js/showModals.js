@@ -20,18 +20,20 @@ document.getElementById("btn-eliminar").addEventListener("click", () => showMess
 function showModal(id) {
     const modal = document.getElementById(id);
     const close = modal.querySelector(".button-close-modal");
+    const modalContent = modal.querySelector(".modal-content");
     modal.classList.add("modal-active");
+    modalContent.classList.add("modal-content-active");
     close.addEventListener("click", () => {
-        modal.classList.remove("modal-active");
-        modal.classList.add("modal-closing");
+        modalContent.classList.remove("modal-content-active");
+        modalContent.classList.add("modal-content-closing");
         setTimeout(() => {
-            modal.classList.remove("modal-closing");
-        }, 270);
+            modal.classList.remove("modal-active");
+            modalContent.classList.remove("modal-content-closing");
+        }, 170);
     });
-    // window.addEventListener("click", evento => evento.target == modal && modal.classList.remove("modal-active"));
 }
 
-// No se para que es, aún
+// No se para que es, aún, creo que es de las validaciones de Leo
 // function formatPhone(input) {
 //     input.value = input.value.replace(/\D/g, "").replace(/(\d{4})(\d{4})/, "$1-$2");
 // }
