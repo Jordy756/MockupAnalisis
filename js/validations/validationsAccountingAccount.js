@@ -7,7 +7,7 @@ const errorMessages = {
     },
     cod: {
         valueMissing: "Este campo no puede ir vacío",
-        patternMismatch: "No pueden ir caracteres especiales",
+        patternMismatch: "Solo números (0-9) y puntos (.)",
     },
     name: {
         valueMissing: "Este campo no puede ir vacío",
