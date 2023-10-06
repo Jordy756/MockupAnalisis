@@ -85,25 +85,53 @@
                         </header>
                         <main class="modal-main">
                             <form id="add-department-form" action="" class="form">
+
                                 <div class="input-box">
-                                    <input id="cod" type="text" class="input" placeholder="Código" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ-, ]+" />
+                                    <input id="name" 
+                                    type="text" 
+                                    class="input" 
+                                    placeholder="Nombre" 
+                                    required 
+                                    pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ñÑ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
-                                <div class="input-box">
-                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
-                                    <span class="span-for-input-error"></span>
-                                </div>
+
                                 <div class="input-box">
                                     <input
                                         id="address"
                                         type="text"
                                         class="input"
-                                        placeholder="Dirección"
+                                        placeholder="País"
                                         required
-                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ]+"
+                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
                                     />
                                     <span class="span-for-input-error"></span>
                                 </div>
+
+                                <div class="input-box">
+                                    <input
+                                        id="address"
+                                        type="text"
+                                        class="input"
+                                        placeholder="Provincia"
+                                        required
+                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                                    />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+
+                                <div class="input-box">
+                                    <input
+                                        id="address"
+                                        type="text"
+                                        class="input"
+                                        placeholder="Dirección Exacta"
+                                        required
+                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                                    />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+
                                 <div class="buttons-box">
                                     <button type="submit" class="button button-primary">Registrar</button>
                                     <button type="button" class="button button-secondary">Cancelar</button>
@@ -121,12 +149,26 @@
                         </header>
                         <main class="modal-main">
                             <form id="update-department-form" action="" class="form">
+
                                 <div class="input-box">
-                                    <input id="cod" type="text" class="input" placeholder="Código" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ-, ]+" />
+                                    <input id="name" 
+                                    type="text" 
+                                    class="input" 
+                                    placeholder="Nombre" 
+                                    required 
+                                    pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ñÑ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
+
                                 <div class="input-box">
-                                    <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
+                                    <input
+                                        id="address"
+                                        type="text"
+                                        class="input"
+                                        placeholder="País"
+                                        required
+                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                                    />
                                     <span class="span-for-input-error"></span>
                                 </div>
                                 <div class="input-box">
@@ -134,12 +176,24 @@
                                         id="address"
                                         type="text"
                                         class="input"
-                                        placeholder="Dirección"
+                                        placeholder="Provincia"
                                         required
-                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ]+"
+                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
                                     />
                                     <span class="span-for-input-error"></span>
                                 </div>
+                                <div class="input-box">
+                                    <input
+                                        id="address"
+                                        type="text"
+                                        class="input"
+                                        placeholder="Dirección Exacta"
+                                        required
+                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
+                                    />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                
                                 <div class="buttons-box">
                                     <button type="submit" class="button button-primary">Actualizar</button>
                                     <button type="button" class="button button-secondary">Cancelar</button>
