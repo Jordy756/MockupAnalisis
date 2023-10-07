@@ -69,7 +69,10 @@
                                 <td class="body-column quantitative-column"><span class="price">84724.09</span></td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button type="button" class="table-button button-details" onclick="showModal('myModal1')">
+                                        <button type="button" class="table-button button-accept" onclick="showModal('add-quantity-to-supply')">
+                                            <img src="../assets/icons/plus.svg" alt="Agregar más" srcset="" />
+                                        </button>
+                                        <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
                                             <img src="../assets/icons/eye.svg" alt="detalles" />
                                         </button>
                                         <a href="./updateSupply.html" class="table-button button-update">
@@ -91,7 +94,10 @@
                                 <td class="body-column quantitative-column"><span class="price">872384.42</span></td>
                                 <td class="body-column">
                                     <div class="actions">
-                                        <button type="button" class="table-button button-details" onclick="showModal('myModal1')">
+                                        <button type="button" class="table-button button-accept" onclick="showModal('add-quantity-to-supply')">
+                                            <img src="../assets/icons/plus.svg" alt="Agregar más" srcset="" />
+                                        </button>
+                                        <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
                                             <img src="../assets/icons/eye.svg" alt="detalles" />
                                         </button>
                                         <a href="./updateSupply.html" class="table-button button-update">
@@ -165,6 +171,31 @@
                                     <input id="unitValue" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
+                                <div class="input-box">
+                                    <input id="supplier" type="text" class="input" placeholder="Proveedor" required />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="input-box">
+                                    <input id="quantity" type="text" class="input" placeholder="Cantidad" min="0" required pattern="^[0-9]+$" />
+                                    <span class="span-for-input-error"></span>
+                                </div>
+                                <div class="buttons-box">
+                                    <button type="submit" class="button button-primary">Registrar</button>
+                                    <button type="button" class="button button-secondary">Cancelar</button>
+                                </div>
+                            </form>
+                        </main>
+                    </div>
+                </div>
+
+                <div id="add-quantity-to-supply" class="modal">
+                    <div class="modal-content">
+                        <header class="modal-header">
+                            <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
+                            <h2 class="subtitle title-in-center">Agregar más suministros</h2>
+                        </header>
+                        <main class="modal-main">
+                            <form id="add-supply-form" action="" class="form">
                                 <div class="input-box">
                                     <input id="supplier" type="text" class="input" placeholder="Proveedor" required />
                                     <span class="span-for-input-error"></span>
