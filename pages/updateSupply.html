@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/bases/reset.css" />
         <link rel="stylesheet" href="../css/bases/style.css" />
         <link rel="stylesheet" href="../css/components/header.css" />
-        <link rel="stylesheet" href="../css/update-supply.css" />
+        <link rel="stylesheet" href="../css/information-and-table.css" />
         <link rel="stylesheet" href="../css/components/input.css" />
         <link rel="stylesheet" href="../css/buttons.css" />
         <link rel="stylesheet" href="../css/components/table.css" />
@@ -21,37 +21,53 @@
                     <a href="#" class="nav-link"><img src="../assets/icons/logout.svg" alt="Logout" /></a>
                 </nav>
             </header>
-            <main class="main-update-supply">
-                <h1 class="title title-in-center">Actualizar suministro</h1>
-                <section class="section-update-supply">
-                    <h2 class="subtitle title-in-center">Actualizar datos</h2>
+            <main class="main-information-and-table">
+                <h1 class="title">Actualizar suministro</h1>
+                <section class="information-section">
+                    <h2 class="subtitle">Actualizar datos</h2>
                     <form id="update-supply-form" action="" class="form">
                         <div class="input-box">
-                            <input id="accountingAccount" type="text" class="input" placeholder="Cuenta contable" required pattern="[0-9.]+" />
+                            <input
+                                id="accountingAccount"
+                                type="text"
+                                class="input"
+                                placeholder="Cuenta contable"
+                                value="1.1.4.01.99.03"
+                                required
+                                pattern="[0-9.]+"
+                            />
                             <span class="span-for-input-error"></span>
                         </div>
                         <div class="input-box">
-                            <input id="group" type="text" class="input" placeholder="Grupo" required />
+                            <input id="name" type="text" class="input" placeholder="Nombre" value="Agenda" required pattern="[a-zA-Z0-9]+" />
                             <span class="span-for-input-error"></span>
                         </div>
                         <div class="input-box">
-                            <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-Z0-9]+" />
+                            <input id="brand" type="text" class="input" placeholder="Marca" value="Marca1" required />
                             <span class="span-for-input-error"></span>
                         </div>
                         <div class="input-box">
-                            <input id="unitMeasurement" type="text" class="input" placeholder="Unidad de medida" required />
+                            <input id="group" type="text" class="input" placeholder="Grupo" value="Grupo1" required />
                             <span class="span-for-input-error"></span>
                         </div>
                         <div class="input-box">
-                            <input id="subgroup" type="text" class="input" placeholder="Subgrupo" required />
+                            <input id="subgroup" type="text" class="input" placeholder="Subgrupo" value="Subgrupo1" required />
                             <span class="span-for-input-error"></span>
                         </div>
                         <div class="input-box">
-                            <input id="brand" type="text" class="input" placeholder="Marca" required />
+                            <input id="unitMeasurement" type="text" class="input" placeholder="Unidad de medida" value="1 kg" required />
                             <span class="span-for-input-error"></span>
                         </div>
                         <div class="input-box">
-                            <input id="unitValue" type="text" class="input" placeholder="Valor por unidad" required pattern="[0-9,]+" />
+                            <input
+                                id="unitValue"
+                                type="text"
+                                class="input"
+                                placeholder="Valor por unidad"
+                                value="123.34"
+                                required
+                                pattern="[0-9,]+"
+                            />
                             <span class="span-for-input-error"></span>
                         </div>
                         <div class="buttons-box">
@@ -60,21 +76,23 @@
                         </div>
                     </form>
                 </section>
-                <section class="section-update-supply">
-                    <h2 class="subtitle title-in-center">Lista de provedores del suministro</h2>
+                <section class="table-section">
+                    <h2 class="subtitle">Lista de provedores del suministro</h2>
                     <section class="table-container">
                         <table class="table">
                             <thead class="table-head">
                                 <tr class="head-row">
                                     <th class="head-column sticky-column">Nombre</th>
                                     <th class="head-column quantitative-column">Cantidad</th>
+                                    <th class="head-column">Fecha</th>
                                     <th class="head-column">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody class="table-body">
                                 <tr class="body-row">
-                                    <td class="body-column sticky-column">HR</td>
+                                    <td class="body-column sticky-column">Proveedor1</td>
                                     <td class="body-column quantitative-column">8</td>
+                                    <td class="body-column">26/07/2023</td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-update" onclick="showModal('update-supplier')">
@@ -87,8 +105,9 @@
                                     </td>
                                 </tr>
                                 <tr class="body-row">
-                                    <td class="body-column sticky-column">HR</td>
+                                    <td class="body-column sticky-column">Proveedor1</td>
                                     <td class="body-column quantitative-column">87</td>
+                                    <td class="body-column">24/07/2023</td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button type="button" class="table-button button-update" onclick="showModal('update-supplier')">
@@ -101,8 +120,9 @@
                                     </td>
                                 </tr>
                                 <tr class="body-row">
-                                    <td class="body-column sticky-column">HR</td>
+                                    <td class="body-column sticky-column">Proveedor2</td>
                                     <td class="body-column quantitative-column">7</td>
+                                    <td class="body-column">6/09/2023</td>
                                     <td class="body-column">
                                         <div class="actions">
                                             <button class="table-button button-update" type="button" onclick="showModal('update-supplier')">
@@ -132,7 +152,7 @@
                     <div class="modal-content">
                         <header class="modal-header">
                             <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
-                            <h2 class="subtitle title-in-center">Actualizar proveedor</h2>
+                            <h2 class="subtitle">Actualizar proveedor</h2>
                         </header>
                         <main class="modal-main">
                             <form id="add-supply-form" action="" class="form">

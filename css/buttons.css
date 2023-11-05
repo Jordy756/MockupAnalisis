@@ -4,20 +4,6 @@
     gap: 1rem;
 }
 
-.button {
-    padding: 0.6rem 1rem;
-    border-radius: 0.3125rem;
-    outline: none;
-    font-size: 1rem;
-    transition: all 200ms ease-in-out;
-
-    &:hover {
-        transform: scale(1.01);
-        background-color: var(--button-hover-green-color);
-        cursor: pointer;
-    }
-}
-
 .button-primary {
     border: none;
     background-color: var(--green-color);
@@ -34,7 +20,51 @@
     }
 }
 
+.back-button,
 .pagination-button {
     padding: 0.2rem 0.6rem;
 }
 
+.button-save-quantity {
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+    border: none;
+    padding: 0rem;
+    visibility: hidden;
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.button-save-quantity-active {
+    visibility: visible;
+}
+
+.buttons-request-container,
+.buttons-accept-request-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.buttons-request-container {
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 423px) {
+    .buttons-request-container,
+    .buttons-accept-request-container {
+        justify-content: center;
+    }
+
+    .buttons-request-container {
+        flex-direction: column-reverse;
+    }
+
+    .buttons-request-container button,
+    .buttons-accept-request-container button {
+        flex: 1;
+    }
+}

@@ -38,7 +38,7 @@
                             <tr class="head-row">
                                 <th colspan="2" class="options-column sticky-column">
                                     <div class="input-box">
-                                        <select class="select" name="" id="">
+                                        <select class="select select-section" name="" id="">
                                             <option value="">La Managua</option>
                                             <option value="">Los diamantes</option>
                                             <option value="">Carlos Duran</option>
@@ -66,7 +66,10 @@
                                     <span class="identity-brand">Marca1</span>
                                 </td>
                                 <td class="body-column quantitative-column">2</td>
-                                <td class="body-column quantitative-column"><span class="price">84724.09</span></td>
+                                <td class="body-column quantitative-column">
+                                    <span class="identity-name">Proveedor1</span>
+                                    <span class="identity-brand price">724.09</span>
+                                </td>
                                 <td class="body-column">
                                     <div class="actions">
                                         <button type="button" class="table-button button-accept" onclick="showModal('add-quantity-to-supply')">
@@ -85,13 +88,16 @@
                                 </td>
                             </tr>
                             <tr class="body-row">
-                                <td class="body-column sticky-column">INTA0002</td>
+                                <td class="body-column sticky-column">INTA001</td>
                                 <td class="body-column">
                                     <span class="identity-name">Nombre1</span>
-                                    <span class="identity-brand">Marca2</span>
+                                    <span class="identity-brand">Marca1</span>
                                 </td>
                                 <td class="body-column quantitative-column">4</td>
-                                <td class="body-column quantitative-column"><span class="price">872384.42</span></td>
+                                <td class="body-column quantitative-column">
+                                    <span class="identity-name">Proveedor1</span>
+                                    <span class="identity-brand price">324.09</span>
+                                </td>
                                 <td class="body-column">
                                     <div class="actions">
                                         <button type="button" class="table-button button-accept" onclick="showModal('add-quantity-to-supply')">
@@ -213,6 +219,47 @@
                     </div>
                 </div>
             </main>
+        </div>
+
+        <div id="supply-details" class="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
+                    <h2 class="subtitle">Informacón del suministro</h2>
+                </header>
+                <main class="modal-main main-prueba">
+                    <ul class="list">
+                        <li class="list-item"><strong class="strong">Código del Suministro: </strong> @supplyDTO.supplyCod</li>
+                        <li class="list-item"><strong class="strong">Nombre: </strong> @supplyDTO.supplyName</li>
+                        <li class="list-item"><strong class="strong">Grupo: </strong> @supplyDTO.group</li>
+                        <li class="list-item"><strong class="strong">Subgrupo: </strong> @supplyDTO.subgroup</li>
+                        <li class="list-item"><strong class="strong">Unidad de medida: </strong> @supplyDTO.unitMeasurement</li>
+                        <li class="list-item"><strong class="strong">Marca: </strong> @supplyDTO.brand</li>
+                        <li class="list-item"><strong class="strong">Unidad de valor: </strong> @supplyDTO.unitValue</li>
+                        <li class="list-item"><strong class="strong">Stock Inicial: </strong> @supplyDTO.initialStock</li>
+                        <li class="list-item"><strong class="strong">Cuenta contable: </strong> @supplyDTO.account ingAccountDTO?.name</li>
+                        <li class="list-item"><strong class="strong">Cantidad: </strong> @supplyDTO.quantity</li>
+                    </ul>
+                    <section class="table-container">
+                        <table class="table">
+                            <thead class="table-head">
+                                <tr class="head-row">
+                                    <th class="head-column sticky-column">Nombre</th>
+                                    <th class="head-column">Dirección</th>
+                                    <th class="head-column">Teléfono</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-body">
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">@supplier.supplierName</td>
+                                    <td class="body-column">@supplier.addressDTO?.state, @supplier.addressDTO?.exactDirection</td>
+                                    <td class="body-column">@supplier.telephone</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </main>
+            </div>
         </div>
         <script src="../js/libraries/swetalert.js"></script>
         <script src="../js/showModals.js"></script>

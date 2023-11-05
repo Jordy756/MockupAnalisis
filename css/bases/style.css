@@ -49,17 +49,13 @@ body {
 
 .title,
 .subtitle {
-    width: 100%;
     font-weight: bold;
+    text-align: center;
+    width: 100%;
 }
 
 .title {
     font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.title-in-center {
-    text-align: center;
 }
 
 .subtitle {
@@ -77,6 +73,20 @@ body {
 
 .form-reason {
     width: 100%;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.3125rem;
+    outline: none;
+    font-size: 1rem;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+        background-color: var(--button-hover-green-color);
+        cursor: pointer;
+    }
 }
 
 @media screen and (max-width: 480px) {

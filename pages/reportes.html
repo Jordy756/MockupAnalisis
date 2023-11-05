@@ -6,64 +6,171 @@
         <title>Reportes</title>
         <link rel="stylesheet" href="../css/bases/reset.css" />
         <link rel="stylesheet" href="../css/bases/style.css" />
+        <link rel="stylesheet" href="../css/information-and-table.css" />
         <link rel="stylesheet" href="../css/components/header.css" />
         <link rel="stylesheet" href="../css/components/select.css" />
+        <link rel="stylesheet" href="../css/components/radio-button.css" />
         <link rel="stylesheet" href="../css/buttons.css" />
         <link rel="stylesheet" href="../css/components/input.css" />
+        <link rel="stylesheet" href="../css/components/table.css" />
     </head>
     <body>
         <div class="main-container">
             <header class="header">
                 <nav class="nav-header">
                     <a href="#" class="nav-link"><img src="../assets/images/logo.webp" alt="" width="80px" height="50px" /></a>
-                    <a href="#" class="nav-link"><img src="../assets/icons/logout.svg" alt="Cerrar sesión"></a>
+                    <a href="#" class="nav-link"><img src="../assets/icons/logout.svg" alt="Cerrar sesión" /></a>
                 </nav>
             </header>
-            <main class="main">
-                <h1 class="title title-in-center">Reportes</h1>
-                <form action="" class="form">
-                    <div class="input-box">
-                        <select class="select" name="" id="">
-                            <option value="" selected disabled>Selecciona una unidad</option>
-                            <option value="">La Managua</option>
-                            <option value="">Los diamantes</option>
-                            <option value="">Carlos Duran</option>
-                        </select>
+            <main class="main-information-and-table">
+                <h1 class="title">Reportes</h1>
+                <section class="information-section">
+                    <h2 class="subtitle">Realizar un reporte</h2>
+                    <form action="" class="form">
+                        <div class="radio-section-box">
+                            <label class="radio-section-box-title" for="section">Sección:</label>
+                            <div class="radio-section-box-elements">
+                                <input type="radio" id="department-reports" name="section" value="department" />
+                                <label for="department">Departamento</label>
+                                <input type="radio" id="unit-reports" name="section" value="unit" />
+                                <label for="unit">Unidad</label>
+                            </div>
+                        </div>
+                        <div id="departments-reports" class="input-box">
+                            <select class="select">
+                                <option value="" disabled selected>Selecciona un departamento</option>
+                                <option value="">Laboratios</option>
+                                <option value="">No me acuerdo</option>
+                            </select>
+                        </div>
+                        <div id="units-reports" class="input-box">
+                            <select class="select">
+                                <option value="" disabled selected>Selecciona una unidad</option>
+                                <option value="">Carlos Duran</option>
+                                <option value="">Los diamantes</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <select class="select" name="" id="">
+                                <option value="" selected disabled>Selecciona el tipo de reporte</option>
+                                <option value="">Salidas</option>
+                                <option value="">Gastos</option>
+                                <option value="">Inventario</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="">Fecha de inicio</label>
+                            <input type="date" class="input" data-format="dd-mm-yyyy" id="fechaInicio" />
+                        </div>
+                        <div class="input-box">
+                            <label for="">Fecha de final</label>
+                            <input type="date" class="input" data-format="dd-mm-yyyy" id="fechaFinal" />
+                        </div>
+                        <button type="submit" class="button button-primary">Descargar</button>
+                    </form>
+                </section>
+                <section class="table-section">
+                    <h2 class="subtitle">Lista de reportes</h2>
+                    <section class="table-container">
+                        <table class="table">
+                            <thead class="table-head">
+                                <tr class="head-row">
+                                    <th class="head-column sticky-column">Sección</th>
+                                    <th class="head-column">Fecha de inicio</th>
+                                    <th class="head-column">Fecha final</th>
+                                    <th class="head-column">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-body">
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">
+                                        <span class="identity-name">Estudios Básicos de Tierras</span>
+                                        <span class="identity-brand">Salidas</span>
+                                    </td>
+                                    <td class="body-column">1</td>
+                                    <td class="body-column"><span class="price">372.83</span></td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button type="button" class="table-button button-delete">
+                                                <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">
+                                        <span class="identity-name">Proveeduría</span>
+                                        <span class="identity-brand">Inventario</span>
+                                    </td>
+                                    <td class="body-column">1</td>
+                                    <td class="body-column"><span class="price">372.83</span></td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button type="button" class="table-button button-delete">
+                                                <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">
+                                        <span class="identity-name">Proveeduría</span>
+                                        <span class="identity-brand">Salidas</span>
+                                    </td>
+                                    <td class="body-column">1</td>
+                                    <td class="body-column"><span class="price">372.83</span></td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button type="button" class="table-button button-delete">
+                                                <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">
+                                        <span class="identity-name">Proveeduría</span>
+                                        <span class="identity-brand">Entradas</span>
+                                    </td>
+                                    <td class="body-column">1</td>
+                                    <td class="body-column"><span class="price">372.83</span></td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button type="button" class="table-button button-delete">
+                                                <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="body-row">
+                                    <td class="body-column sticky-column">
+                                        <span class="identity-name">Proveeduría</span>
+                                        <span class="identity-brand">Entradas</span>
+                                    </td>
+                                    <td class="body-column">1</td>
+                                    <td class="body-column"><span class="price">372.83</span></td>
+                                    <td class="body-column">
+                                        <div class="actions">
+                                            <button type="button" class="table-button button-delete">
+                                                <img src="../assets/icons/trash.svg" alt="Eliminar" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <div>
+                        <button id="previous-button" type="button" class="button button-secondary pagination-button">
+                            <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
+                        </button>
+                        <button id="next-button" type="button" class="button button-secondary pagination-button">
+                            <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
+                        </button>
                     </div>
-                    <div class="input-box">
-                        <select class="select" name="" id="">
-                            <option value="" selected disabled>Selecciona el tipo de reporte</option>
-                            <option value="">Salidas</option>
-                            <option value="">Gastos</option>
-                            <option value="">Inventario</option>
-                        </select>
-                    </div>
-                    <div class="input-box">
-                        <label for="">Fecha de inicio</label>
-                        <input type="date" class="input" data-format="dd-mm-yyyy" id="fechaInicio" />
-                    </div>
-                    <div class="input-box">
-                        <label for="">Fecha de final</label>
-                        <input type="date" class="input" data-format="dd-mm-yyyy" id="fechaFinal" />
-                    </div>
-                    <button type="submit" class="button button-primary">Descargar</button>
-                </form>
+                </section>
             </main>
         </div>
+        <script src="../js/chooseSectionReports.js"></script>
     </body>
 </html>
-
-<!-- <script>
-    // Se obtiene una referencia a las fechas
-    const fechaInicioInput = document.getElementById("fechaInicio");
-    const fechaFinalInput = document.getElementById("fechaFinal");
-
-    // Se obtiene la fecha actual en formato (yyyy-mm-dd)
-    const fechaActual = new Date().toISOString().split("T")[0];
-
-    // Se establece la fecha mínima para ambos campos de fecha
-    fechaInicioInput.setAttribute("max", fechaActual);
-    fechaFinalInput.setAttribute("max", fechaActual);
-
-    // Error: Tira un día de más. Posible solución: Sincronizar con la hora del server.
-</script> -->

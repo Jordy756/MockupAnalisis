@@ -101,37 +101,6 @@
                             <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
                             <h2 class="subtitle title-in-center">Lista de suministros</h2>
                         </header>
-                        <main class="modal-main-requests">
-                            <ul class="list">
-                                <li class="list-item"><strong class="strong">Código del Suministro: </strong>INTA001</li>
-                                <li class="list-item"><strong class="strong">Nombre: </strong>Computadora portátil</li>
-                                <li class="list-item"><strong class="strong">Marca: </strong>Patito</li>
-                                <li class="list-item"><strong class="strong">Cantidad: </strong>2</li>
-                            </ul>
-                            <ul class="list">
-                                <li class="list-item"><strong class="strong">Código del Suministro: </strong>INTA002</li>
-                                <li class="list-item"><strong class="strong">Nombre: </strong>Agenda</li>
-                                <li class="list-item"><strong class="strong">Marca: </strong>Patito</li>
-                                <li class="list-item"><strong class="strong">Cantidad: </strong>5</li>
-                            </ul>
-                            <ul class="list">
-                                <li class="list-item"><strong class="strong">Código del Suministro: </strong>INTA003</li>
-                                <li class="list-item"><strong class="strong">Nombre: </strong>Computadora portátil</li>
-                                <li class="list-item"><strong class="strong">Marca: </strong>God</li>
-                                <li class="list-item"><strong class="strong">Cantidad: </strong>1</li>
-                            </ul>
-                        </main>
-                        <footer>
-                            <button class="button button-primary">Generar PDF</button>
-                        </footer>
-                    </div>
-                </div>
-                <div id="accept-request" class="modal">
-                    <div class="modal-content">
-                        <header class="modal-header">
-                            <h1 class="subtitle title-in-center">Aceptar Solicitud</h1>
-                            <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
-                        </header>
                         <main class="modal-main">
                             <section class="table-container">
                                 <table class="table">
@@ -151,9 +120,91 @@
                                                 <span class="identity-name">Toner</span>
                                                 <span class="identity-brand">Patito</span>
                                             </td>
+                                            <td class="body-column">3</td>
+                                            <td class="body-column quantitative-column"><span class="price">372.83</span></td>
+                                            <td class="body-column">
+                                                <div class="actions">
+                                                    <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
+                                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="body-row">
+                                            <td class="body-column sticky-column">INTA512</td>
+                                            <td class="body-column">
+                                                <span class="identity-name">Toner</span>
+                                                <span class="identity-brand">Patito</span>
+                                            </td>
+                                            <td class="body-column">3</td>
+                                            <td class="body-column quantitative-column"><span class="price">372.83</span></td>
+                                            <td class="body-column">
+                                                <div class="actions">
+                                                    <button type="button" class="table-button button-details" onclick="showModal('supply-details')">
+                                                        <img src="../assets/icons/eye.svg" alt="Detalles" />
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+                            <div>
+                                <button id="previous-button" type="submit" class="button button-secondary pagination-button">
+                                    <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
+                                </button>
+                                <button id="next-button" type="submit" class="button button-secondary pagination-button">
+                                    <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
+                                </button>
+                            </div>
+                        </main>
+                        <footer>
+                            <button class="button button-primary">Generar PDF</button>
+                        </footer>
+                    </div>
+                </div>
+                <div id="accept-request" class="modal">
+                    <div class="modal-content">
+                        <header class="modal-header">
+                            <h1 class="subtitle title-in-center">Aceptar Solicitud</h1>
+                            <button type="button" class="button-close-modal"><img src="../assets/icons/x.svg" alt="Salir" /></button>
+                        </header>
+                        <main class="modal-main">
+                            <section class="table-container">
+                                <table class="table">
+                                    <thead class="table-head">
+                                        <tr class="head-row">
+                                            <th class="head-column sticky-column">Código</th>
+                                            <th class="head-column">Identidad</th>
+                                            <th class="head-column quantitative-column">
+                                                <div class="quantity-request">
+                                                    <button type="button" class="button button-save-quantity">
+                                                        <img src="../assets/icons/save.svg" alt="Guardar" />
+                                                    </button>
+                                                    <span>Cantidad</span>
+                                                </div>
+                                            </th>
+                                            <th class="head-column quantitative-column">Valor unidad</th>
+                                            <th class="head-column">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-body">
+                                        <tr class="body-row">
+                                            <td class="body-column sticky-column">INTA512</td>
+                                            <td class="body-column">
+                                                <span class="identity-name">Toner</span>
+                                                <span class="identity-brand">Patito</span>
+                                            </td>
                                             <td class="body-column">
                                                 <div class="input-box">
-                                                    <input id="quantity" type="text" class="input quantitative-input" value="3" min="0" required pattern="^[0-9]+$" />
+                                                    <input
+                                                        type="text"
+                                                        class="input quantitative-input"
+                                                        value="3"
+                                                        min="0"
+                                                        required
+                                                        pattern="^[0-9]+$"
+                                                    />
                                                     <span class="span-for-input-error"></span>
                                                 </div>
                                             </td>
@@ -177,7 +228,14 @@
                                             </td>
                                             <td class="body-column">
                                                 <div class="input-box">
-                                                    <input id="quantity" type="text" class="input quantitative-input" value="3" min="0" required pattern="^[0-9]+$" />
+                                                    <input
+                                                        type="text"
+                                                        class="input quantitative-input"
+                                                        value="3"
+                                                        min="0"
+                                                        required
+                                                        pattern="^[0-9]+$"
+                                                    />
                                                     <span class="span-for-input-error"></span>
                                                 </div>
                                             </td>
@@ -196,12 +254,26 @@
                                     </tbody>
                                 </table>
                             </section>
+                            <div>
+                                <button id="previous-button" type="submit" class="button button-secondary pagination-button">
+                                    <img src="../assets/icons/arrow-left.svg" alt="Flecha izquierda" />
+                                </button>
+                                <button id="next-button" type="submit" class="button button-secondary pagination-button">
+                                    <img src="../assets/icons/arrow-right.svg" alt="Flecha derecha" />
+                                </button>
+                            </div>
                             <form id="accept-request-form" action="" class="form form-reason">
                                 <div class="input-box">
                                     <textarea id="motive" placeholder="Motivo" name="" class="textarea" required></textarea>
                                     <span class="span-for-input-error"></span>
                                 </div>
-                                <button class="button button-primary">Aceptar</button>
+                                <div class="buttons-request-container">
+                                    <div class="buttons-accept-request-container">
+                                        <button class="button button-primary">Aceptar</button>
+                                        <button class="button button-secondary">Cancelar</button>
+                                    </div>
+                                    <button class="button button-primary">Descargar PDF</button>
+                                </div>
                             </form>
                         </main>
                     </div>
@@ -232,6 +304,7 @@
             </main>
         </div>
         <script src="../js/showModals.js"></script>
+        <script src="../js/showButtonSaveQuantity.js"></script>
         <script type="module" src="../js/validations/validationsHandleRequest.js"></script>
     </body>
 </html>

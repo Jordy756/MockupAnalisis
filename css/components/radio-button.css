@@ -1,5 +1,5 @@
 .radio-section-box {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .radio-section-box-title {
@@ -19,6 +19,8 @@
 #departments-insert,
 #units-insert,
 #departments-update,
-#units-update {
+#units-update,
+#departments-reports,
+#units-reports {
     display: none;
 }

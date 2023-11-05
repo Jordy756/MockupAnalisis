@@ -59,7 +59,7 @@
 
 .modal-main {
     display: grid;
-    place-items: center;
+    place-items: start;
     gap: 1rem;
 }
 
@@ -77,6 +77,7 @@
 .list-item:not(:last-child) {
     margin-bottom: 0.5rem;
 }
+
 
 @keyframes square-in-center {
     from {

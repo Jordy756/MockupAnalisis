@@ -22,7 +22,12 @@
                 </nav>
             </header>
             <main class="main">
-                <h1 class="title">Unidades</h1>
+                <div class="table-title-container">
+                    <h1 class="title">Unidades</h1>
+                    <button class="button button-primary back-button">
+                        <img src="../assets/icons/arrow-back.svg" alt="Volver" />
+                    </button>
+                </div>
                 <section class="section-search-engine">
                     <button type="button" class="button button-primary" onclick="showModal('new-unit')">Nueva unidad</button>
                     <form class="input-box-search-engine">
@@ -78,21 +83,13 @@
                         </header>
                         <main class="modal-main">
                             <form id="add-unit-form" action="" class="form">
-
                                 <div class="input-box">
                                     <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
 
                                 <div class="input-box">
-                                    <input
-                                        id="address"
-                                        type="text"
-                                        class="input"
-                                        placeholder="País"
-                                        required
-                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
-                                    />
+                                    <input id="address" type="text" class="input" placeholder="País" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
 
@@ -137,21 +134,13 @@
                         </header>
                         <main class="modal-main">
                             <form id="update-unit-form" action="" class="form">
-
                                 <div class="input-box">
                                     <input id="name" type="text" class="input" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ, ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
 
                                 <div class="input-box">
-                                    <input
-                                        id="address"
-                                        type="text"
-                                        class="input"
-                                        placeholder="País"
-                                        required
-                                        pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+"
-                                    />
+                                    <input id="address" type="text" class="input" placeholder="País" required pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚ, ñÑ]+" />
                                     <span class="span-for-input-error"></span>
                                 </div>
 

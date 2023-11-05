@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../css/bases/reset.css" />
         <link rel="stylesheet" href="../css/bases/style.css" />
         <link rel="stylesheet" href="../css/components/header.css" />
+        <link rel="stylesheet" href="../css/components/offcanvas.css" />
         <link rel="stylesheet" href="../css/components/card.css" />
     </head>
 
@@ -15,9 +16,21 @@
             <header class="header">
                 <nav class="nav-header">
                     <a href="#" class="nav-link"><img src="../assets/images/logo.webp" alt="" width="80px" height="50px" /></a>
-                    <a href="#" class="nav-link"><img src="../assets/icons/logout.svg" alt="Logout" /></a>
                 </nav>
+                <button class="button button-open-offcanvas"><img src="../assets/icons/user-settings.svg" alt="Configuración" /></button>
             </header>
+            <div class="offcanvas">
+                <div class="offcanvas-content">
+                    <h2 class="subtitle">Configuración</h2>
+                    <h3>Roles....</h3>
+                    <div class="roles-container">
+                        <span>@role.name</span>
+                        <button class="button button-open-offcanvas"><img src="../assets/icons/save.svg" alt="Cambiar rol" /></button>
+                    </div>
+                </div>
+                <button class="button button-logout">Cerrar sesión <img src="../assets/icons/logout.svg" alt="Cerrar sesión" /></button>
+            </div>
+            <div class="overlay"></div>
             <main class="main-home">
                 <a href="./solicitar.html" class="card-link">
                     <div class="card">
@@ -42,5 +55,6 @@
                 </a>
             </main>
         </div>
+        <script src="../js/showOffCanvas.js"></script>
     </body>
 </html>

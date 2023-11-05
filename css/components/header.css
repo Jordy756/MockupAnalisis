@@ -1,11 +1,27 @@
-.nav-header {
+.header {
     background-color: var(--green-color);
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0.1rem 0.5rem;
+    align-items: center;
+    padding: 0 0.5rem 0.2rem;
 }
 
 .nav-link {
     cursor: pointer;
+}
+
+.button-open-offcanvas, .button-logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
+    border: none;
+    padding: 0.4rem;
+}
+
+.roles-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
